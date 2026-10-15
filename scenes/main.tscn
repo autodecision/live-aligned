@@ -1,4 +1,4 @@
-[gd_scene load_steps=18 format=3 uid="uid://dfqm251m3t1a"]
+[gd_scene load_steps=19 format=3 uid="uid://dfqm251m3t1a"]
 
 [ext_resource type="PackedScene" uid="uid://b4k11dpddqmu6" path="res://assets/mediterranean_temple.glb" id="1_temple"]
 [ext_resource type="PackedScene" uid="uid://bvyqm14m3c6e" path="res://scenes/player.tscn" id="2_player"]
@@ -22,6 +22,8 @@
 [ext_resource type="Script" path="res://scripts/island_site_repairs.gd" id="11_site_repairs"]
 
 [ext_resource type="Script" path="res://scripts/north_pagoda.gd" id="12_pagoda"]
+
+[ext_resource type="Script" path="res://scripts/island_characters.gd" id="13_characters"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_med"]
 sky_top_color = Color(0.2, 0.52, 0.95, 1)
@@ -110,3 +112,7 @@ script = ExtResource("8_lanterns")
 
 [node name="DayNightCycle" type="Node3D" parent="."]
 script = ExtResource("9_clock")
+
+[node name="IslandCharacters" type="Node3D" parent="."]
+script = ExtResource("13_characters")
+

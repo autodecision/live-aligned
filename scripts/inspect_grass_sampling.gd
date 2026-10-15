@@ -1,7 +1,7 @@
 extends SceneTree
 func _initialize()->void:call_deferred("run")
 func run()->void:
- var source=load("res://assets/gscatter_ground_cover.glb").instantiate()
+ var source=load("res://assets/original_grass.glb").instantiate()
  for mesh in source.find_children("*","MeshInstance3D",true,false):
   var surfaces:=[]
   for i in mesh.mesh.get_surface_count():

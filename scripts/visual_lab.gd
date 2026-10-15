@@ -124,7 +124,9 @@ func _row()->HBoxContainer:
 
 func _build_ui()->void:
  var root_ui:=Control.new();root_ui.name="LabUI";root_ui.set_anchors_and_offsets_preset(Control.PRESET_FULL_RECT);root_ui.mouse_filter=Control.MOUSE_FILTER_IGNORE;root_ui.theme=_theme();add_child(root_ui)
+ # Keep the control for existing preview scripts; F7 is the visible HUD shortcut.
  _launcher=_button("Visual Lab   F7",func():set_panel_open(true));_launcher.name="OpenVisualLab"
+ _launcher.hide()
  root_ui.add_child(_launcher);_launcher.set_anchors_and_offsets_preset(Control.PRESET_BOTTOM_RIGHT);_launcher.position=Vector2(-188,-64);_launcher.size=Vector2(168,42)
  _panel=PanelContainer.new();_panel.name="VisualLabPanel";root_ui.add_child(_panel)
  _panel.set_anchors_and_offsets_preset(Control.PRESET_TOP_RIGHT);_panel.anchor_bottom=1.;_panel.offset_left=-530;_panel.offset_right=-20;_panel.offset_top=20;_panel.offset_bottom=-20
@@ -266,7 +268,7 @@ func set_panel_open(open:bool)->void:
   _player.set_physics_process(false);_player.set_process_unhandled_input(false);_player.capture_mouse(false)
   _player.velocity=Vector3.ZERO;_panel.show();_launcher.hide()
  else:
-  _panel.hide();_launcher.show();_player.set_physics_process(_prior_physics);_player.set_process_unhandled_input(_prior_input);_player.capture_mouse(_prior_capture)
+  _panel.hide();_launcher.hide();_player.set_physics_process(_prior_physics);_player.set_process_unhandled_input(_prior_input);_player.capture_mouse(_prior_capture)
   get_viewport().gui_release_focus()
 
 func _input(event:InputEvent)->void:

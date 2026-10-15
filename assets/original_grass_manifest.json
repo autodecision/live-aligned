@@ -1,0 +1,20 @@
+{
+  "provenance": "Original mathematical geometry and vertex colors; no external inputs",
+  "generator": "tools/build_original_grass.py",
+  "textures": 0,
+  "materials": 1,
+  "meshes": {
+    "LA_Grass_ShortSward": {
+      "vertices": 140,
+      "triangles": 120
+    },
+    "LA_Grass_MeadowTuft": {
+      "vertices": 126,
+      "triangles": 108
+    },
+    "LA_Grass_DrySeedHead": {
+      "vertices": 303,
+      "triangles": 354
+    }
+  }
+}

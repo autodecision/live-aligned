@@ -2,10 +2,13 @@ extends Node3D
 ## Small terrain additions and imported-material corrections, kept separate from the map.
 const BANKS=preload("res://assets/bridge_landing_banks.glb")
 const MANIFEST="res://assets/island_site_repairs.json"
+const APPROACH_TERRAIN=preload("res://assets/bridge_approach_terrain.glb")
+const APPROACH_REPAIRS="res://assets/bridge_approach_repairs.json"
 var moved_trees:Array=[]
 var repaired_rocks:Array=[]
 func _ready()->void:
  var data:Variant=JSON.parse_string(FileAccess.get_file_as_string(MANIFEST));var map=get_parent().get_node("TempleMap")
+ _install_bridge_approaches(map)
  for row in data.trees:
   var tree=map.get_node_or_null(NodePath(row.name));assert(tree,"Missing relocated tree "+row.name)
   tree.position=Vector3(row.position[0],row.position[1],row.position[2]);moved_trees.append(tree)
@@ -29,3 +32,20 @@ func _ready()->void:
   var body:=StaticBody3D.new();body.name="BankCollision";mesh.add_child(body)
   var collider:=CollisionShape3D.new();collider.shape=mesh.mesh.create_trimesh_shape();body.add_child(collider)
  print("ISLAND_SITE_REPAIRS ",moved_trees.size()," approach trees, ",repaired_rocks.size()," weathered rocks, 3 full-width landing banks")
+
+func _install_bridge_approaches(map:Node3D)->void:
+ # Reuse the original node, shader hooks and collision hierarchy. Only this
+ # terrain mesh is exported from Blender; the optimized base map is preserved.
+ var source:Node3D=APPROACH_TERRAIN.instantiate()
+ var meshes:=source.find_children("*","MeshInstance3D",true,false)
+ assert(meshes.size()==1,"Expected one scoped bridge approach terrain mesh")
+ var terrain:MeshInstance3D=map.get_node("Cliff_Terrain")
+ terrain.mesh=meshes[0].mesh
+ var shapes:=terrain.find_children("*","CollisionShape3D",true,false)
+ assert(shapes.size()==1,"Expected the existing terrain collider")
+ shapes[0].shape=terrain.mesh.create_trimesh_shape()
+ source.free()
+ var repair:Variant=JSON.parse_string(FileAccess.get_file_as_string(APPROACH_REPAIRS))
+ for row in repair.grounded_props:
+  var prop:Node3D=map.get_node(NodePath(row.name))
+  prop.position=Vector3(row.position[0],row.position[1],row.position[2])

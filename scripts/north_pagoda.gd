@@ -2,12 +2,14 @@ extends Node3D
 ## Independent, batched landmark and island addition; all collision stays simple.
 const MODEL=preload("res://assets/north_pagoda.glb")
 const PLAN="res://assets/north_pagoda.json"
+const SIDEWALK_GROUND=preload("res://assets/pagoda_sidewalk_terrain.glb")
 var lights:Array[OmniLight3D]=[]
 var glow:StandardMaterial3D
 var plan:Dictionary
 func vector(a:Array)->Vector3:return Vector3(a[0],a[2],-a[1])
 func _ready()->void:
  plan=JSON.parse_string(FileAccess.get_file_as_string(PLAN))
+ _install_sidewalk_ground()
  var model:Node3D=MODEL.instantiate();add_child(model)
  var ground:=ShaderMaterial.new();ground.shader=load("res://shaders/island_ground.gdshader");ground.set_shader_parameter("meadow_texture",load("res://assets/textures/rocky_terrain_02_Diffuse_2k.jpg"))
  for mesh in model.find_children("*","MeshInstance3D",true,false):
@@ -51,6 +53,24 @@ func _ready()->void:
  var transform_world:=Transform3D(Basis.from_scale(Vector3(sx,1,sz)),Vector3(bounds.position.x*(1-sx),0,bounds.end.z*(1-sz)))
  sea.global_transform=transform_world*sea.global_transform
  print("NORTH_PAGODA 3 accessible floors; two spiral flights, cleared stone path, ",lights.size()," night lanterns")
+func _install_sidewalk_ground()->void:
+ var source:Node3D=SIDEWALK_GROUND.instantiate()
+ for mesh in source.find_children("*","MeshInstance3D",true,false):
+  var target:MeshInstance3D
+  if String(mesh.name).begins_with("Sidewalk_Distant_Islands"):
+   target=get_parent().get_node("TempleMap/Distant_Islands")
+  elif String(mesh.name).begins_with("Sidewalk_Landing_Bank_Main_North"):
+   for candidate in get_parent().get_node("IslandSiteRepairs").find_children("Landing_Bank_Main_North","MeshInstance3D",true,false):target=candidate
+  assert(target!=null,"Missing sidewalk ground target "+mesh.name)
+  target.mesh=mesh.mesh
+  var shapes:=target.find_children("*","CollisionShape3D",true,false)
+  assert(shapes.size()==1,"Expected the existing sidewalk ground collider")
+  shapes[0].shape=target.mesh.create_trimesh_shape()
+ source.free()
+ var repair:Variant=JSON.parse_string(FileAccess.get_file_as_string("res://assets/pagoda_sidewalk_repairs.json"))
+ for row in repair.grounded_props:
+  var prop:Node3D=get_parent().get_node("TempleMap/"+row.name)
+  prop.position=Vector3(row.position[0],row.position[1],row.position[2])
 func set_night_strength(value:float)->void:
  if glow:glow.emission_energy_multiplier=lerpf(.03,3.4,clampf(value,0,1))
  for light in lights:light.light_energy=1.5*value;light.visible=value>.001

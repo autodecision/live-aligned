@@ -1,0 +1,122 @@
+{
+  "graded_vertices": {
+    "Distant_Islands": 1612,
+    "Landing_Bank_Main_North": 984,
+    "North_Pagoda_Pagoda_Meadow_Ground": 673
+  },
+  "grounded_props": [
+    {
+      "name": "Island_North_Olive_01",
+      "blender_position": [
+        64.30060577392578,
+        39.4349250793457,
+        4.894764423370361
+      ],
+      "position": [
+        64.30060577392578,
+        4.894764423370361,
+        -39.4349250793457
+      ]
+    },
+    {
+      "name": "Island_North_Olive_02",
+      "blender_position": [
+        67.69999694824219,
+        44.75,
+        5.646055221557617
+      ],
+      "position": [
+        67.69999694824219,
+        5.646055221557617,
+        -44.75
+      ]
+    },
+    {
+      "name": "Island_North_Olive_06",
+      "blender_position": [
+        72.33858489990234,
+        45.261741638183594,
+        5.679244518280029
+      ],
+      "position": [
+        72.33858489990234,
+        5.679244518280029,
+        -45.261741638183594
+      ]
+    },
+    {
+      "name": "Island_North_Olive_07",
+      "blender_position": [
+        56.56360626220703,
+        44.99643325805664,
+        4.552834987640381
+      ],
+      "position": [
+        56.56360626220703,
+        4.552834987640381,
+        -44.99643325805664
+      ]
+    },
+    {
+      "name": "Island_North_Olive_13",
+      "blender_position": [
+        64.5,
+        44.0,
+        5.063784599304199
+      ],
+      "position": [
+        64.5,
+        5.063784599304199,
+        -44.0
+      ]
+    },
+    {
+      "name": "Island_North_Olive_14",
+      "blender_position": [
+        72.98084259033203,
+        39.73407745361328,
+        4.962143421173096
+      ],
+      "position": [
+        72.98084259033203,
+        4.962143421173096,
+        -39.73407745361328
+      ]
+    },
+    {
+      "name": "Island_North_Olive_16",
+      "blender_position": [
+        77.86041259765625,
+        48.34971618652344,
+        4.314558506011963
+      ],
+      "position": [
+        77.86041259765625,
+        4.314558506011963,
+        -48.34971618652344
+      ]
+    },
+    {
+      "name": "Large_Rock_North_04",
+      "blender_position": [
+        75.11509704589844,
+        47.85854721069336,
+        5.737773895263672
+      ],
+      "position": [
+        75.11509704589844,
+        5.737773895263672,
+        -47.85854721069336
+      ]
+    }
+  ],
+  "reseated_lamps": [
+    "Coastal_Lantern_North_01",
+    "Coastal_Lantern_North_05"
+  ],
+  "grass_reseated_before_clearing": 1873,
+  "top_triangles": 440,
+  "slab_thickness": 0.18,
+  "bridge_landings": 2,
+  "uniform_riser_uvs": true
+}

@@ -2,9 +2,21 @@
   "note": "Inventory only. No asset download credentials or private URLs. Restore only from an authorized local copy.",
   "files": [
     {
+      "path": "assets/bridge_approach_repairs.json",
+      "included_in_public_source": true,
+      "bytes": 2736,
+      "sha256": "58a3ccd1bdc1cc2f4b7f4cee7cb08c0086fc8114e1b51e50bd1cb738a5fa5cc0"
+    },
+    {
+      "path": "assets/bridge_approach_terrain.glb",
+      "included_in_public_source": false,
+      "bytes": 1330352,
+      "sha256": "74d937da33ba058b540dba570108be86a8ed7576fb20f6cdb9834baf2dffeffa"
+    },
+    {
       "path": "assets/bridge_landing_banks.glb",
-      "bytes": 126636,
-      "sha256": "62b4f5017fa5702b5c9af914fd7de23d4f85291ca16a24e9865dcaf911602ca3",
+      "bytes": 126652,
+      "sha256": "0e98eb3d4db2709f55d45074e4279a56131fa77f7ed706d6fa3a0428952c1c57",
       "included_in_public_source": false
     },
     {
@@ -20,63 +32,21 @@
       "included_in_public_source": false
     },
     {
-      "path": "assets/gscatter_ground_cover.glb",
-      "bytes": 9785632,
-      "sha256": "8b181106b4dcc4be5fc5dad45c628be8ef6c0b458b0393a35cfd969e0f3ec01c",
-      "included_in_public_source": false
-    },
-    {
-      "path": "assets/gscatter_ground_cover_BromusSterilis_x0460_Albedo_8bit_16384ppm-BromusSterilis_x0460_Opacity_8bit_16384ppm.png",
-      "bytes": 2489421,
-      "sha256": "0d4629612f7818d05a0d8569dba64fdde33ff5af62bc35944d6decfd10287673",
-      "included_in_public_source": false
-    },
-    {
-      "path": "assets/gscatter_ground_cover_BromusSterilis_x0460_NormalOpenGL_8bit_16384ppm.png",
-      "bytes": 1248172,
-      "sha256": "9d0e17c378959e8516bdc2cd1650a24e47101f61231cbaf6b1fe3c496ee84754",
-      "included_in_public_source": false
-    },
-    {
-      "path": "assets/gscatter_ground_cover_LoliumPerenne_a2cxi_Albedo_8bit_16384ppm-LoliumPerenne_a2cxi_Opacity_8bit_16384ppm.png",
-      "bytes": 1788023,
-      "sha256": "116dd8dabc392369cca21214444d855a64bae1c65d6f5cd79ca4fc30222277c2",
-      "included_in_public_source": false
-    },
-    {
-      "path": "assets/gscatter_ground_cover_LoliumPerenne_a2cxi_NormalOpenGL_8bit_16384ppm.png",
-      "bytes": 978311,
-      "sha256": "98f8193cae7a6ddaa48fd379c3166f894d180faae81382bc17f7dc8b0cf29511",
-      "included_in_public_source": false
-    },
-    {
-      "path": "assets/gscatter_ground_cover_TrisetumFlavescens_s58ic_Albedo_8bit_16384ppm-TrisetumFlavescens_s58ic_Opacity_8bit_16384ppm.png",
-      "bytes": 1894412,
-      "sha256": "1edbf559c7922834d0277c5ef53b8291005210531a37c68cb4aba21389fb9230",
-      "included_in_public_source": false
-    },
-    {
-      "path": "assets/gscatter_ground_cover_TrisetumFlavescens_s58ic_NormalOpenGL_8bit_16384ppm.png",
-      "bytes": 1037711,
-      "sha256": "3f6989912f2c0b70488bf191998d9b891de58bc3757aacc5141961738aa8c4da",
-      "included_in_public_source": false
-    },
-    {
       "path": "assets/gscatter_ground_cover_instances.json",
-      "bytes": 13849700,
-      "sha256": "63450e0c86a5475b2ebf9b96c010119ab64d21d51262078d3e247b6c2538268e",
+      "bytes": 13641986,
+      "sha256": "2a5cba53663ba3e81b3f479115100125b177931f6a2dacb7cbf622a7361fb30b",
       "included_in_public_source": true
     },
     {
       "path": "assets/island_bridges.glb",
-      "bytes": 3329268,
-      "sha256": "ef67edf2f96bb28bf7303a40024246dd80f4cec9966f87560ccafd702172ef02",
+      "bytes": 3348592,
+      "sha256": "2b2ba7eeaea8feb365bcc318cfcbfa534738cb8422f78ba7d01ed66bbfb2c369",
       "included_in_public_source": false
     },
     {
       "path": "assets/island_bridges.json",
-      "bytes": 71058,
-      "sha256": "78aa8d26d9e511dc36b2d309a9b4d178c513b74160af89269c106a9cd8d257d9",
+      "bytes": 71677,
+      "sha256": "114c4b4b12446877d3fff2d4ea938100bb2f01f241c88b6adc98d5b296fec7d8",
       "included_in_public_source": true
     },
     {
@@ -93,8 +63,8 @@
     },
     {
       "path": "assets/island_lantern_positions.json",
-      "bytes": 16993,
-      "sha256": "75d246148b8fbb47941965476ea8a60bf584cc6267204552e04759755fccb68a",
+      "bytes": 17001,
+      "sha256": "9abe5768254812bb4014351b4bcc0e910d2f6e2c9ad3d8f6f6842021f03e1c36",
       "included_in_public_source": true
     },
     {
@@ -102,6 +72,12 @@
       "bytes": 1921,
       "sha256": "1ee58732361b94770f00a2884544854908137278afe9fd389c766e85f35cd025",
       "included_in_public_source": true
+    },
+    {
+      "path": "assets/mediterranean_temple.blend",
+      "bytes": 201098936,
+      "sha256": "bb2bfe18878415ef6e1837c0b3971126d8ad4a0c8ee933aeeb06c0d4af568db3",
+      "included_in_public_source": false
     },
     {
       "path": "assets/mediterranean_temple.glb",
@@ -369,20 +345,20 @@
     },
     {
       "path": "assets/north_pagoda.glb",
-      "bytes": 9435052,
-      "sha256": "2f3c505cac09ab03e341d49a7d28221c4ea7c889479202c56700fb4146c15e0a",
+      "bytes": 9467888,
+      "sha256": "8ea4f44b2ebf6af123df9feb04c9695f760b1eedaad421b782ea409275058818",
       "included_in_public_source": false
     },
     {
       "path": "assets/north_pagoda.json",
-      "bytes": 793067,
-      "sha256": "b83864419f877c7aa67031d22724cdf4f0c8c5c6077b96f55b440220a06457f9",
+      "bytes": 912291,
+      "sha256": "92f912f616eaaaff364b5e39f34d206a3ade2070029568823255c678c0b7d9da",
       "included_in_public_source": true
     },
     {
       "path": "assets/north_pagoda_cover.json",
-      "bytes": 607997,
-      "sha256": "6ef50558da3a93e7eaf18322da9136e4e211f5248021998424b3330c86fcf07b",
+      "bytes": 604919,
+      "sha256": "a96956ccbc56144ada2492060aaead20d4a806f0f7ae1253948ceb452b1b13ec",
       "included_in_public_source": true
     },
     {
@@ -408,6 +384,24 @@
       "bytes": 6543147,
       "sha256": "7832ea0c5a2ffbd0da8667f35ec51116151f0b2985ff556d59920ee93a659a9b",
       "included_in_public_source": false
+    },
+    {
+      "path": "assets/original_grass.glb",
+      "bytes": 54440,
+      "sha256": "4afb6a86c196234e2fd8d78598980c813ce57807b7ed107db1af14c39cac1f40",
+      "included_in_public_source": false
+    },
+    {
+      "path": "assets/pagoda_sidewalk_repairs.json",
+      "included_in_public_source": true,
+      "bytes": 2547,
+      "sha256": "f31dca7b35e6bea358dbf6f76b9b28113d7f5dd468295c0f3cfee7dd9a072b25"
+    },
+    {
+      "path": "assets/pagoda_sidewalk_terrain.glb",
+      "included_in_public_source": false,
+      "bytes": 419284,
+      "sha256": "52051800dd0b4ed7847ef6bb9b2bebd6792be8813800f3ca986640c3145713ea"
     },
     {
       "path": "assets/temple_static_occlusion.scn",
