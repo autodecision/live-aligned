@@ -1,0 +1,776 @@
+[
+  {
+    "name": "Coastal_Lantern_Main_02",
+    "island": "Main",
+    "blender_position": [
+      -4.75,
+      -21.75,
+      3.230970001220703
+    ],
+    "position": [
+      -4.75,
+      3.230970001220703,
+      21.75
+    ],
+    "yaw": 0.7,
+    "footprint_height_range": 0.14951324462890625,
+    "maximum_base_gap": -0.025
+  },
+  {
+    "name": "Coastal_Lantern_Main_03",
+    "island": "Main",
+    "blender_position": [
+      11.0,
+      18.5,
+      1.4359222412109376
+    ],
+    "position": [
+      11.0,
+      1.4359222412109376,
+      -18.5
+    ],
+    "yaw": 1.4,
+    "footprint_height_range": 0.17995452880859375,
+    "maximum_base_gap": -0.025
+  },
+  {
+    "name": "Coastal_Lantern_Main_04",
+    "island": "Main",
+    "blender_position": [
+      10.5,
+      30.75,
+      2.7210060119628907
+    ],
+    "position": [
+      10.5,
+      2.7210060119628907,
+      -30.75
+    ],
+    "yaw": 2.0999999999999996,
+    "footprint_height_range": 0.037265777587890625,
+    "maximum_base_gap": -0.025
+  },
+  {
+    "name": "Coastal_Lantern_Main_05",
+    "island": "Main",
+    "blender_position": [
+      -2.0,
+      16.25,
+      3.528825378417969
+    ],
+    "position": [
+      -2.0,
+      3.528825378417969,
+      -16.25
+    ],
+    "yaw": 2.8,
+    "footprint_height_range": 0.01013946533203125,
+    "maximum_base_gap": -0.025
+  },
+  {
+    "name": "Coastal_Lantern_Main_06",
+    "island": "Main",
+    "blender_position": [
+      -10.75,
+      16.5,
+      3.4598289489746095
+    ],
+    "position": [
+      -10.75,
+      3.4598289489746095,
+      -16.5
+    ],
+    "yaw": 3.5,
+    "footprint_height_range": 0.15113449096679688,
+    "maximum_base_gap": -0.025
+  },
+  {
+    "name": "Coastal_Lantern_Main_07",
+    "island": "Main",
+    "blender_position": [
+      -16.0,
+      10.5,
+      3.0636001586914063
+    ],
+    "position": [
+      -16.0,
+      3.0636001586914063,
+      -10.5
+    ],
+    "yaw": 4.199999999999999,
+    "footprint_height_range": 0.09495162963867188,
+    "maximum_base_gap": -0.025
+  },
+  {
+    "name": "Coastal_Lantern_Main_08",
+    "island": "Main",
+    "blender_position": [
+      -21.5,
+      1.5,
+      5.956342315673828
+    ],
+    "position": [
+      -21.5,
+      5.956342315673828,
+      -1.5
+    ],
+    "yaw": 4.8999999999999995,
+    "footprint_height_range": 0.1587066650390625,
+    "maximum_base_gap": -0.025
+  },
+  {
+    "name": "Coastal_Lantern_Main_09",
+    "island": "Main",
+    "blender_position": [
+      -15.5,
+      -8.0,
+      3.7057395935058595
+    ],
+    "position": [
+      -15.5,
+      3.7057395935058595,
+      8.0
+    ],
+    "yaw": 5.6,
+    "footprint_height_range": 0.14144134521484375,
+    "maximum_base_gap": -0.025
+  },
+  {
+    "name": "Coastal_Lantern_Main_10",
+    "island": "Main",
+    "blender_position": [
+      -25.0,
+      -18.0,
+      0.5731101989746094
+    ],
+    "position": [
+      -25.0,
+      0.5731101989746094,
+      18.0
+    ],
+    "yaw": 0.01681469282041359,
+    "footprint_height_range": 0.1161041259765625,
+    "maximum_base_gap": -0.025
+  },
+  {
+    "name": "Coastal_Lantern_Main_11",
+    "island": "Main",
+    "blender_position": [
+      -34.0,
+      17.25,
+      10.928369140625
+    ],
+    "position": [
+      -34.0,
+      10.928369140625,
+      -17.25
+    ],
+    "yaw": 0.7168146928204138,
+    "footprint_height_range": 0.16295623779296875,
+    "maximum_base_gap": -0.025
+  },
+  {
+    "name": "Coastal_Lantern_Main_12",
+    "island": "Main",
+    "blender_position": [
+      -20.5,
+      31.75,
+      13.077439880371093
+    ],
+    "position": [
+      -20.5,
+      13.077439880371093,
+      -31.75
+    ],
+    "yaw": 1.416814692820413,
+    "footprint_height_range": 0.17988967895507812,
+    "maximum_base_gap": -0.025
+  },
+  {
+    "name": "Coastal_Lantern_Main_13",
+    "island": "Main",
+    "blender_position": [
+      -3.5,
+      36.0,
+      11.390718078613281
+    ],
+    "position": [
+      -3.5,
+      11.390718078613281,
+      -36.0
+    ],
+    "yaw": 2.1168146928204123,
+    "footprint_height_range": 0.0612335205078125,
+    "maximum_base_gap": -0.025
+  },
+  {
+    "name": "Coastal_Lantern_Main_14",
+    "island": "Main",
+    "blender_position": [
+      22.45,
+      22.25,
+      1.89022216796875
+    ],
+    "position": [
+      22.45,
+      1.89022216796875,
+      -22.25
+    ],
+    "yaw": 2.8168146928204134,
+    "footprint_height_range": 0.1248626708984375,
+    "maximum_base_gap": -0.025,
+    "adjustment": "Moved 1.25m toward Main_Island_Olive_36"
+  },
+  {
+    "name": "Coastal_Lantern_North_01",
+    "island": "North",
+    "blender_position": [
+      57.75,
+      37.25,
+      5.072007751464843
+    ],
+    "position": [
+      57.75,
+      5.072007751464843,
+      -37.25
+    ],
+    "yaw": 0.0,
+    "footprint_height_range": 0.16948318481445312,
+    "maximum_base_gap": -0.025
+  },
+  {
+    "name": "Coastal_Lantern_North_03",
+    "island": "North",
+    "blender_position": [
+      57.5,
+      55.5,
+      9.033967590332031
+    ],
+    "position": [
+      57.5,
+      9.033967590332031,
+      -55.5
+    ],
+    "yaw": 1.4,
+    "footprint_height_range": 0.16941452026367188,
+    "maximum_base_gap": -0.025
+  },
+  {
+    "name": "Coastal_Lantern_North_05",
+    "island": "North",
+    "blender_position": [
+      74.75,
+      43.75,
+      5.3790946960449215
+    ],
+    "position": [
+      74.75,
+      5.3790946960449215,
+      -43.75
+    ],
+    "yaw": 2.8,
+    "footprint_height_range": 0.10910415649414062,
+    "maximum_base_gap": -0.025
+  },
+  {
+    "name": "Coastal_Lantern_South_01",
+    "island": "South",
+    "blender_position": [
+      81.0,
+      -22.75,
+      5.403802490234375
+    ],
+    "position": [
+      81.0,
+      5.403802490234375,
+      22.75
+    ],
+    "yaw": 0.0,
+    "footprint_height_range": 0.15695571899414062,
+    "maximum_base_gap": -0.025
+  },
+  {
+    "name": "Coastal_Lantern_South_02",
+    "island": "South",
+    "blender_position": [
+      94.25,
+      -23.25,
+      4.751603698730468
+    ],
+    "position": [
+      94.25,
+      4.751603698730468,
+      23.25
+    ],
+    "yaw": 0.7,
+    "footprint_height_range": 0.15731430053710938,
+    "maximum_base_gap": -0.025
+  },
+  {
+    "name": "Coastal_Lantern_South_03",
+    "island": "South",
+    "blender_position": [
+      104.0,
+      -26.0,
+      1.1449790954589845
+    ],
+    "position": [
+      104.0,
+      1.1449790954589845,
+      26.0
+    ],
+    "yaw": 1.4,
+    "footprint_height_range": 0.17448043823242188,
+    "maximum_base_gap": -0.025
+  },
+  {
+    "name": "Coastal_Lantern_South_04",
+    "island": "South",
+    "blender_position": [
+      89.25,
+      -34.0,
+      1.1432777404785157
+    ],
+    "position": [
+      89.25,
+      1.1432777404785157,
+      34.0
+    ],
+    "yaw": 2.0999999999999996,
+    "footprint_height_range": 0.11995697021484375,
+    "maximum_base_gap": -0.025
+  },
+  {
+    "name": "Coastal_Lantern_Courtyard_01",
+    "island": "Main",
+    "blender_position": [
+      -5.95,
+      -11.3,
+      0.035
+    ],
+    "position": [
+      -5.95,
+      0.035,
+      11.3
+    ],
+    "yaw": 0.0,
+    "support_object": "Central_Stair_Courtyard",
+    "maximum_base_gap": -0.025
+  },
+  {
+    "name": "Coastal_Lantern_Courtyard_02",
+    "island": "Main",
+    "blender_position": [
+      1.0,
+      -11.3,
+      0.035
+    ],
+    "position": [
+      1.0,
+      0.035,
+      11.3
+    ],
+    "yaw": 0.0,
+    "support_object": "Central_Stair_Courtyard",
+    "maximum_base_gap": -0.025
+  },
+  {
+    "name": "Coastal_Lantern_Bridge_Main_North_01",
+    "island": "Bridge",
+    "bridge": "Main_North",
+    "support_bridge": "Main_North",
+    "bridge_distance": 2.5,
+    "blender_position": [
+      22.43718910217285,
+      34.30708312988281,
+      2.6765763759613037
+    ],
+    "position": [
+      22.43718910217285,
+      2.6765763759613037,
+      -34.30708312988281
+    ],
+    "yaw": 0.21866893940891044,
+    "maximum_base_gap": 0.0
+  },
+  {
+    "name": "Coastal_Lantern_Bridge_Main_North_02",
+    "island": "Bridge",
+    "bridge": "Main_North",
+    "support_bridge": "Main_North",
+    "bridge_distance": 11.045765985873693,
+    "blender_position": [
+      31.786012649536133,
+      31.631410598754883,
+      3.9792637825012207
+    ],
+    "position": [
+      31.786012649536133,
+      3.9792637825012207,
+      -31.631410598754883
+    ],
+    "yaw": 0.21866893940891044,
+    "maximum_base_gap": 0.0
+  },
+  {
+    "name": "Coastal_Lantern_Bridge_Main_North_03",
+    "island": "Bridge",
+    "bridge": "Main_North",
+    "support_bridge": "Main_North",
+    "bridge_distance": 19.591531971747386,
+    "blender_position": [
+      39.12172317504883,
+      38.01475524902344,
+      4.880013942718506
+    ],
+    "position": [
+      39.12172317504883,
+      4.880013942718506,
+      -38.01475524902344
+    ],
+    "yaw": 0.21866893940891044,
+    "maximum_base_gap": 0.0
+  },
+  {
+    "name": "Coastal_Lantern_Bridge_Main_North_04",
+    "island": "Bridge",
+    "bridge": "Main_North",
+    "support_bridge": "Main_North",
+    "bridge_distance": 28.13729795762108,
+    "blender_position": [
+      48.470542907714844,
+      35.339080810546875,
+      5.2616705894470215
+    ],
+    "position": [
+      48.470542907714844,
+      5.2616705894470215,
+      -35.339080810546875
+    ],
+    "yaw": 0.21866893940891044,
+    "maximum_base_gap": 0.0
+  },
+  {
+    "name": "Coastal_Lantern_Bridge_Main_North_05",
+    "island": "Bridge",
+    "bridge": "Main_North",
+    "support_bridge": "Main_North",
+    "bridge_distance": 36.68306394349477,
+    "blender_position": [
+      55.80625534057617,
+      41.72242736816406,
+      5.241389274597168
+    ],
+    "position": [
+      55.80625534057617,
+      5.241389274597168,
+      -41.72242736816406
+    ],
+    "yaw": 0.21866893940891044,
+    "maximum_base_gap": 0.0
+  },
+  {
+    "name": "Coastal_Lantern_Bridge_Main_South_01",
+    "island": "Bridge",
+    "bridge": "Main_South",
+    "support_bridge": "Main_South",
+    "bridge_distance": 2.5,
+    "blender_position": [
+      3.1649973392486572,
+      -13.521577835083008,
+      1.9819170236587524
+    ],
+    "position": [
+      3.1649973392486572,
+      1.9819170236587524,
+      13.521577835083008
+    ],
+    "yaw": -0.07414952984848297,
+    "maximum_base_gap": 0.0
+  },
+  {
+    "name": "Coastal_Lantern_Bridge_Main_South_02",
+    "island": "Bridge",
+    "bridge": "Main_South",
+    "support_bridge": "Main_South",
+    "bridge_distance": 11.745873350151822,
+    "blender_position": [
+      12.041728973388672,
+      -18.833778381347656,
+      2.831005811691284
+    ],
+    "position": [
+      12.041728973388672,
+      2.831005811691284,
+      18.833778381347656
+    ],
+    "yaw": -0.07414952984848297,
+    "maximum_base_gap": 0.0
+  },
+  {
+    "name": "Coastal_Lantern_Bridge_Main_South_03",
+    "island": "Bridge",
+    "bridge": "Main_South",
+    "support_bridge": "Main_South",
+    "bridge_distance": 20.991746700303644,
+    "blender_position": [
+      21.605937957763672,
+      -14.891475677490234,
+      3.6107888221740723
+    ],
+    "position": [
+      21.605937957763672,
+      3.6107888221740723,
+      14.891475677490234
+    ],
+    "yaw": -0.07414952984848297,
+    "maximum_base_gap": 0.0
+  },
+  {
+    "name": "Coastal_Lantern_Bridge_Main_South_04",
+    "island": "Bridge",
+    "bridge": "Main_South",
+    "support_bridge": "Main_South",
+    "bridge_distance": 30.237620050455465,
+    "blender_position": [
+      30.4826602935791,
+      -20.20367431640625,
+      4.276508808135986
+    ],
+    "position": [
+      30.4826602935791,
+      4.276508808135986,
+      20.20367431640625
+    ],
+    "yaw": -0.07414952984848297,
+    "maximum_base_gap": 0.0
+  },
+  {
+    "name": "Coastal_Lantern_Bridge_Main_South_05",
+    "island": "Bridge",
+    "bridge": "Main_South",
+    "support_bridge": "Main_South",
+    "bridge_distance": 39.48349340060729,
+    "blender_position": [
+      40.046871185302734,
+      -16.261375427246094,
+      4.798670291900635
+    ],
+    "position": [
+      40.046871185302734,
+      4.798670291900635,
+      16.261375427246094
+    ],
+    "yaw": -0.07414952984848297,
+    "maximum_base_gap": 0.0
+  },
+  {
+    "name": "Coastal_Lantern_Bridge_Main_South_06",
+    "island": "Bridge",
+    "bridge": "Main_South",
+    "support_bridge": "Main_South",
+    "bridge_distance": 48.72936675075911,
+    "blender_position": [
+      48.92359161376953,
+      -21.57357406616211,
+      5.166980266571045
+    ],
+    "position": [
+      48.92359161376953,
+      5.166980266571045,
+      21.57357406616211
+    ],
+    "yaw": -0.07414952984848297,
+    "maximum_base_gap": 0.0
+  },
+  {
+    "name": "Coastal_Lantern_Bridge_Main_South_07",
+    "island": "Bridge",
+    "bridge": "Main_South",
+    "support_bridge": "Main_South",
+    "bridge_distance": 57.97524010091093,
+    "blender_position": [
+      58.48780822753906,
+      -17.631271362304688,
+      5.391730785369873
+    ],
+    "position": [
+      58.48780822753906,
+      5.391730785369873,
+      17.631271362304688
+    ],
+    "yaw": -0.07414952984848297,
+    "maximum_base_gap": 0.0
+  },
+  {
+    "name": "Coastal_Lantern_Bridge_Main_South_08",
+    "island": "Bridge",
+    "bridge": "Main_South",
+    "support_bridge": "Main_South",
+    "bridge_distance": 67.22111345106275,
+    "blender_position": [
+      67.36453247070312,
+      -22.943471908569336,
+      5.5024189949035645
+    ],
+    "position": [
+      67.36453247070312,
+      5.5024189949035645,
+      22.943471908569336
+    ],
+    "yaw": -0.07414952984848297,
+    "maximum_base_gap": 0.0
+  },
+  {
+    "name": "Coastal_Lantern_Bridge_Main_South_09",
+    "island": "Bridge",
+    "bridge": "Main_South",
+    "support_bridge": "Main_South",
+    "bridge_distance": 76.46698680121457,
+    "blender_position": [
+      76.9287338256836,
+      -19.001171112060547,
+      5.543802261352539
+    ],
+    "position": [
+      76.9287338256836,
+      5.543802261352539,
+      19.001171112060547
+    ],
+    "yaw": -0.07414952984848297,
+    "maximum_base_gap": 0.0
+  },
+  {
+    "name": "Coastal_Lantern_Bridge_North_South_01",
+    "island": "Bridge",
+    "bridge": "North_South",
+    "support_bridge": "North_South",
+    "bridge_distance": 2.5,
+    "blender_position": [
+      73.16853332519531,
+      37.98518753051758,
+      5.328914165496826
+    ],
+    "position": [
+      73.16853332519531,
+      5.328914165496826,
+      -37.98518753051758
+    ],
+    "yaw": -1.2919323521299537,
+    "maximum_base_gap": 0.0
+  },
+  {
+    "name": "Coastal_Lantern_Bridge_North_South_02",
+    "island": "Bridge",
+    "bridge": "North_South",
+    "support_bridge": "North_South",
+    "bridge_distance": 11.808456586487416,
+    "blender_position": [
+      71.27005767822266,
+      27.75910758972168,
+      5.666927814483643
+    ],
+    "position": [
+      71.27005767822266,
+      5.666927814483643,
+      -27.75910758972168
+    ],
+    "yaw": -1.2919323521299537,
+    "maximum_base_gap": 0.0
+  },
+  {
+    "name": "Coastal_Lantern_Bridge_North_South_03",
+    "island": "Bridge",
+    "bridge": "North_South",
+    "support_bridge": "North_South",
+    "bridge_distance": 21.116913172974833,
+    "blender_position": [
+      78.2930908203125,
+      20.087472915649414,
+      5.855772018432617
+    ],
+    "position": [
+      78.2930908203125,
+      5.855772018432617,
+      -20.087472915649414
+    ],
+    "yaw": -1.2919323521299537,
+    "maximum_base_gap": 0.0
+  },
+  {
+    "name": "Coastal_Lantern_Bridge_North_South_04",
+    "island": "Bridge",
+    "bridge": "North_South",
+    "support_bridge": "North_South",
+    "bridge_distance": 30.425369759462246,
+    "blender_position": [
+      76.39462280273438,
+      9.861388206481934,
+      5.813602924346924
+    ],
+    "position": [
+      76.39462280273438,
+      5.813602924346924,
+      -9.861388206481934
+    ],
+    "yaw": -1.2919323521299537,
+    "maximum_base_gap": 0.0
+  },
+  {
+    "name": "Coastal_Lantern_Bridge_North_South_05",
+    "island": "Bridge",
+    "bridge": "North_South",
+    "support_bridge": "North_South",
+    "bridge_distance": 39.733826345949666,
+    "blender_position": [
+      83.41765594482422,
+      2.1897506713867188,
+      5.5109100341796875
+    ],
+    "position": [
+      83.41765594482422,
+      5.5109100341796875,
+      -2.1897506713867188
+    ],
+    "yaw": -1.2919323521299537,
+    "maximum_base_gap": 0.0
+  },
+  {
+    "name": "Coastal_Lantern_Bridge_North_South_06",
+    "island": "Bridge",
+    "bridge": "North_South",
+    "support_bridge": "North_South",
+    "bridge_distance": 49.04228293243708,
+    "blender_position": [
+      81.51918029785156,
+      -8.036330223083496,
+      4.977204322814941
+    ],
+    "position": [
+      81.51918029785156,
+      4.977204322814941,
+      8.036330223083496
+    ],
+    "yaw": -1.2919323521299537,
+    "maximum_base_gap": 0.0
+  },
+  {
+    "name": "Coastal_Lantern_Bridge_North_South_07",
+    "island": "Bridge",
+    "bridge": "North_South",
+    "support_bridge": "North_South",
+    "bridge_distance": 58.35073951892449,
+    "blender_position": [
+      88.54222106933594,
+      -15.707968711853027,
+      4.294328689575195
+    ],
+    "position": [
+      88.54222106933594,
+      4.294328689575195,
+      15.707968711853027
+    ],
+    "yaw": -1.2919323521299537,
+    "maximum_base_gap": 0.0
+  }
+]

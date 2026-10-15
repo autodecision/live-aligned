@@ -1,0 +1,112 @@
+[gd_scene load_steps=18 format=3 uid="uid://dfqm251m3t1a"]
+
+[ext_resource type="PackedScene" uid="uid://b4k11dpddqmu6" path="res://assets/mediterranean_temple.glb" id="1_temple"]
+[ext_resource type="PackedScene" uid="uid://bvyqm14m3c6e" path="res://scenes/player.tscn" id="2_player"]
+
+[ext_resource type="Script" path="res://scripts/island_ground_cover.gd" id="3_ground_cover"]
+
+[ext_resource type="Script" path="res://scripts/animated_water.gd" id="4_water"]
+
+[ext_resource type="Script" path="res://scripts/scene_render_optimization.gd" id="5_render_optimization"]
+
+[ext_resource type="PackedScene" path="res://assets/temple_static_occlusion.scn" id="6_occlusion"]
+
+[ext_resource type="Script" path="res://scripts/visual_lab.gd" id="7_visual_lab"]
+
+[ext_resource type="Script" path="res://scripts/island_lanterns.gd" id="8_lanterns"]
+
+[ext_resource type="Script" path="res://scripts/day_night_cycle.gd" id="9_clock"]
+
+[ext_resource type="Script" path="res://scripts/island_bridges.gd" id="10_bridges"]
+
+[ext_resource type="Script" path="res://scripts/island_site_repairs.gd" id="11_site_repairs"]
+
+[ext_resource type="Script" path="res://scripts/north_pagoda.gd" id="12_pagoda"]
+
+[sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_med"]
+sky_top_color = Color(0.2, 0.52, 0.95, 1)
+sky_horizon_color = Color(0.72, 0.85, 0.98, 1)
+sky_curve = 0.12
+ground_bottom_color = Color(0.12, 0.22, 0.32, 1)
+ground_horizon_color = Color(0.68, 0.82, 0.95, 1)
+sun_angle_max = 35.0
+
+[sub_resource type="Sky" id="Sky_med"]
+sky_material = SubResource("ProceduralSkyMaterial_med")
+
+[sub_resource type="Environment" id="Environment_med"]
+background_mode = 2
+sky = SubResource("Sky_med")
+ambient_light_source = 3
+ambient_light_color = Color(0.85, 0.92, 1, 1)
+ambient_light_energy = 0.6
+tonemap_mode = 3
+tonemap_exposure = 1.05
+ssr_enabled = false
+ssao_enabled = false
+ssao_radius = 1.0
+ssao_intensity = 1.0
+ssao_power = 1.5
+glow_enabled = true
+glow_intensity = 0.2
+fog_enabled = true
+fog_light_color = Color(0.7, 0.82, 0.95, 1)
+fog_density = 0.001
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_stair_ramp"]
+size = Vector3(4.4, 0.2, 9.6)
+
+[node name="Main" type="Node3D"]
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="."]
+environment = SubResource("Environment_med")
+
+[node name="MediterraneanSun" type="DirectionalLight3D" parent="."]
+transform = Transform3D(0.866025, -0.286788, 0.409576, 0, 0.819152, 0.573576, -0.5, -0.496732, 0.709406, 0, 30, 0)
+light_color = Color(1, 0.96, 0.88, 1)
+light_energy = 1.4
+shadow_enabled = true
+shadow_bias = 0.03
+directional_shadow_mode = 1
+directional_shadow_max_distance = 80.0
+directional_shadow_blend_splits = true
+
+[node name="TempleMap" parent="." instance=ExtResource("1_temple")]
+
+[node name="StairCollisionRamp" type="StaticBody3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 0.876727, -0.480989, 0, 0.480989, 0.876727, -3.5, 2.3, 5.1)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="StairCollisionRamp"]
+shape = SubResource("BoxShape3D_stair_ramp")
+
+[node name="Player" parent="." instance=ExtResource("2_player")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3.5, 1.2, 12.0)
+
+[node name="IslandSiteRepairs" type="Node3D" parent="."]
+script = ExtResource("11_site_repairs")
+
+[node name="IslandBridges" type="Node3D" parent="."]
+script = ExtResource("10_bridges")
+
+[node name="NorthPagoda" type="Node3D" parent="."]
+script = ExtResource("12_pagoda")
+
+[node name="IslandGroundCover" type="Node3D" parent="."]
+script = ExtResource("3_ground_cover")
+
+[node name="AnimatedWater" type="Node3D" parent="."]
+script = ExtResource("4_water")
+
+[node name="RenderOptimization" type="Node3D" parent="."]
+script = ExtResource("5_render_optimization")
+
+[node name="StaticOcclusion" parent="." instance=ExtResource("6_occlusion")]
+
+[node name="VisualLab" type="CanvasLayer" parent="."]
+script = ExtResource("7_visual_lab")
+
+[node name="IslandLanterns" type="Node3D" parent="."]
+script = ExtResource("8_lanterns")
+
+[node name="DayNightCycle" type="Node3D" parent="."]
+script = ExtResource("9_clock")

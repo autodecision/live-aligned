@@ -1,0 +1,923 @@
+{
+  "note": "Inventory only. No asset download credentials or private URLs. Restore only from an authorized local copy.",
+  "files": [
+    {
+      "path": "assets/bridge_landing_banks.glb",
+      "bytes": 126636,
+      "sha256": "62b4f5017fa5702b5c9af914fd7de23d4f85291ca16a24e9865dcaf911602ca3",
+      "included_in_public_source": false
+    },
+    {
+      "path": "assets/bust_collision_proxy.tres",
+      "bytes": 1315,
+      "sha256": "141e37a5841ac79e03e8291c8e0cfec4fb803049d0c3b5211e73eaf4d58bf684",
+      "included_in_public_source": false
+    },
+    {
+      "path": "assets/coastal_lantern.glb",
+      "bytes": 128552,
+      "sha256": "2d2a41fa5a928c1831bafb68ff8803dba2a3ac2ee64ef82a6af89b68e5e97166",
+      "included_in_public_source": false
+    },
+    {
+      "path": "assets/gscatter_ground_cover.glb",
+      "bytes": 9785632,
+      "sha256": "8b181106b4dcc4be5fc5dad45c628be8ef6c0b458b0393a35cfd969e0f3ec01c",
+      "included_in_public_source": false
+    },
+    {
+      "path": "assets/gscatter_ground_cover_BromusSterilis_x0460_Albedo_8bit_16384ppm-BromusSterilis_x0460_Opacity_8bit_16384ppm.png",
+      "bytes": 2489421,
+      "sha256": "0d4629612f7818d05a0d8569dba64fdde33ff5af62bc35944d6decfd10287673",
+      "included_in_public_source": false
+    },
+    {
+      "path": "assets/gscatter_ground_cover_BromusSterilis_x0460_NormalOpenGL_8bit_16384ppm.png",
+      "bytes": 1248172,
+      "sha256": "9d0e17c378959e8516bdc2cd1650a24e47101f61231cbaf6b1fe3c496ee84754",
+      "included_in_public_source": false
+    },
+    {
+      "path": "assets/gscatter_ground_cover_LoliumPerenne_a2cxi_Albedo_8bit_16384ppm-LoliumPerenne_a2cxi_Opacity_8bit_16384ppm.png",
+      "bytes": 1788023,
+      "sha256": "116dd8dabc392369cca21214444d855a64bae1c65d6f5cd79ca4fc30222277c2",
+      "included_in_public_source": false
+    },
+    {
+      "path": "assets/gscatter_ground_cover_LoliumPerenne_a2cxi_NormalOpenGL_8bit_16384ppm.png",
+      "bytes": 978311,
+      "sha256": "98f8193cae7a6ddaa48fd379c3166f894d180faae81382bc17f7dc8b0cf29511",
+      "included_in_public_source": false
+    },
+    {
+      "path": "assets/gscatter_ground_cover_TrisetumFlavescens_s58ic_Albedo_8bit_16384ppm-TrisetumFlavescens_s58ic_Opacity_8bit_16384ppm.png",
+      "bytes": 1894412,
+      "sha256": "1edbf559c7922834d0277c5ef53b8291005210531a37c68cb4aba21389fb9230",
+      "included_in_public_source": false
+    },
+    {
+      "path": "assets/gscatter_ground_cover_TrisetumFlavescens_s58ic_NormalOpenGL_8bit_16384ppm.png",
+      "bytes": 1037711,
+      "sha256": "3f6989912f2c0b70488bf191998d9b891de58bc3757aacc5141961738aa8c4da",
+      "included_in_public_source": false
+    },
+    {
+      "path": "assets/gscatter_ground_cover_instances.json",
+      "bytes": 13849700,
+      "sha256": "63450e0c86a5475b2ebf9b96c010119ab64d21d51262078d3e247b6c2538268e",
+      "included_in_public_source": true
+    },
+    {
+      "path": "assets/island_bridges.glb",
+      "bytes": 3329268,
+      "sha256": "ef67edf2f96bb28bf7303a40024246dd80f4cec9966f87560ccafd702172ef02",
+      "included_in_public_source": false
+    },
+    {
+      "path": "assets/island_bridges.json",
+      "bytes": 71058,
+      "sha256": "78aa8d26d9e511dc36b2d309a9b4d178c513b74160af89269c106a9cd8d257d9",
+      "included_in_public_source": true
+    },
+    {
+      "path": "assets/island_bridges_bridge_cedar_grain.png",
+      "bytes": 210996,
+      "sha256": "ced52d19c213e4151cd20ab5835f4218ae7876da5cc392c2b4a69c449fc17f67",
+      "included_in_public_source": false
+    },
+    {
+      "path": "assets/island_bridges_floor_tiles_02_Diffuse_2k.jpg",
+      "bytes": 1381118,
+      "sha256": "9a4e5acbb6c71e03979cc75fe1121ae0dc66583153cab9f32116c79e33707634",
+      "included_in_public_source": false
+    },
+    {
+      "path": "assets/island_lantern_positions.json",
+      "bytes": 16993,
+      "sha256": "75d246148b8fbb47941965476ea8a60bf584cc6267204552e04759755fccb68a",
+      "included_in_public_source": true
+    },
+    {
+      "path": "assets/island_site_repairs.json",
+      "bytes": 1921,
+      "sha256": "1ee58732361b94770f00a2884544854908137278afe9fd389c766e85f35cd025",
+      "included_in_public_source": true
+    },
+    {
+      "path": "assets/mediterranean_temple.glb",
+      "bytes": 155763132,
+      "sha256": "9f73360bbdcb1da33ad6ca75b971950fe9be04848291b14ba5ed3e303417f254",
+      "included_in_public_source": false
+    },
+    {
+      "path": "assets/mediterranean_temple_boulder_01_diff_1k.jpg",
+      "bytes": 987467,
+      "sha256": "c38f0e918f6dc16b8d386ba3cdd89805c78320c119a1ceec85856f82b09a65b8",
+      "included_in_public_source": false
+    },
+    {
+      "path": "assets/mediterranean_temple_boulder_01_nor_gl.png",
+      "bytes": 6542067,
+      "sha256": "809f92789b3a43f34fc1939005453315a6906e02285a3811798a5a5b1beb5896",
+      "included_in_public_source": false
+    },
+    {
+      "path": "assets/mediterranean_temple_boulder_01_rough.png",
+      "bytes": 1198387,
+      "sha256": "3fd63bbbdf8700ac8772f1e63984d9c246027c943b9edc860ac9310daceda592",
+      "included_in_public_source": false
+    },
+    {
+      "path": "assets/mediterranean_temple_ceramic_vase_02_diff_1k.jpg",
+      "bytes": 98894,
+      "sha256": "12320e404c744095945b164293e522baadb6a0b393648f5908bfea2903f7fcc0",
+      "included_in_public_source": false
+    },
+    {
+      "path": "assets/mediterranean_temple_ceramic_vase_02_nor_gl.png",
+      "bytes": 5045310,
+      "sha256": "e0559f7587e210bdb49a2ddd7f78191c31c7aab00667556e4bb831f9077bf42e",
+      "included_in_public_source": false
+    },
+    {
+      "path": "assets/mediterranean_temple_ceramic_vase_02_rough_1k.png",
+      "bytes": 1120930,
+      "sha256": "683884f93c3298e54b5714a6d407f6eee74462a63f7514407632065a8b1969c0",
+      "included_in_public_source": false
+    },
+    {
+      "path": "assets/mediterranean_temple_fern_02_diff-fern_02_alpha.png",
+      "bytes": 1530167,
+      "sha256": "92bbe134263a409d8e6df191b56743f1102e61260f6e2b1db80bcf39ca37cba9",
+      "included_in_public_source": false
+    },
+    {
+      "path": "assets/mediterranean_temple_fern_02_nor_gl.png",
+      "bytes": 3094148,
+      "sha256": "5b3f9ad114b889cfad15ae1cc161f491ab9018e6befd85b1921f4fd8b3fa5df2",
+      "included_in_public_source": false
+    },
+    {
+      "path": "assets/mediterranean_temple_fern_02_rough.png",
+      "bytes": 332595,
+      "sha256": "b581986b589b1e3e1b1cbd4958d4b73b23197886d097c8c56c9eafadf98345d4",
+      "included_in_public_source": false
+    },
+    {
+      "path": "assets/mediterranean_temple_floor_tiles_02_Diffuse_2k.jpg",
+      "bytes": 1381118,
+      "sha256": "9a4e5acbb6c71e03979cc75fe1121ae0dc66583153cab9f32116c79e33707634",
+      "included_in_public_source": false
+    },
+    {
+      "path": "assets/mediterranean_temple_floor_tiles_02_Rough_2k.png",
+      "bytes": 5020522,
+      "sha256": "15179f669b9c4dafb1ac2996637050baf7621b7902ab460a886aceafe79d2d0d",
+      "included_in_public_source": false
+    },
+    {
+      "path": "assets/mediterranean_temple_floor_tiles_02_nor_gl_2k.jpg",
+      "bytes": 540151,
+      "sha256": "0c0d11a6ee43f523131db810720e4232ff35f05c126a7959d499a715294a1ad6",
+      "included_in_public_source": false
+    },
+    {
+      "path": "assets/mediterranean_temple_island_tree_01_branches_diff_1k.png",
+      "bytes": 5300342,
+      "sha256": "4485125d88b9dcce618220e8850f8b3ec586d9cdebe08e28aca777206eef56e2",
+      "included_in_public_source": false
+    },
+    {
+      "path": "assets/mediterranean_temple_island_tree_01_branches_nor_gl_1k.png",
+      "bytes": 5400459,
+      "sha256": "e72c3bf652d998d75ef98fc51fb7a10de3b7efd072c191a8eb9c92b6f93340f0",
+      "included_in_public_source": false
+    },
+    {
+      "path": "assets/mediterranean_temple_island_tree_01_branches_rough_1k.png",
+      "bytes": 934219,
+      "sha256": "7722508b1fc777e17b831e4fd31023dde9f2b0cb3c56594193cd2a1cd8dc1dd7",
+      "included_in_public_source": false
+    },
+    {
+      "path": "assets/mediterranean_temple_island_tree_01_diff_1k.jpg",
+      "bytes": 791327,
+      "sha256": "51bff9a3a6ed7d89ff4c73f01708b7267ed8d7a82b0cb12343741894f708218f",
+      "included_in_public_source": false
+    },
+    {
+      "path": "assets/mediterranean_temple_island_tree_01_leaves_diff-island_tree_01_leaves_alpha.png",
+      "bytes": 642681,
+      "sha256": "7c00b78bcf10906ba99004a99461f060ebfc28338db8912b9b65828f8364d3d5",
+      "included_in_public_source": false
+    },
+    {
+      "path": "assets/mediterranean_temple_island_tree_01_leaves_nor_gl_1k.png",
+      "bytes": 2886859,
+      "sha256": "e58402f30c7108ec6321e0c689009508f6ab138c81612d9a67238038ac108211",
+      "included_in_public_source": false
+    },
+    {
+      "path": "assets/mediterranean_temple_island_tree_01_leaves_rough_1k.png",
+      "bytes": 774422,
+      "sha256": "c8b507beaf4be320f30d9abe49675e9330c29bfffe60216085cfd69cca6077c3",
+      "included_in_public_source": false
+    },
+    {
+      "path": "assets/mediterranean_temple_island_tree_01_nor_gl.png",
+      "bytes": 6280030,
+      "sha256": "a09265c3d44a5d511ee2ee080871a28fc827dbf01a1cf6bed796d0de8bb73715",
+      "included_in_public_source": false
+    },
+    {
+      "path": "assets/mediterranean_temple_island_tree_01_rough.png",
+      "bytes": 1055292,
+      "sha256": "fdd96f49d4f9d1c87d367738d6f2a6ccede36fd82b25c13a92067c7bcc9e633d",
+      "included_in_public_source": false
+    },
+    {
+      "path": "assets/mediterranean_temple_marble_01_Diffuse_2k.jpg",
+      "bytes": 1269188,
+      "sha256": "d403786171716f86718bdd67eba923d4fb6125c0636bacef0e6a21dd5d623a48",
+      "included_in_public_source": false
+    },
+    {
+      "path": "assets/mediterranean_temple_marble_01_Rough_2k.png",
+      "bytes": 1605051,
+      "sha256": "86699d0f6f00fb5860d81f5eb924345e1214638e731808854eb3fc496b3e9211",
+      "included_in_public_source": false
+    },
+    {
+      "path": "assets/mediterranean_temple_marble_01_nor_gl_2k.jpg",
+      "bytes": 409581,
+      "sha256": "d5e17ccb2913adbf28fcb781fddf0aa711259ddea6c1c918442f9a3589aa4660",
+      "included_in_public_source": false
+    },
+    {
+      "path": "assets/mediterranean_temple_marble_bust_01_mask_1k.png",
+      "bytes": 1638698,
+      "sha256": "75a0d9ab5822c0a0434eed479a5e92eedc9c0bf6d1b15efdea27b99117d9f4c2",
+      "included_in_public_source": false
+    },
+    {
+      "path": "assets/mediterranean_temple_marble_bust_01_nor_gl.png",
+      "bytes": 4816638,
+      "sha256": "dfec18bfbc864486703521a94f83117ee049bbb6b182d236073e4f4cc65176b9",
+      "included_in_public_source": false
+    },
+    {
+      "path": "assets/mediterranean_temple_marble_bust_01_rough_1k.png",
+      "bytes": 1254012,
+      "sha256": "ecb6bb0578d68d65eed982deede9aa0f58bb94a517e3ac76880e493e63a7b94f",
+      "included_in_public_source": false
+    },
+    {
+      "path": "assets/mediterranean_temple_potted_plant_01_leaves_diff_1k.png",
+      "bytes": 3368765,
+      "sha256": "83d339ea0c13609fff151afd778d5625bc42eacf5e60454eedabf0b571b0bbaf",
+      "included_in_public_source": false
+    },
+    {
+      "path": "assets/mediterranean_temple_potted_plant_01_leaves_nor_gl_1k.png",
+      "bytes": 4012816,
+      "sha256": "a5b928cdcbade2872edd19d239de6110e047e31113524ba8a931853b4f9a0916",
+      "included_in_public_source": false
+    },
+    {
+      "path": "assets/mediterranean_temple_potted_plant_01_leaves_rough_1k.png",
+      "bytes": 787415,
+      "sha256": "c6518e0ae7ca7e2034cadc205237c3003bd693236be0aefab71f113becb9e5c9",
+      "included_in_public_source": false
+    },
+    {
+      "path": "assets/mediterranean_temple_potted_plant_01_pot_diff_1k.png",
+      "bytes": 4849826,
+      "sha256": "db986d79c9af9d10463ba3c8400bfaa7d2271e0a94cd0607b07e29e7053be3a8",
+      "included_in_public_source": false
+    },
+    {
+      "path": "assets/mediterranean_temple_potted_plant_01_pot_nor_gl_1k.png",
+      "bytes": 4818586,
+      "sha256": "70fdafbdede97cd1c811007002026ccc5ecbde74db1114ed4f90c75a2c4d78a9",
+      "included_in_public_source": false
+    },
+    {
+      "path": "assets/mediterranean_temple_potted_plant_01_pot_rough_1k.png",
+      "bytes": 1203934,
+      "sha256": "3b40ac1633fb9ef78c297a6728c5d6744eaf0cd1cbd2f950cb09a5823d190b8b",
+      "included_in_public_source": false
+    },
+    {
+      "path": "assets/mediterranean_temple_potted_plant_02_leaves_diff_1k.png",
+      "bytes": 4282900,
+      "sha256": "c664ad56c2117d82ea3b6907d0e6554f1d627da05e0f3e28f71e31bea98c667f",
+      "included_in_public_source": false
+    },
+    {
+      "path": "assets/mediterranean_temple_potted_plant_02_leaves_nor_gl_1k.png",
+      "bytes": 4442426,
+      "sha256": "b77d02419d03704b5551fdd797493822dfe083e0661aafd5778e6cd5aa4229f8",
+      "included_in_public_source": false
+    },
+    {
+      "path": "assets/mediterranean_temple_potted_plant_02_leaves_rough_1k.png",
+      "bytes": 973699,
+      "sha256": "b0175021ccb5e965ad090737daff7d4b48826ffb9f1b548e7d85f5df56a9484d",
+      "included_in_public_source": false
+    },
+    {
+      "path": "assets/mediterranean_temple_potted_plant_02_pot_diff_1k.png",
+      "bytes": 4980098,
+      "sha256": "8988e4ce4d985162e5753b9864eb0971c72532d6f1e9914a513b04570a5b3449",
+      "included_in_public_source": false
+    },
+    {
+      "path": "assets/mediterranean_temple_potted_plant_02_pot_nor_gl_1k.png",
+      "bytes": 3580734,
+      "sha256": "ca1e14ed985c58c4a3f64b48d1f9efd51e407e8e99eafa6d92ccab3e8de664b1",
+      "included_in_public_source": false
+    },
+    {
+      "path": "assets/mediterranean_temple_potted_plant_02_pot_rough_1k.png",
+      "bytes": 892214,
+      "sha256": "49069cab8e364495bd3f1cb7489ae6f25c516695678f39c3fbf9d3da26b4247c",
+      "included_in_public_source": false
+    },
+    {
+      "path": "assets/mediterranean_temple_rocky_terrain_02_Diffuse_2k.jpg",
+      "bytes": 3232826,
+      "sha256": "9b042fe0618ffbc3650592456d7d8d265ba9a1cb5ce802f5f1d86b7ee79508a1",
+      "included_in_public_source": false
+    },
+    {
+      "path": "assets/mediterranean_temple_rocky_terrain_02_Rough_2k.png",
+      "bytes": 4487045,
+      "sha256": "c0e3320956303ada32b192316b8817a42d36b9e5c108e08afb5692782bfd1610",
+      "included_in_public_source": false
+    },
+    {
+      "path": "assets/mediterranean_temple_rocky_terrain_02_nor_gl_2k.jpg",
+      "bytes": 4149208,
+      "sha256": "556ed903180a9431b253fc1c334c769dc4615c5c0f4ef1cedf20533ae8409ce8",
+      "included_in_public_source": false
+    },
+    {
+      "path": "assets/mediterranean_temple_tv_no_signal_card.png",
+      "bytes": 13997,
+      "sha256": "1d2fe9fe5e0e8a16bfc362060a86cab293030e7ae603e67bcda14bb0286c5d05",
+      "included_in_public_source": false
+    },
+    {
+      "path": "assets/north_pagoda.glb",
+      "bytes": 9435052,
+      "sha256": "2f3c505cac09ab03e341d49a7d28221c4ea7c889479202c56700fb4146c15e0a",
+      "included_in_public_source": false
+    },
+    {
+      "path": "assets/north_pagoda.json",
+      "bytes": 793067,
+      "sha256": "b83864419f877c7aa67031d22724cdf4f0c8c5c6077b96f55b440220a06457f9",
+      "included_in_public_source": true
+    },
+    {
+      "path": "assets/north_pagoda_cover.json",
+      "bytes": 607997,
+      "sha256": "6ef50558da3a93e7eaf18322da9136e4e211f5248021998424b3330c86fcf07b",
+      "included_in_public_source": true
+    },
+    {
+      "path": "assets/north_pagoda_floor_tiles_02_Diffuse_2k.jpg",
+      "bytes": 1381118,
+      "sha256": "9a4e5acbb6c71e03979cc75fe1121ae0dc66583153cab9f32116c79e33707634",
+      "included_in_public_source": false
+    },
+    {
+      "path": "assets/north_pagoda_rocky_terrain_02_Diffuse_2k.jpg",
+      "bytes": 3232826,
+      "sha256": "9b042fe0618ffbc3650592456d7d8d265ba9a1cb5ce802f5f1d86b7ee79508a1",
+      "included_in_public_source": false
+    },
+    {
+      "path": "assets/olive_tree_render_lod.res",
+      "bytes": 6861669,
+      "sha256": "d360df1964d91653973d59acdde8bc100a600bfbc30207f35f09a4fd1de80843",
+      "included_in_public_source": false
+    },
+    {
+      "path": "assets/olive_tree_shadow_lod.res",
+      "bytes": 6543147,
+      "sha256": "7832ea0c5a2ffbd0da8667f35ec51116151f0b2985ff556d59920ee93a659a9b",
+      "included_in_public_source": false
+    },
+    {
+      "path": "assets/temple_static_occlusion.scn",
+      "bytes": 1704594,
+      "sha256": "4db77f5adf7a3afbe370cd810ea9340abe24c52f385ba2bc107c96d2459ad91c",
+      "included_in_public_source": false
+    },
+    {
+      "path": "assets/textures/BromusSterilis_x0460_Albedo_8bit_16384ppm.png",
+      "bytes": 1988550,
+      "sha256": "3ab578faabc5fd49bcd491f68dd181886fe405a558ea08ffe4906326926c2ed9",
+      "included_in_public_source": false
+    },
+    {
+      "path": "assets/textures/BromusSterilis_x0460_Albedo_8bit_16384ppm.png.001.png",
+      "bytes": 1988550,
+      "sha256": "3ab578faabc5fd49bcd491f68dd181886fe405a558ea08ffe4906326926c2ed9",
+      "included_in_public_source": false
+    },
+    {
+      "path": "assets/textures/BromusSterilis_x0460_Albedo_8bit_16384ppm.png.002.png",
+      "bytes": 1988550,
+      "sha256": "3ab578faabc5fd49bcd491f68dd181886fe405a558ea08ffe4906326926c2ed9",
+      "included_in_public_source": false
+    },
+    {
+      "path": "assets/textures/BromusSterilis_x0460_NormalOpenGL_8bit_16384ppm.png",
+      "bytes": 1248172,
+      "sha256": "9d0e17c378959e8516bdc2cd1650a24e47101f61231cbaf6b1fe3c496ee84754",
+      "included_in_public_source": false
+    },
+    {
+      "path": "assets/textures/BromusSterilis_x0460_NormalOpenGL_8bit_16384ppm.png.001.png",
+      "bytes": 1248172,
+      "sha256": "9d0e17c378959e8516bdc2cd1650a24e47101f61231cbaf6b1fe3c496ee84754",
+      "included_in_public_source": false
+    },
+    {
+      "path": "assets/textures/BromusSterilis_x0460_NormalOpenGL_8bit_16384ppm.png.002.png",
+      "bytes": 1248172,
+      "sha256": "9d0e17c378959e8516bdc2cd1650a24e47101f61231cbaf6b1fe3c496ee84754",
+      "included_in_public_source": false
+    },
+    {
+      "path": "assets/textures/BromusSterilis_x0460_Opacity_8bit_16384ppm.png",
+      "bytes": 230983,
+      "sha256": "9767d0b5117355ca2d99103192c5ec9ba12928dea9cd54f682305ae5f088e9c1",
+      "included_in_public_source": false
+    },
+    {
+      "path": "assets/textures/BromusSterilis_x0460_Opacity_8bit_16384ppm.png.001.png",
+      "bytes": 230983,
+      "sha256": "9767d0b5117355ca2d99103192c5ec9ba12928dea9cd54f682305ae5f088e9c1",
+      "included_in_public_source": false
+    },
+    {
+      "path": "assets/textures/BromusSterilis_x0460_Opacity_8bit_16384ppm.png.002.png",
+      "bytes": 230983,
+      "sha256": "9767d0b5117355ca2d99103192c5ec9ba12928dea9cd54f682305ae5f088e9c1",
+      "included_in_public_source": false
+    },
+    {
+      "path": "assets/textures/LoliumPerenne_a2cxi_Albedo_8bit_16384ppm.png",
+      "bytes": 1482317,
+      "sha256": "ab932f5fcb2dea1a4fc609d80197a7ed181809993f1341582255060e0a58b6a2",
+      "included_in_public_source": false
+    },
+    {
+      "path": "assets/textures/LoliumPerenne_a2cxi_Albedo_8bit_16384ppm.png.001.png",
+      "bytes": 1482317,
+      "sha256": "ab932f5fcb2dea1a4fc609d80197a7ed181809993f1341582255060e0a58b6a2",
+      "included_in_public_source": false
+    },
+    {
+      "path": "assets/textures/LoliumPerenne_a2cxi_Albedo_8bit_16384ppm.png.002.png",
+      "bytes": 1482317,
+      "sha256": "ab932f5fcb2dea1a4fc609d80197a7ed181809993f1341582255060e0a58b6a2",
+      "included_in_public_source": false
+    },
+    {
+      "path": "assets/textures/LoliumPerenne_a2cxi_NormalOpenGL_8bit_16384ppm.png",
+      "bytes": 978311,
+      "sha256": "98f8193cae7a6ddaa48fd379c3166f894d180faae81382bc17f7dc8b0cf29511",
+      "included_in_public_source": false
+    },
+    {
+      "path": "assets/textures/LoliumPerenne_a2cxi_NormalOpenGL_8bit_16384ppm.png.001.png",
+      "bytes": 978311,
+      "sha256": "98f8193cae7a6ddaa48fd379c3166f894d180faae81382bc17f7dc8b0cf29511",
+      "included_in_public_source": false
+    },
+    {
+      "path": "assets/textures/LoliumPerenne_a2cxi_NormalOpenGL_8bit_16384ppm.png.002.png",
+      "bytes": 978311,
+      "sha256": "98f8193cae7a6ddaa48fd379c3166f894d180faae81382bc17f7dc8b0cf29511",
+      "included_in_public_source": false
+    },
+    {
+      "path": "assets/textures/LoliumPerenne_a2cxi_Opacity_8bit_16384ppm.png",
+      "bytes": 105540,
+      "sha256": "d7dac6026e4ef1bc520949206e89368aa43298edbf0ea109045ce572d163c020",
+      "included_in_public_source": false
+    },
+    {
+      "path": "assets/textures/LoliumPerenne_a2cxi_Opacity_8bit_16384ppm.png.001.png",
+      "bytes": 105540,
+      "sha256": "d7dac6026e4ef1bc520949206e89368aa43298edbf0ea109045ce572d163c020",
+      "included_in_public_source": false
+    },
+    {
+      "path": "assets/textures/LoliumPerenne_a2cxi_Opacity_8bit_16384ppm.png.002.png",
+      "bytes": 105540,
+      "sha256": "d7dac6026e4ef1bc520949206e89368aa43298edbf0ea109045ce572d163c020",
+      "included_in_public_source": false
+    },
+    {
+      "path": "assets/textures/TrisetumFlavescens_s58ic_Albedo_8bit_16384ppm.png",
+      "bytes": 1387537,
+      "sha256": "fe364cb99960dc00f3814cd4b0ca570e18f172f9e34199f78d66a85fd445bf6e",
+      "included_in_public_source": false
+    },
+    {
+      "path": "assets/textures/TrisetumFlavescens_s58ic_Albedo_8bit_16384ppm.png.001.png",
+      "bytes": 1387537,
+      "sha256": "fe364cb99960dc00f3814cd4b0ca570e18f172f9e34199f78d66a85fd445bf6e",
+      "included_in_public_source": false
+    },
+    {
+      "path": "assets/textures/TrisetumFlavescens_s58ic_Albedo_8bit_16384ppm.png.002.png",
+      "bytes": 1387537,
+      "sha256": "fe364cb99960dc00f3814cd4b0ca570e18f172f9e34199f78d66a85fd445bf6e",
+      "included_in_public_source": false
+    },
+    {
+      "path": "assets/textures/TrisetumFlavescens_s58ic_NormalOpenGL_8bit_16384ppm.png",
+      "bytes": 1037711,
+      "sha256": "3f6989912f2c0b70488bf191998d9b891de58bc3757aacc5141961738aa8c4da",
+      "included_in_public_source": false
+    },
+    {
+      "path": "assets/textures/TrisetumFlavescens_s58ic_NormalOpenGL_8bit_16384ppm.png.001.png",
+      "bytes": 1037711,
+      "sha256": "3f6989912f2c0b70488bf191998d9b891de58bc3757aacc5141961738aa8c4da",
+      "included_in_public_source": false
+    },
+    {
+      "path": "assets/textures/TrisetumFlavescens_s58ic_NormalOpenGL_8bit_16384ppm.png.002.png",
+      "bytes": 1037711,
+      "sha256": "3f6989912f2c0b70488bf191998d9b891de58bc3757aacc5141961738aa8c4da",
+      "included_in_public_source": false
+    },
+    {
+      "path": "assets/textures/TrisetumFlavescens_s58ic_Opacity_8bit_16384ppm.png",
+      "bytes": 232532,
+      "sha256": "be0ebefa38201135877d3b6c3fbd7cf3b69a0f4833acfe9571b3dc85274aa103",
+      "included_in_public_source": false
+    },
+    {
+      "path": "assets/textures/TrisetumFlavescens_s58ic_Opacity_8bit_16384ppm.png.001.png",
+      "bytes": 232532,
+      "sha256": "be0ebefa38201135877d3b6c3fbd7cf3b69a0f4833acfe9571b3dc85274aa103",
+      "included_in_public_source": false
+    },
+    {
+      "path": "assets/textures/TrisetumFlavescens_s58ic_Opacity_8bit_16384ppm.png.002.png",
+      "bytes": 232532,
+      "sha256": "be0ebefa38201135877d3b6c3fbd7cf3b69a0f4833acfe9571b3dc85274aa103",
+      "included_in_public_source": false
+    },
+    {
+      "path": "assets/textures/boulder_01_diff_1k.jpg",
+      "bytes": 987467,
+      "sha256": "c38f0e918f6dc16b8d386ba3cdd89805c78320c119a1ceec85856f82b09a65b8",
+      "included_in_public_source": false
+    },
+    {
+      "path": "assets/textures/boulder_01_nor_gl_1k.exr",
+      "bytes": 2421732,
+      "sha256": "9ed94c347a8ddcb0485e59c47cfd1c6abdfceef937c9a7e9186abd4c32438b2d",
+      "included_in_public_source": false
+    },
+    {
+      "path": "assets/textures/boulder_01_rough_1k.exr",
+      "bytes": 496072,
+      "sha256": "8f70563b37e26abc8c389a9bae8e7d42d8b73758e75e4341e929f25ed732ffd2",
+      "included_in_public_source": false
+    },
+    {
+      "path": "assets/textures/bridge_cedar_grain.png",
+      "bytes": 210996,
+      "sha256": "ced52d19c213e4151cd20ab5835f4218ae7876da5cc392c2b4a69c449fc17f67",
+      "included_in_public_source": false
+    },
+    {
+      "path": "assets/textures/ceramic_vase_02_diff_1k.jpg",
+      "bytes": 98894,
+      "sha256": "12320e404c744095945b164293e522baadb6a0b393648f5908bfea2903f7fcc0",
+      "included_in_public_source": false
+    },
+    {
+      "path": "assets/textures/ceramic_vase_02_nor_gl_1k.exr",
+      "bytes": 1580009,
+      "sha256": "58b140a2d229d9dc4ad473eba0537d0179c4fb819d1b1de10b85783394298690",
+      "included_in_public_source": false
+    },
+    {
+      "path": "assets/textures/ceramic_vase_02_rough_1k.jpg",
+      "bytes": 190645,
+      "sha256": "137ffbd61551654d94aebfd5f0b18fe9d85ed5c1515d32cca65c9db62fccd01b",
+      "included_in_public_source": false
+    },
+    {
+      "path": "assets/textures/circus_maximus_2_2k.hdr",
+      "bytes": 5926878,
+      "sha256": "25b9b16d29f841733369c3d8a91c398eebb5827b7a65991b594008f8f937db18",
+      "included_in_public_source": false
+    },
+    {
+      "path": "assets/textures/coastal_rock_grey.jpg",
+      "bytes": 364210,
+      "sha256": "52333b5fecdbce84b7813b5da216ffb23a013f58cad314515b4df5b8ee43ee78",
+      "included_in_public_source": false
+    },
+    {
+      "path": "assets/textures/coastal_rock_moss.jpg",
+      "bytes": 330518,
+      "sha256": "528b2e6430edac87b447fd8fe4dcbec1e210b098b83272f818d8c6c1fbdac44f",
+      "included_in_public_source": false
+    },
+    {
+      "path": "assets/textures/coastal_rock_normal.png",
+      "bytes": 1762757,
+      "sha256": "428abbdcb94a36e71e3a43295f11cf34c52ad4ebeaa8dff17eb24bf0f53f8d5a",
+      "included_in_public_source": false
+    },
+    {
+      "path": "assets/textures/coastal_rock_ochre.jpg",
+      "bytes": 363478,
+      "sha256": "5e5de2a517ef6105c264e42ccd8ca01db1660eaa641f8cc92067d6c9b40ee3ce",
+      "included_in_public_source": false
+    },
+    {
+      "path": "assets/textures/fern_02_alpha_1k.png",
+      "bytes": 114589,
+      "sha256": "ea3c64284c7ebdeedf484d2d816eae92825ec526140c3bb83859ddc7a64001f9",
+      "included_in_public_source": false
+    },
+    {
+      "path": "assets/textures/fern_02_diff_1k.jpg",
+      "bytes": 315705,
+      "sha256": "a828a6e7b4c01c826911e2eac4b3afc7457dab7b3b392a31c681ed88b7d50029",
+      "included_in_public_source": false
+    },
+    {
+      "path": "assets/textures/fern_02_nor_gl_1k.exr",
+      "bytes": 801563,
+      "sha256": "318209d70836a9b078c395a2df26bcc732dae3df248ecd5d827005da7c8ff174",
+      "included_in_public_source": false
+    },
+    {
+      "path": "assets/textures/fern_02_rough_1k.exr",
+      "bytes": 267009,
+      "sha256": "6bde0113a818f78ebcce524fe417b9617a8aadf2873a1948fdbb200cc27eaf3c",
+      "included_in_public_source": false
+    },
+    {
+      "path": "assets/textures/floor_tiles_02_Diffuse_2k.jpg",
+      "bytes": 1381118,
+      "sha256": "9a4e5acbb6c71e03979cc75fe1121ae0dc66583153cab9f32116c79e33707634",
+      "included_in_public_source": false
+    },
+    {
+      "path": "assets/textures/floor_tiles_02_Displacement_2k.jpg",
+      "bytes": 302553,
+      "sha256": "430e09bfbbf0edd6661fabd18dfb66766fa4cf4c2838146cf6bab578739b472f",
+      "included_in_public_source": false
+    },
+    {
+      "path": "assets/textures/floor_tiles_02_Rough_2k.jpg",
+      "bytes": 1214592,
+      "sha256": "95007052c6cc7a92284a5cea92ebdaecbfae6fcdd6dfd6ac443e2af43ddcd9a6",
+      "included_in_public_source": false
+    },
+    {
+      "path": "assets/textures/floor_tiles_02_nor_gl_2k.jpg",
+      "bytes": 540151,
+      "sha256": "0c0d11a6ee43f523131db810720e4232ff35f05c126a7959d499a715294a1ad6",
+      "included_in_public_source": false
+    },
+    {
+      "path": "assets/textures/island_tree_01_branches_diff_1k.png",
+      "bytes": 5300342,
+      "sha256": "4485125d88b9dcce618220e8850f8b3ec586d9cdebe08e28aca777206eef56e2",
+      "included_in_public_source": false
+    },
+    {
+      "path": "assets/textures/island_tree_01_branches_nor_gl_1k.png",
+      "bytes": 5400459,
+      "sha256": "e72c3bf652d998d75ef98fc51fb7a10de3b7efd072c191a8eb9c92b6f93340f0",
+      "included_in_public_source": false
+    },
+    {
+      "path": "assets/textures/island_tree_01_branches_rough_1k.png",
+      "bytes": 1625206,
+      "sha256": "c6db3c33f23654a8d31dcf5609d19d97ab1036b36b3d9a6bcd50ecc975f8fb3c",
+      "included_in_public_source": false
+    },
+    {
+      "path": "assets/textures/island_tree_01_diff_1k.jpg",
+      "bytes": 791327,
+      "sha256": "51bff9a3a6ed7d89ff4c73f01708b7267ed8d7a82b0cb12343741894f708218f",
+      "included_in_public_source": false
+    },
+    {
+      "path": "assets/textures/island_tree_01_leaves_alpha_1k.png",
+      "bytes": 57438,
+      "sha256": "f4341f147988dbe6b58d9ca841a8f0e4bcff25bc40d05f9877da82006d489c39",
+      "included_in_public_source": false
+    },
+    {
+      "path": "assets/textures/island_tree_01_leaves_diff_1k.png",
+      "bytes": 1638916,
+      "sha256": "63d3563a22a62151f338ceb4e992de7c31b62e8e3582e2762d5071f02d286349",
+      "included_in_public_source": false
+    },
+    {
+      "path": "assets/textures/island_tree_01_leaves_nor_gl_1k.png",
+      "bytes": 2886859,
+      "sha256": "e58402f30c7108ec6321e0c689009508f6ab138c81612d9a67238038ac108211",
+      "included_in_public_source": false
+    },
+    {
+      "path": "assets/textures/island_tree_01_leaves_rough_1k.png",
+      "bytes": 879599,
+      "sha256": "b7e9a1857f63617344968bb43693786bfed7dd15bedca3193ce333f233fbab78",
+      "included_in_public_source": false
+    },
+    {
+      "path": "assets/textures/island_tree_01_nor_gl_1k.exr",
+      "bytes": 2415664,
+      "sha256": "5047921e146d2a13be79d72b19478d8cf2eb17d5550eb99530b0704fa0aece38",
+      "included_in_public_source": false
+    },
+    {
+      "path": "assets/textures/island_tree_01_rough_1k.exr",
+      "bytes": 875265,
+      "sha256": "23e8c08ab5c6245badbaf19318e2419076ec01154e2f23b8b924323fcafa2e31",
+      "included_in_public_source": false
+    },
+    {
+      "path": "assets/textures/marble_01_Diffuse_2k.jpg",
+      "bytes": 1269188,
+      "sha256": "d403786171716f86718bdd67eba923d4fb6125c0636bacef0e6a21dd5d623a48",
+      "included_in_public_source": false
+    },
+    {
+      "path": "assets/textures/marble_01_Displacement_2k.jpg",
+      "bytes": 231514,
+      "sha256": "7f9b2a458bb6f5b5314380a26ab800d0e8b93cfc350351326328e539fed4988e",
+      "included_in_public_source": false
+    },
+    {
+      "path": "assets/textures/marble_01_Rough_2k.jpg",
+      "bytes": 281388,
+      "sha256": "1b970e033856c93ee7390d947da5340e101b489fc8c1463354ea9e6655ce039a",
+      "included_in_public_source": false
+    },
+    {
+      "path": "assets/textures/marble_01_nor_gl_2k.jpg",
+      "bytes": 409581,
+      "sha256": "d5e17ccb2913adbf28fcb781fddf0aa711259ddea6c1c918442f9a3589aa4660",
+      "included_in_public_source": false
+    },
+    {
+      "path": "assets/textures/marble_bust_01_diff_1k.jpg",
+      "bytes": 160337,
+      "sha256": "cbb7dccdc62d7eaa240eef7b4956969bf6e73c7338b64f1378629838ea22383c",
+      "included_in_public_source": false
+    },
+    {
+      "path": "assets/textures/marble_bust_01_mask_1k.png",
+      "bytes": 1638698,
+      "sha256": "75a0d9ab5822c0a0434eed479a5e92eedc9c0bf6d1b15efdea27b99117d9f4c2",
+      "included_in_public_source": false
+    },
+    {
+      "path": "assets/textures/marble_bust_01_nor_gl_1k.exr",
+      "bytes": 1158881,
+      "sha256": "b8004bc118e27b6a3d5cf1b6d56bb164767cf2b401853a0d6cd3f1bdd19efe0e",
+      "included_in_public_source": false
+    },
+    {
+      "path": "assets/textures/marble_bust_01_rough_1k.jpg",
+      "bytes": 193918,
+      "sha256": "1c4502352dc936dd1f1c1a81b418706df1ce0445949874215015325f9b8921fb",
+      "included_in_public_source": false
+    },
+    {
+      "path": "assets/textures/potted_plant_01_leaves_alpha_1k.png",
+      "bytes": 90654,
+      "sha256": "380ff44359f128b7cf0e2912b378a0f61f4b0d8e8707dbe043c92465d82e9592",
+      "included_in_public_source": false
+    },
+    {
+      "path": "assets/textures/potted_plant_01_leaves_diff_1k.png",
+      "bytes": 3368765,
+      "sha256": "83d339ea0c13609fff151afd778d5625bc42eacf5e60454eedabf0b571b0bbaf",
+      "included_in_public_source": false
+    },
+    {
+      "path": "assets/textures/potted_plant_01_leaves_nor_gl_1k.png",
+      "bytes": 4012816,
+      "sha256": "a5b928cdcbade2872edd19d239de6110e047e31113524ba8a931853b4f9a0916",
+      "included_in_public_source": false
+    },
+    {
+      "path": "assets/textures/potted_plant_01_leaves_rough_1k.png",
+      "bytes": 1059300,
+      "sha256": "8b3332d70c9d955a108ef38077121588d30d9866a54c2992fe6a5d1c43e92124",
+      "included_in_public_source": false
+    },
+    {
+      "path": "assets/textures/potted_plant_01_pot_diff_1k.png",
+      "bytes": 4849826,
+      "sha256": "db986d79c9af9d10463ba3c8400bfaa7d2271e0a94cd0607b07e29e7053be3a8",
+      "included_in_public_source": false
+    },
+    {
+      "path": "assets/textures/potted_plant_01_pot_nor_gl_1k.png",
+      "bytes": 4818586,
+      "sha256": "70fdafbdede97cd1c811007002026ccc5ecbde74db1114ed4f90c75a2c4d78a9",
+      "included_in_public_source": false
+    },
+    {
+      "path": "assets/textures/potted_plant_01_pot_rough_1k.png",
+      "bytes": 1629094,
+      "sha256": "f4f4232fb21f7aa33caca8ee1fd7acedfc437c46d635b09f636c12b057759e6f",
+      "included_in_public_source": false
+    },
+    {
+      "path": "assets/textures/potted_plant_02_leaves_alpha_1k.png",
+      "bytes": 100823,
+      "sha256": "af56887c4a14b1ace924906529ee56d46ad102e0738bcdf53569a57ce1a56bd1",
+      "included_in_public_source": false
+    },
+    {
+      "path": "assets/textures/potted_plant_02_leaves_diff_1k.png",
+      "bytes": 4282900,
+      "sha256": "c664ad56c2117d82ea3b6907d0e6554f1d627da05e0f3e28f71e31bea98c667f",
+      "included_in_public_source": false
+    },
+    {
+      "path": "assets/textures/potted_plant_02_leaves_nor_gl_1k.png",
+      "bytes": 4442426,
+      "sha256": "b77d02419d03704b5551fdd797493822dfe083e0661aafd5778e6cd5aa4229f8",
+      "included_in_public_source": false
+    },
+    {
+      "path": "assets/textures/potted_plant_02_leaves_rough_1k.png",
+      "bytes": 1348122,
+      "sha256": "41e2714a8647e4f189f0c48708960eec38817f566e10949e4dae66d0084f80b8",
+      "included_in_public_source": false
+    },
+    {
+      "path": "assets/textures/potted_plant_02_pot_diff_1k.png",
+      "bytes": 4980098,
+      "sha256": "8988e4ce4d985162e5753b9864eb0971c72532d6f1e9914a513b04570a5b3449",
+      "included_in_public_source": false
+    },
+    {
+      "path": "assets/textures/potted_plant_02_pot_nor_gl_1k.png",
+      "bytes": 3580734,
+      "sha256": "ca1e14ed985c58c4a3f64b48d1f9efd51e407e8e99eafa6d92ccab3e8de664b1",
+      "included_in_public_source": false
+    },
+    {
+      "path": "assets/textures/potted_plant_02_pot_rough_1k.png",
+      "bytes": 1220537,
+      "sha256": "d848d54ff81db3818cc4df8c75e617362098e3677fc545551d62e386b7345be5",
+      "included_in_public_source": false
+    },
+    {
+      "path": "assets/textures/rocky_terrain_02_Diffuse_2k.jpg",
+      "bytes": 3232826,
+      "sha256": "9b042fe0618ffbc3650592456d7d8d265ba9a1cb5ce802f5f1d86b7ee79508a1",
+      "included_in_public_source": false
+    },
+    {
+      "path": "assets/textures/rocky_terrain_02_Displacement_2k.jpg",
+      "bytes": 759583,
+      "sha256": "84a544dad4d12da56962297dbc7c64813c918ca4942cc8b71b5a18799e454c24",
+      "included_in_public_source": false
+    },
+    {
+      "path": "assets/textures/rocky_terrain_02_Rough_2k.jpg",
+      "bytes": 1589303,
+      "sha256": "89f3c7b9e467160a821cbac32a1fdfd75f13cb87c9deeb22099d16677a711126",
+      "included_in_public_source": false
+    },
+    {
+      "path": "assets/textures/rocky_terrain_02_nor_gl_2k.jpg",
+      "bytes": 4149208,
+      "sha256": "556ed903180a9431b253fc1c334c769dc4615c5c0f4ef1cedf20533ae8409ce8",
+      "included_in_public_source": false
+    },
+    {
+      "path": "assets/textures/tv_no_signal_card.png",
+      "bytes": 13997,
+      "sha256": "1d2fe9fe5e0e8a16bfc362060a86cab293030e7ae603e67bcda14bb0286c5d05",
+      "included_in_public_source": false
+    }
+  ]
+}

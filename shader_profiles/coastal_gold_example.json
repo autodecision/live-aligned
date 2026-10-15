@@ -1,0 +1,76 @@
+{
+  "application": "Live Aligned",
+  "effects_enabled": true,
+  "graphics_reference": {
+    "internal_resolution_scale": 0.75,
+    "msaa_enum": 1,
+    "performance_mode": true,
+    "render_method": "mobile"
+  },
+  "inspiration": "The Witcher 3",
+  "parameters": {
+    "ambient_fill": 0.6,
+    "bleach": 0.0,
+    "bloom": 0.09,
+    "bloom_radius": 5.0,
+    "bloom_threshold": 0.72,
+    "chromatic": 0.0,
+    "color_levels": 16.0,
+    "contrast": 1.12,
+    "effect_mix": 1.0,
+    "exposure": 0.0,
+    "film_grain": 0.0,
+    "fog_density": 0.0024,
+    "fog_height": 2.0,
+    "fog_warmth": 0.15,
+    "fov": 65.0,
+    "gamma": 1.0,
+    "height_haze": 0.0,
+    "highlight_rolloff": 0.0,
+    "highlight_warmth": 0.35,
+    "lens_distortion": 0.0,
+    "letterbox": 0.0,
+    "outline_width": 1.0,
+    "outlines": 0.0,
+    "posterize": 0.0,
+    "saturation": 0.94,
+    "scanlines": 0.0,
+    "shadow_lift": 0.0,
+    "shadow_tone": 0.2,
+    "sharpness": 0.0,
+    "sky_brightness": 1.0,
+    "sky_warmth": 0.0,
+    "sun_azimuth": 30.0,
+    "sun_elevation": 24.0,
+    "sun_strength": 1.4,
+    "sun_warmth": 0.38,
+    "temperature": 0.18,
+    "tint": 0.0,
+    "vibrance": 0.0,
+    "vignette": 0.15,
+    "vignette_softness": 0.65
+  },
+  "profile_name": "Coastal gold example",
+  "saved_at_utc": "2026-10-14T22:28:08",
+  "schema_version": 1,
+  "shader_revision": 1,
+  "source_preset": "witcher",
+  "viewpoint": {
+    "fov_degrees": 65.0,
+    "head_rotation_radians": [
+      0.466425985097885,
+      0.0,
+      0.0
+    ],
+    "player_position": [
+      -3.5,
+      0.0600049570202827,
+      11.5
+    ],
+    "player_rotation_radians": [
+      0.0,
+      0.0,
+      0.0
+    ]
+  }
+}

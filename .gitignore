@@ -1,0 +1,37 @@
+# Local/imported data and tooling
+.godot/
+backups/
+addons/
+*.import
+*.blend
+*.blend1
+*.blend2
+*.bak*
+*.before_*
+*.log
+__pycache__/
+.codebase-memory/
+.codegraph/
+# Assets are private/local by default; explicit source metadata only
+/assets/*
+!/assets/*.json
+# Locally saved looks: publish only the supplied example and instructions
+/shader_profiles/*
+!/shader_profiles/README.md
+!/shader_profiles/coastal_gold_example.json
+# Credentials and personal settings
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+*.p12
+*.pfx
+*credentials*
+*mcp_auth_token*
+export_credentials.cfg
+export_presets.cfg
+.local/
+# Generated root captures/reports
+/*.png
+/*validation*.json

@@ -1,0 +1,100 @@
+{
+  "trees": [
+    {
+      "name": "Island_North_Olive_10",
+      "blender_position": [
+        58.5,
+        48.0,
+        5.717577934265137
+      ],
+      "position": [
+        58.5,
+        5.717577934265137,
+        -48.0
+      ],
+      "root_samples": 84,
+      "maximum_root_gap": -0.04
+    },
+    {
+      "name": "Island_North_Olive_13",
+      "blender_position": [
+        64.5,
+        44.0,
+        5.2862725257873535
+      ],
+      "position": [
+        64.5,
+        5.2862725257873535,
+        -44.0
+      ],
+      "root_samples": 81,
+      "maximum_root_gap": -0.04
+    }
+  ],
+  "rocks": [
+    {
+      "name": "Large_Rock_Main_02",
+      "variant": "grey"
+    },
+    {
+      "name": "Large_Rock_Main_03",
+      "variant": "ochre"
+    },
+    {
+      "name": "Large_Rock_Main_05",
+      "variant": "ochre"
+    },
+    {
+      "name": "Large_Rock_Main_08",
+      "variant": "moss"
+    },
+    {
+      "name": "Large_Rock_Main_09",
+      "variant": "ochre"
+    },
+    {
+      "name": "Large_Rock_Main_11",
+      "variant": "ochre"
+    },
+    {
+      "name": "Large_Rock_North_01",
+      "variant": "grey"
+    },
+    {
+      "name": "Large_Rock_North_03",
+      "variant": "moss"
+    },
+    {
+      "name": "Large_Rock_North_06",
+      "variant": "ochre"
+    },
+    {
+      "name": "Large_Rock_North_07",
+      "variant": "moss"
+    },
+    {
+      "name": "Large_Rock_South_01",
+      "variant": "grey",
+      "blender_position": [
+        85.4000015258789,
+        -24.799999237060547,
+        5.176460266113281
+      ],
+      "position": [
+        85.4000015258789,
+        5.176460266113281,
+        24.799999237060547
+      ],
+      "scale": [
+        0.65,
+        0.65,
+        0.65
+      ],
+      "ground_samples": 128,
+      "maximum_ground_gap": -0.06
+    }
+  ],
+  "landing_banks": "res://assets/bridge_landing_banks.glb",
+  "bank_collision": "exact small terrain mesh",
+  "north_approach_cleared": true
+}
