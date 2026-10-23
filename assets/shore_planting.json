@@ -1,0 +1,105 @@
+{
+  "support_vertices": 327,
+  "rocks": {
+    "East_Headland_Stack": {
+      "delta_blender": [
+        10.378508567810059,
+        6.023831367492676,
+        0.0
+      ],
+      "position": [
+        10.378508567810059,
+        0.0,
+        -6.023831367492676
+      ],
+      "max_ground_before": -2.3278884887695312,
+      "max_ground_after": -5.698200225830078,
+      "shore_clearance_m": 0.65
+    },
+    "East_Reef": {
+      "delta_blender": [
+        12.883665084838867,
+        -36.81047439575195,
+        0.0
+      ],
+      "position": [
+        12.883665084838867,
+        0.0,
+        36.81047439575195
+      ],
+      "max_ground_before": 5.500007629394531,
+      "max_ground_after": -5.74078369140625,
+      "shore_clearance_m": 0.65
+    },
+    "North_Reef": {
+      "delta_blender": [
+        -5.231085777282715,
+        4.651423454284668,
+        0.0
+      ],
+      "position": [
+        -5.231085777282715,
+        0.0,
+        -4.651423454284668
+      ],
+      "max_ground_before": -0.135467529296875,
+      "max_ground_after": -5.73272705078125,
+      "shore_clearance_m": 0.65
+    },
+    "North_Satellite": {
+      "delta_blender": [
+        -4.179750442504883,
+        9.084585189819336,
+        0.0
+      ],
+      "position": [
+        -4.179750442504883,
+        0.0,
+        -9.084585189819336
+      ],
+      "max_ground_before": 0.6194992065429688,
+      "max_ground_after": -6.1585693359375,
+      "shore_clearance_m": 0.65
+    },
+    "South_Cove_Rock": {
+      "delta_blender": [
+        -3.7081377506256104,
+        -10.356143951416016,
+        0.0
+      ],
+      "position": [
+        -3.7081377506256104,
+        0.0,
+        10.356143951416016
+      ],
+      "max_ground_before": -0.2069091796875,
+      "max_ground_after": -6.1420745849609375,
+      "shore_clearance_m": 0.65
+    },
+    "South_Satellite": {
+      "delta_blender": [
+        25.482479095458984,
+        -31.608266830444336,
+        0.0
+      ],
+      "position": [
+        25.482479095458984,
+        0.0,
+        31.608266830444336
+      ],
+      "max_ground_before": 4.650005340576172,
+      "max_ground_after": -8.327095031738281,
+      "shore_clearance_m": 0.65
+    }
+  },
+  "grass": {
+    "added": {
+      "Main": 302,
+      "North": 1091,
+      "South": 586
+    },
+    "total_added": 1979,
+    "reseated": 361,
+    "runtime_total": 52231
+  }
+}

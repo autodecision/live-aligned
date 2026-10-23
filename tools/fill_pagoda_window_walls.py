@@ -9,7 +9,7 @@ from pathlib import Path
 
 import bpy
 
-PROJECT = Path('/home/allister/Projects/live-aligned')
+PROJECT = Path(__file__).resolve().parent.parent
 OUT = Path('/home/allister/Projects/mcp-for-blender/output/mediterranean_temple/improvements')
 NAME = 'North_Pagoda_Pagoda_Window_Wall_Infill'
 

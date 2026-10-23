@@ -13,7 +13,7 @@ godot --headless --path . --editor --quit
 godot --path .
 ```
 
-WASD / arrow keys move, Shift sprints, Space jumps, Esc releases the cursor. F6 changes graphics quality, F7 opens Visual Lab, and F9 compares the original look. See [saved looks](shader_profiles/README.md).
+WASD / arrow keys move, Shift sprints, Space jumps, Esc releases the cursor and shows **Reset position**, which returns you to the start if you get stuck. F6 changes graphics quality, F7 opens Visual Lab, and F9 compares the original look. See [saved looks](shader_profiles/README.md).
 
 ## Development
 

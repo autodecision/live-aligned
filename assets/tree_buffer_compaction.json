@@ -1,0 +1,70 @@
+[
+  {
+    "identical_triangle_attributes": true,
+    "output": "res://assets/olive_tree_render_lod_compact.res",
+    "source": "res://assets/olive_tree_render_lod.res",
+    "surfaces": [
+      {
+        "lods": 3,
+        "new_vertices": 959,
+        "normal_stride": 8,
+        "old_vertices": 1735,
+        "position_stride": 12,
+        "surface": 0,
+        "triangles": 1222
+      },
+      {
+        "lods": 0,
+        "new_vertices": 63855,
+        "normal_stride": 8,
+        "old_vertices": 181447,
+        "position_stride": 12,
+        "surface": 1,
+        "triangles": 35647
+      },
+      {
+        "lods": 2,
+        "new_vertices": 5498,
+        "normal_stride": 8,
+        "old_vertices": 44859,
+        "position_stride": 12,
+        "surface": 2,
+        "triangles": 3090
+      }
+    ]
+  },
+  {
+    "identical_triangle_attributes": true,
+    "output": "res://assets/olive_tree_shadow_lod_compact.res",
+    "source": "res://assets/olive_tree_shadow_lod.res",
+    "surfaces": [
+      {
+        "lods": 0,
+        "new_vertices": 545,
+        "normal_stride": 8,
+        "old_vertices": 1735,
+        "position_stride": 12,
+        "surface": 0,
+        "triangles": 610
+      },
+      {
+        "lods": 0,
+        "new_vertices": 18699,
+        "normal_stride": 8,
+        "old_vertices": 181447,
+        "position_stride": 12,
+        "surface": 1,
+        "triangles": 10849
+      },
+      {
+        "lods": 0,
+        "new_vertices": 5498,
+        "normal_stride": 8,
+        "old_vertices": 44859,
+        "position_stride": 12,
+        "surface": 2,
+        "triangles": 3090
+      }
+    ]
+  }
+]

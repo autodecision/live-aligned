@@ -1,0 +1,32 @@
+{
+  "main_island": {
+    "digest": {
+      "vertices": 74236,
+      "polygons": 73692,
+      "sha256": "0f1ae0ae7ead4622"
+    },
+    "flat_sea_triangles": 0
+  },
+  "south_island": {
+    "digest": {
+      "vertices": 21232,
+      "polygons": 35015,
+      "sha256": "15d46fc77ffb5779"
+    },
+    "north_vertices": 6735,
+    "north_sha256": "83a59a5286bba36391f8dbb8d2445e45e06f0289351839d1f3afac664b34f53f",
+    "flat_sea_triangles": 0
+  },
+  "north_island": {
+    "digest": {
+      "vertices": 14187,
+      "polygons": 27558,
+      "sha256": "a41061f4951a612a"
+    },
+    "flat_sea_triangles": 0
+  },
+  "grass_reseated": {
+    "gscatter_ground_cover_instances.json": 1967,
+    "north_pagoda_cover.json": 21
+  }
+}

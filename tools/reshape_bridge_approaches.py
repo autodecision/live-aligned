@@ -10,7 +10,7 @@ from pathlib import Path
 from mathutils import Vector
 from mathutils.bvhtree import BVHTree
 
-PROJECT = Path('/home/allister/Projects/live-aligned')
+PROJECT = Path(__file__).resolve().parent.parent
 OUT = Path('/home/allister/Projects/mcp-for-blender/output/mediterranean_temple/improvements')
 STARTS = [('Main_North', (20.5, 31.5, 2.2600278854370117)),
           ('Main_South', (-1., -22., 2.35))]

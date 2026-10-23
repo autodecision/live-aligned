@@ -1,0 +1,16 @@
+{
+  "terrain_vertices": 3736,
+  "grass": {
+    "added": {
+      "Main": 3211,
+      "North": 15788,
+      "South": 6960
+    },
+    "added_total": 25959,
+    "reseated": 332,
+    "runtime_total": 78185
+  },
+  "terrain_sha": "738da92814323924f8862412407ed7e5066f25b5661f5c20396afb1172226f0d",
+  "final_grade_reseated": 1794,
+  "lower_beach_roots_removed": 114
+}

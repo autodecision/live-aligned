@@ -1,0 +1,28 @@
+{
+  "mesh": "North_Pagoda_Pagoda_Meadow_Ground",
+  "base_mesh": "Pagoda_Coastal_Distant_Islands",
+  "stage": "continuous north coast",
+  "geometry": {
+    "grid_step": 0.5,
+    "grid_shape": [
+      265,
+      201
+    ],
+    "vertices": 53265,
+    "faces": 105600,
+    "south_faces_preserved": 28512,
+    "old_north_faces_removed": 6503,
+    "raised_grid_points": 22425,
+    "maximum_fill": 9.548129812879507,
+    "perimeter_max_above_bed": 0.0
+  },
+  "grass": {
+    "reseated": 17890,
+    "added": 3140,
+    "total": 81325
+  },
+  "sha256": "7b525ee675dd334d304fa465e730e2c3db7a2b8f6478097987e343edc32d11d2",
+  "distant_sha256": "6aee0c0cce2506707b04e807b8e080bec61ae31b72b7d67fccb35e4bac47f2d2",
+  "preserved_other_meshes": 977,
+  "source_backup": "/home/allister/Backups/live-aligned/pagoda-coast-20261020-031232"
+}

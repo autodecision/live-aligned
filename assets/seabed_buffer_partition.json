@@ -1,0 +1,38 @@
+{
+  "cutoff": -5.56,
+  "deep": {
+    "identical_triangle_attributes": true,
+    "output": "res://assets/ocean_seabed_deep_compact.res",
+    "source": "res://assets/ocean_seabed_deep.res",
+    "surfaces": [
+      {
+        "lods": 0,
+        "new_vertices": 85901,
+        "normal_stride": 8,
+        "old_vertices": 86427,
+        "position_stride": 12,
+        "surface": 0,
+        "triangles": 170086
+      }
+    ]
+  },
+  "deep_triangles": 170086,
+  "original_triangles": 171680,
+  "shoal_triangles": 1594,
+  "shoals": {
+    "identical_triangle_attributes": true,
+    "output": "res://assets/ocean_seabed_shoals_compact.res",
+    "source": "res://assets/ocean_seabed_shoals.res",
+    "surfaces": [
+      {
+        "lods": 0,
+        "new_vertices": 1070,
+        "normal_stride": 8,
+        "old_vertices": 86427,
+        "position_stride": 12,
+        "surface": 0,
+        "triangles": 1594
+      }
+    ]
+  }
+}

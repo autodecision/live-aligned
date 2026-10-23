@@ -2,16 +2,22 @@
   "note": "Inventory only. No asset download credentials or private URLs. Restore only from an authorized local copy.",
   "files": [
     {
+      "path": "assets/bowl_outlet_detail.glb",
+      "bytes": 3440388,
+      "sha256": "7c3c5222274fc95b1b50fa9d14ebbea2c2815e76d61e2cd99b047773caf1c73e",
+      "included_in_public_source": false
+    },
+    {
       "path": "assets/bridge_approach_repairs.json",
       "included_in_public_source": true,
-      "bytes": 2736,
-      "sha256": "58a3ccd1bdc1cc2f4b7f4cee7cb08c0086fc8114e1b51e50bd1cb738a5fa5cc0"
+      "bytes": 5065,
+      "sha256": "213bc24fe8bf87db35427ad248708e4b52989f19f71a28f5ceb172692c187d49"
     },
     {
       "path": "assets/bridge_approach_terrain.glb",
       "included_in_public_source": false,
-      "bytes": 1330352,
-      "sha256": "74d937da33ba058b540dba570108be86a8ed7576fb20f6cdb9834baf2dffeffa"
+      "bytes": 4145424,
+      "sha256": "aabe635bf2420166bd52e88bb7a24e7bf75f1fec6d70b5c308a0fb1c321325a5"
     },
     {
       "path": "assets/bridge_landing_banks.glb",
@@ -26,15 +32,549 @@
       "included_in_public_source": false
     },
     {
+      "path": "assets/characters/alien_suit.glb",
+      "bytes": 4217508,
+      "sha256": "8fbb646fa6cb88c4229ee7fbf83274463484a22513adccc820245475f03345e0",
+      "included_in_public_source": false
+    },
+    {
+      "path": "assets/characters/alien_suit_Alien \u2022 ash grey _ micro normal.png",
+      "bytes": 125099,
+      "sha256": "2362d5001d2cbd5fb02fe7ee83adb345e429d5ca9512f7c4fb5b2aef7fa16628",
+      "included_in_public_source": false
+    },
+    {
+      "path": "assets/characters/alien_suit_Alien \u2022 ash grey _ roughness.png",
+      "bytes": 79260,
+      "sha256": "bb671a6892bdee4aac93c7aabf9cacf9431cd15e96c6ad7f31e797bd7716ac77",
+      "included_in_public_source": false
+    },
+    {
+      "path": "assets/characters/alien_suit_Alien \u2022 ash grey _ surface.png",
+      "bytes": 111125,
+      "sha256": "709b06ac60ed7bd903562b23428ae61528dee6017d4029875537fbd149a4500e",
+      "included_in_public_source": false
+    },
+    {
+      "path": "assets/characters/alien_suit_Alien \u2022 eyelid _ micro normal.png",
+      "bytes": 125260,
+      "sha256": "3fb16df792caea5098e8d1c29bf30abb4c4689541f24210373b10082d6191e75",
+      "included_in_public_source": false
+    },
+    {
+      "path": "assets/characters/alien_suit_Alien \u2022 eyelid _ roughness.png",
+      "bytes": 79284,
+      "sha256": "ba033b2dbea496e78504cc4e83d69b070e787609957580d7a61529f7450f1389",
+      "included_in_public_source": false
+    },
+    {
+      "path": "assets/characters/alien_suit_Alien \u2022 eyelid _ surface.png",
+      "bytes": 100174,
+      "sha256": "0209b011eec1bb5d648f2db748c46ea50b4ab86d1c6be931fa3c4f26c9602079",
+      "included_in_public_source": false
+    },
+    {
+      "path": "assets/characters/alien_suit_Leather \u2022 black _ micro normal.png",
+      "bytes": 208174,
+      "sha256": "95713286e9907453ee53019ef970387779665e424af9f89c8896ee0ef11589c0",
+      "included_in_public_source": false
+    },
+    {
+      "path": "assets/characters/alien_suit_Leather \u2022 black _ roughness.png",
+      "bytes": 89355,
+      "sha256": "c67de8c90b2200d50a92ec15c68a67f4b9c595c6530371fe3c2004a42a9fcee3",
+      "included_in_public_source": false
+    },
+    {
+      "path": "assets/characters/alien_suit_Leather \u2022 black _ surface.png",
+      "bytes": 65240,
+      "sha256": "492c0639d327b30e3133ae95317991f76c6b711e821efaf5debb07889a8325d8",
+      "included_in_public_source": false
+    },
+    {
+      "path": "assets/characters/alien_suit_Metal \u2022 dark gunmetal _ micro normal.png",
+      "bytes": 193336,
+      "sha256": "2a7c448af18e26cd5c77cb48810ccc516f127b0f0ab61e89b3c919a48cf26760",
+      "included_in_public_source": false
+    },
+    {
+      "path": "assets/characters/alien_suit_Metal \u2022 dark gunmetal _ roughness.png",
+      "bytes": 88136,
+      "sha256": "96f58560466cb6d4947c727e3ed4ef600457b43eb3772945c8726a0c93e2c79e",
+      "included_in_public_source": false
+    },
+    {
+      "path": "assets/characters/alien_suit_Metal \u2022 dark gunmetal _ surface.png",
+      "bytes": 88068,
+      "sha256": "79a87fb066c9eb89db34d57c1bb2a223491812f64832b8495b842d1d64cbc80a",
+      "included_in_public_source": false
+    },
+    {
+      "path": "assets/characters/alien_suit_Shirt \u2022 pearl _ micro normal.png",
+      "bytes": 208247,
+      "sha256": "1d19dbb473433ae2dbeca816dbb93423335bb90e86bdc2d6c6d857e44638c59d",
+      "included_in_public_source": false
+    },
+    {
+      "path": "assets/characters/alien_suit_Shirt \u2022 pearl _ roughness.png",
+      "bytes": 89306,
+      "sha256": "a7fefab5ce0708b5a9bab7d5ec68a58d758ed8271290a226dbeb6ac2e4615ba5",
+      "included_in_public_source": false
+    },
+    {
+      "path": "assets/characters/alien_suit_Shirt \u2022 pearl _ surface.png",
+      "bytes": 139942,
+      "sha256": "3a04478407023454c2ce9dc772b30f090f6b0af4c4768cfc2c540c2e686c290b",
+      "included_in_public_source": false
+    },
+    {
+      "path": "assets/characters/alien_suit_Suit \u2022 charcoal wool _ micro normal.png",
+      "bytes": 208190,
+      "sha256": "3656015f2b0a8b12f3ae96f5c756c700381f10ef7991ec1292c58a4e7a0438a1",
+      "included_in_public_source": false
+    },
+    {
+      "path": "assets/characters/alien_suit_Suit \u2022 charcoal wool _ roughness.png",
+      "bytes": 89406,
+      "sha256": "b0a0e8a85722423ef79634d41865501309ca4b73599d09fbb1b93bb0efe1ce97",
+      "included_in_public_source": false
+    },
+    {
+      "path": "assets/characters/alien_suit_Suit \u2022 charcoal wool _ surface.png",
+      "bytes": 68416,
+      "sha256": "1901d4153e6b9b0b1b85da5c8fce629fe0a747464c865eec11a2408696d279e0",
+      "included_in_public_source": false
+    },
+    {
+      "path": "assets/characters/alien_suit_Suit \u2022 satin lapels _ micro normal.png",
+      "bytes": 208188,
+      "sha256": "387fdbd8aac15ae54a7b22e255b413fd742f85e6f6057ec68c0f780577a5ccf2",
+      "included_in_public_source": false
+    },
+    {
+      "path": "assets/characters/alien_suit_Suit \u2022 satin lapels _ roughness.png",
+      "bytes": 89356,
+      "sha256": "ae70f87d414d6d94fdd703c27c253dd500226ba4ca7eff3046a07d0ff27c68ea",
+      "included_in_public_source": false
+    },
+    {
+      "path": "assets/characters/alien_suit_Suit \u2022 satin lapels _ surface.png",
+      "bytes": 81591,
+      "sha256": "f85f515b3a4ef4f621b5085afbfc0724fd5e40ce0086f2bfcffd3f04bce86cfa",
+      "included_in_public_source": false
+    },
+    {
+      "path": "assets/characters/alien_suit_Tie \u2022 oxidized teal _ micro normal.png",
+      "bytes": 208243,
+      "sha256": "dac5ac6f79fef2aec061d8a8f0d350e23a42e26d45102af7dd92d19613aa91fa",
+      "included_in_public_source": false
+    },
+    {
+      "path": "assets/characters/alien_suit_Tie \u2022 oxidized teal _ roughness.png",
+      "bytes": 89309,
+      "sha256": "350b837ee5e44ce9abafdbfbea9fc4e4f7ad5348028f529a118091e2d00847fc",
+      "included_in_public_source": false
+    },
+    {
+      "path": "assets/characters/alien_suit_Tie \u2022 oxidized teal _ surface.png",
+      "bytes": 87041,
+      "sha256": "4e5411cc004694b686d6c25d073b784acccac7a616e4ea02ed41ac816902706f",
+      "included_in_public_source": false
+    },
+    {
+      "path": "assets/characters/female_scientist.glb",
+      "bytes": 7165728,
+      "sha256": "9a19b8a4a7f9ed1d404ff82403c85776f3697b0487dac77aef5fa54ccd98cd78",
+      "included_in_public_source": false
+    },
+    {
+      "path": "assets/characters/female_scientist_Coat \u2022 ivory twill _ micro normal.png",
+      "bytes": 208185,
+      "sha256": "72daeb00b943768624d5c68f2f03e113dea6ecd3d109ab8f4f224cb40af4eb24",
+      "included_in_public_source": false
+    },
+    {
+      "path": "assets/characters/female_scientist_Coat \u2022 ivory twill _ roughness.png",
+      "bytes": 89360,
+      "sha256": "66018ddd8e5eb11b87ac79704af82b95a17fc480a8e082bca05347a41bb8c3bf",
+      "included_in_public_source": false
+    },
+    {
+      "path": "assets/characters/female_scientist_Coat \u2022 ivory twill _ surface.png",
+      "bytes": 131909,
+      "sha256": "56a41776689dbcc81d429cb17841c632befbeebeb6d65c6295c949913d6ae94f",
+      "included_in_public_source": false
+    },
+    {
+      "path": "assets/characters/female_scientist_Hair \u2022 espresso _ micro normal.png",
+      "bytes": 172181,
+      "sha256": "de1c8da7553be1bcbbef38c8e500b2826dc17046daf6d43d337e2d3bb5a245b3",
+      "included_in_public_source": false
+    },
+    {
+      "path": "assets/characters/female_scientist_Hair \u2022 espresso _ roughness.png",
+      "bytes": 88027,
+      "sha256": "d1c0a098b2e3b2e5a8ce6d74809249b920e3fe1a0a4ca402761d3ce58275253b",
+      "included_in_public_source": false
+    },
+    {
+      "path": "assets/characters/female_scientist_Hair \u2022 espresso _ surface.png",
+      "bytes": 52942,
+      "sha256": "4d4c4d81e1e5f4571f445629d20e73472af83cedf63215ae58bb00ae747109e1",
+      "included_in_public_source": false
+    },
+    {
+      "path": "assets/characters/female_scientist_Hair \u2022 highlights _ micro normal.png",
+      "bytes": 171877,
+      "sha256": "b161392567e0bafb9e655717b6e0c1c9235f04dabd5965b1b5ace0c13a6049a3",
+      "included_in_public_source": false
+    },
+    {
+      "path": "assets/characters/female_scientist_Hair \u2022 highlights _ roughness.png",
+      "bytes": 88001,
+      "sha256": "8e4dcefd2a67c4122bc467686fd6bfcf9244d9ec3b453c06b5366df629e7e679",
+      "included_in_public_source": false
+    },
+    {
+      "path": "assets/characters/female_scientist_Hair \u2022 highlights _ surface.png",
+      "bytes": 77007,
+      "sha256": "326c1afe2f2ae0d672955d60b4da2e8a77725c29afc6f35a86f838d5ec5ad6be",
+      "included_in_public_source": false
+    },
+    {
+      "path": "assets/characters/female_scientist_Leather \u2022 black _ micro normal.png",
+      "bytes": 208174,
+      "sha256": "95713286e9907453ee53019ef970387779665e424af9f89c8896ee0ef11589c0",
+      "included_in_public_source": false
+    },
+    {
+      "path": "assets/characters/female_scientist_Leather \u2022 black _ roughness.png",
+      "bytes": 89355,
+      "sha256": "c67de8c90b2200d50a92ec15c68a67f4b9c595c6530371fe3c2004a42a9fcee3",
+      "included_in_public_source": false
+    },
+    {
+      "path": "assets/characters/female_scientist_Leather \u2022 black _ surface.png",
+      "bytes": 65240,
+      "sha256": "492c0639d327b30e3133ae95317991f76c6b711e821efaf5debb07889a8325d8",
+      "included_in_public_source": false
+    },
+    {
+      "path": "assets/characters/female_scientist_Metal \u2022 brushed alloy _ micro normal.png",
+      "bytes": 193860,
+      "sha256": "8ca7f8af774e0f4ab98f7645feb54fafc9057c6fbc6c7e9b6b726f9b3d40df3e",
+      "included_in_public_source": false
+    },
+    {
+      "path": "assets/characters/female_scientist_Metal \u2022 brushed alloy _ roughness.png",
+      "bytes": 87968,
+      "sha256": "b055e9560dd694f93a55503c4535e7f6495ba0289d9dea7eadde76426a1f7a1a",
+      "included_in_public_source": false
+    },
+    {
+      "path": "assets/characters/female_scientist_Metal \u2022 brushed alloy _ surface.png",
+      "bytes": 120124,
+      "sha256": "62f909fdc4af2816a73ac4fae320d35439a691fee23eba5016ec88daa75839cf",
+      "included_in_public_source": false
+    },
+    {
+      "path": "assets/characters/female_scientist_Metal \u2022 copper _ micro normal.png",
+      "bytes": 194130,
+      "sha256": "48a568b22cf950566ceaff1dc1baf62c406b2f0ca51b0accae3049b5957b2dc8",
+      "included_in_public_source": false
+    },
+    {
+      "path": "assets/characters/female_scientist_Metal \u2022 copper _ roughness.png",
+      "bytes": 88062,
+      "sha256": "9b68fd2a623ca6f77551c4b1ece9ba0f1406065fa3dc33e8aa707fcc36789e9c",
+      "included_in_public_source": false
+    },
+    {
+      "path": "assets/characters/female_scientist_Metal \u2022 copper _ surface.png",
+      "bytes": 110908,
+      "sha256": "42a69c6412a81f3f495bf66d564eb4a8d720aa5484557acdb1cd1bfed6a01773",
+      "included_in_public_source": false
+    },
+    {
+      "path": "assets/characters/female_scientist_Robot \u2022 oxblood _ micro normal.png",
+      "bytes": 193505,
+      "sha256": "61a479cefcb6dfbff1673f19bdf37af6e0a1f3486100e5556b15dfd017c539d2",
+      "included_in_public_source": false
+    },
+    {
+      "path": "assets/characters/female_scientist_Robot \u2022 oxblood _ roughness.png",
+      "bytes": 88183,
+      "sha256": "7919443f24ae62bed3e36d4ee9bd686ee5db9f865f099e590dfd5cd121d808a2",
+      "included_in_public_source": false
+    },
+    {
+      "path": "assets/characters/female_scientist_Robot \u2022 oxblood _ surface.png",
+      "bytes": 119670,
+      "sha256": "439db818df97b3d86966e360a5b9ae162484336715cac59eca8a53034e8b744b",
+      "included_in_public_source": false
+    },
+    {
+      "path": "assets/characters/female_scientist_Shirt \u2022 pearl _ micro normal.png",
+      "bytes": 208247,
+      "sha256": "1d19dbb473433ae2dbeca816dbb93423335bb90e86bdc2d6c6d857e44638c59d",
+      "included_in_public_source": false
+    },
+    {
+      "path": "assets/characters/female_scientist_Shirt \u2022 pearl _ roughness.png",
+      "bytes": 89306,
+      "sha256": "a7fefab5ce0708b5a9bab7d5ec68a58d758ed8271290a226dbeb6ac2e4615ba5",
+      "included_in_public_source": false
+    },
+    {
+      "path": "assets/characters/female_scientist_Shirt \u2022 pearl _ surface.png",
+      "bytes": 139942,
+      "sha256": "3a04478407023454c2ce9dc772b30f090f6b0af4c4768cfc2c540c2e686c290b",
+      "included_in_public_source": false
+    },
+    {
+      "path": "assets/characters/female_scientist_Skin \u2022 eyelids _ micro normal.png",
+      "bytes": 125080,
+      "sha256": "04f5960cb31deb64a4d7f540e5648ea28093e0dee8355cd3d5b3e74a347793ef",
+      "included_in_public_source": false
+    },
+    {
+      "path": "assets/characters/female_scientist_Skin \u2022 eyelids _ roughness.png",
+      "bytes": 79291,
+      "sha256": "aabdc9fa4925daeeb5a675cf0752567e04348e5fe73c47308c38b0a51b222a44",
+      "included_in_public_source": false
+    },
+    {
+      "path": "assets/characters/female_scientist_Skin \u2022 eyelids _ surface.png",
+      "bytes": 120751,
+      "sha256": "bfd59b3e120433987aac86fc09265fe4105c59cb4979b9d96e51149bbe0eac55",
+      "included_in_public_source": false
+    },
+    {
+      "path": "assets/characters/female_scientist_Skin \u2022 fair _ micro normal.png",
+      "bytes": 125574,
+      "sha256": "5a276d299efcbb5658d92d2c6175fbdef27ed3100bce6cb2e34e5841364ba071",
+      "included_in_public_source": false
+    },
+    {
+      "path": "assets/characters/female_scientist_Skin \u2022 fair _ roughness.png",
+      "bytes": 79509,
+      "sha256": "da0065af88f8927c9b7510d200fd765039154b5a454bc6301bbcb8c4b9b3f2b2",
+      "included_in_public_source": false
+    },
+    {
+      "path": "assets/characters/female_scientist_Skin \u2022 fair _ surface.png",
+      "bytes": 126124,
+      "sha256": "2c9061b16d6405ddad92767ff3e12ab01a6b58785ac62294477ff48d40369289",
+      "included_in_public_source": false
+    },
+    {
+      "path": "assets/characters/female_scientist_Trousers \u2022 graphite _ micro normal.png",
+      "bytes": 208270,
+      "sha256": "2a9165d29bb3bc97c692890cd756cb686fd169210202c43bb66ea42f2fe8df2e",
+      "included_in_public_source": false
+    },
+    {
+      "path": "assets/characters/female_scientist_Trousers \u2022 graphite _ roughness.png",
+      "bytes": 89341,
+      "sha256": "43d7e11a43d88791e15b008619359149f208f99e9a0ec26e5fa2d2cb416c92bf",
+      "included_in_public_source": false
+    },
+    {
+      "path": "assets/characters/female_scientist_Trousers \u2022 graphite _ surface.png",
+      "bytes": 87546,
+      "sha256": "2d573c7ae6e6e9aac9e0097ef1d3e521dd05d4b10ec55afc98fd9f19eaaedcb1",
+      "included_in_public_source": false
+    },
+    {
+      "path": "assets/characters/female_scientist_Undershirt \u2022 petrol _ micro normal.png",
+      "bytes": 208145,
+      "sha256": "fcf8f95af57f1ea654749667965a5f3147501c4e0b433929f2dd425a1b3594f9",
+      "included_in_public_source": false
+    },
+    {
+      "path": "assets/characters/female_scientist_Undershirt \u2022 petrol _ roughness.png",
+      "bytes": 89463,
+      "sha256": "6798e2d28ac735c3f871a1176359243b7692732c00a0fc52166249320b103a6b",
+      "included_in_public_source": false
+    },
+    {
+      "path": "assets/characters/female_scientist_Undershirt \u2022 petrol _ surface.png",
+      "bytes": 104049,
+      "sha256": "02e9a0d010be94d0f072fc90992e03cc6cdb019f0c828e5fa249f28063534e51",
+      "included_in_public_source": false
+    },
+    {
+      "path": "assets/characters/palm_pad.glb",
+      "included_in_public_source": false,
+      "bytes": 233584,
+      "sha256": "0b30fafe9636b0c9f9aedea95bacff5e2da3fedf8e63167d6a786b57ad11ca4d"
+    },
+    {
+      "path": "assets/characters/robot.glb",
+      "bytes": 4650548,
+      "sha256": "6e5626a91542cb37beb110bb388448b7dbaa0c6b6deb5ea8a23f049efbe264e7",
+      "included_in_public_source": false
+    },
+    {
+      "path": "assets/characters/robot_Metal \u2022 brushed alloy _ micro normal.png",
+      "bytes": 193860,
+      "sha256": "8ca7f8af774e0f4ab98f7645feb54fafc9057c6fbc6c7e9b6b726f9b3d40df3e",
+      "included_in_public_source": false
+    },
+    {
+      "path": "assets/characters/robot_Metal \u2022 brushed alloy _ roughness.png",
+      "bytes": 87968,
+      "sha256": "b055e9560dd694f93a55503c4535e7f6495ba0289d9dea7eadde76426a1f7a1a",
+      "included_in_public_source": false
+    },
+    {
+      "path": "assets/characters/robot_Metal \u2022 brushed alloy _ surface.png",
+      "bytes": 120124,
+      "sha256": "62f909fdc4af2816a73ac4fae320d35439a691fee23eba5016ec88daa75839cf",
+      "included_in_public_source": false
+    },
+    {
+      "path": "assets/characters/robot_Metal \u2022 copper _ micro normal.png",
+      "bytes": 194130,
+      "sha256": "48a568b22cf950566ceaff1dc1baf62c406b2f0ca51b0accae3049b5957b2dc8",
+      "included_in_public_source": false
+    },
+    {
+      "path": "assets/characters/robot_Metal \u2022 copper _ roughness.png",
+      "bytes": 88062,
+      "sha256": "9b68fd2a623ca6f77551c4b1ece9ba0f1406065fa3dc33e8aa707fcc36789e9c",
+      "included_in_public_source": false
+    },
+    {
+      "path": "assets/characters/robot_Metal \u2022 copper _ surface.png",
+      "bytes": 110908,
+      "sha256": "42a69c6412a81f3f495bf66d564eb4a8d720aa5484557acdb1cd1bfed6a01773",
+      "included_in_public_source": false
+    },
+    {
+      "path": "assets/characters/robot_Metal \u2022 dark gunmetal _ micro normal.png",
+      "bytes": 193336,
+      "sha256": "2a7c448af18e26cd5c77cb48810ccc516f127b0f0ab61e89b3c919a48cf26760",
+      "included_in_public_source": false
+    },
+    {
+      "path": "assets/characters/robot_Metal \u2022 dark gunmetal _ roughness.png",
+      "bytes": 88136,
+      "sha256": "96f58560466cb6d4947c727e3ed4ef600457b43eb3772945c8726a0c93e2c79e",
+      "included_in_public_source": false
+    },
+    {
+      "path": "assets/characters/robot_Metal \u2022 dark gunmetal _ surface.png",
+      "bytes": 88068,
+      "sha256": "79a87fb066c9eb89db34d57c1bb2a223491812f64832b8495b842d1d64cbc80a",
+      "included_in_public_source": false
+    },
+    {
+      "path": "assets/characters/robot_Robot \u2022 ceramic bone _ micro normal.png",
+      "bytes": 193400,
+      "sha256": "8ee129f24bda406e2262fc55685a5611d6c89f5e7cb9df87f160f108c5ec97fc",
+      "included_in_public_source": false
+    },
+    {
+      "path": "assets/characters/robot_Robot \u2022 ceramic bone _ roughness.png",
+      "bytes": 88079,
+      "sha256": "c4688b3dc2e8997309515056c8a47de17fbaa366050c7d78357ac8d579f50c53",
+      "included_in_public_source": false
+    },
+    {
+      "path": "assets/characters/robot_Robot \u2022 ceramic bone _ surface.png",
+      "bytes": 155724,
+      "sha256": "4ce2afe7ccb090a08f6d13985d43b29c081b3a55cc152b09f2266ed499b4bcd0",
+      "included_in_public_source": false
+    },
+    {
+      "path": "assets/characters/robot_Robot \u2022 hazard ochre _ micro normal.png",
+      "bytes": 192812,
+      "sha256": "f5f47e12075e6b29ea7f4ae2b1658807bb37701154e528032faaefaa22304e00",
+      "included_in_public_source": false
+    },
+    {
+      "path": "assets/characters/robot_Robot \u2022 hazard ochre _ roughness.png",
+      "bytes": 88032,
+      "sha256": "e799c5f8c2c209b6584d2da135ece65c79bdd578140a61290c6ec95bcb3c8141",
+      "included_in_public_source": false
+    },
+    {
+      "path": "assets/characters/robot_Robot \u2022 hazard ochre _ surface.png",
+      "bytes": 135511,
+      "sha256": "59f78df7588015b27be5eeeea970ca90bd5116a8b530e2345f9a1e27721f5e0e",
+      "included_in_public_source": false
+    },
+    {
+      "path": "assets/characters/robot_Robot \u2022 oxblood _ micro normal.png",
+      "bytes": 193505,
+      "sha256": "61a479cefcb6dfbff1673f19bdf37af6e0a1f3486100e5556b15dfd017c539d2",
+      "included_in_public_source": false
+    },
+    {
+      "path": "assets/characters/robot_Robot \u2022 oxblood _ roughness.png",
+      "bytes": 88183,
+      "sha256": "7919443f24ae62bed3e36d4ee9bd686ee5db9f865f099e590dfd5cd121d808a2",
+      "included_in_public_source": false
+    },
+    {
+      "path": "assets/characters/robot_Robot \u2022 oxblood _ surface.png",
+      "bytes": 119670,
+      "sha256": "439db818df97b3d86966e360a5b9ae162484336715cac59eca8a53034e8b744b",
+      "included_in_public_source": false
+    },
+    {
+      "path": "assets/characters/robot_Shirt \u2022 pearl _ micro normal.png",
+      "bytes": 208247,
+      "sha256": "1d19dbb473433ae2dbeca816dbb93423335bb90e86bdc2d6c6d857e44638c59d",
+      "included_in_public_source": false
+    },
+    {
+      "path": "assets/characters/robot_Shirt \u2022 pearl _ roughness.png",
+      "bytes": 89306,
+      "sha256": "a7fefab5ce0708b5a9bab7d5ec68a58d758ed8271290a226dbeb6ac2e4615ba5",
+      "included_in_public_source": false
+    },
+    {
+      "path": "assets/characters/robot_Shirt \u2022 pearl _ surface.png",
+      "bytes": 139942,
+      "sha256": "3a04478407023454c2ce9dc772b30f090f6b0af4c4768cfc2c540c2e686c290b",
+      "included_in_public_source": false
+    },
+    {
+      "path": "assets/coast_outflow_detail.glb",
+      "bytes": 150316,
+      "sha256": "7cf9e063628b68486c86570e8f6d2d2ec9d5e1dc29661d05a13cdf72a7427d71",
+      "included_in_public_source": false
+    },
+    {
       "path": "assets/coastal_lantern.glb",
       "bytes": 128552,
       "sha256": "2d2a41fa5a928c1831bafb68ff8803dba2a3ac2ee64ef82a6af89b68e5e97166",
       "included_in_public_source": false
     },
     {
+      "path": "assets/coastal_meadow.json",
+      "included_in_public_source": true,
+      "bytes": 359,
+      "sha256": "f2315eef438777736b571cf3fe8dbb27b8167c4a9a7f0f9310489adfa975398d"
+    },
+    {
+      "path": "assets/couch_pillows.glb",
+      "bytes": 386360,
+      "sha256": "eef0edbb11ffc0e298c9c128b09e0af96ba22b0ee88dce9302868441d11a09cb",
+      "included_in_public_source": false
+    },
+    {
+      "path": "assets/forecourt_rock_grounded.glb",
+      "bytes": 2183808,
+      "sha256": "9bd8915b53c4186355be7271cb28bfcd8251891f8dc2f642b649d3d209760bf7",
+      "included_in_public_source": false
+    },
+    {
       "path": "assets/gscatter_ground_cover_instances.json",
-      "bytes": 13641986,
-      "sha256": "2a5cba53663ba3e81b3f479115100125b177931f6a2dacb7cbf622a7361fb30b",
+      "bytes": 21183999,
+      "sha256": "d91b59a239e968b53f9b2ac6b71275b864030e3ccd3df8d432b717ae688fef0f",
       "included_in_public_source": true
     },
     {
@@ -63,20 +603,26 @@
     },
     {
       "path": "assets/island_lantern_positions.json",
-      "bytes": 17001,
-      "sha256": "9abe5768254812bb4014351b4bcc0e910d2f6e2c9ad3d8f6f6842021f03e1c36",
+      "bytes": 17152,
+      "sha256": "0ff58c93083f51e5d8601138b54328aeb4ad5867096f9b1cc699a042a3c6bed4",
       "included_in_public_source": true
     },
     {
       "path": "assets/island_site_repairs.json",
-      "bytes": 1921,
-      "sha256": "1ee58732361b94770f00a2884544854908137278afe9fd389c766e85f35cd025",
+      "bytes": 2004,
+      "sha256": "4a96081c4b1117c0b601211999ca725602171e4c04aa22f021f4a60fb2a93e61",
       "included_in_public_source": true
     },
     {
+      "path": "assets/lab_prop_detail.glb",
+      "included_in_public_source": false,
+      "bytes": 1875956,
+      "sha256": "b27aabedfa7bf1409715b9663b469c2da1dc10e9a3e55973fe5277aec6d59fba"
+    },
+    {
       "path": "assets/mediterranean_temple.blend",
-      "bytes": 201098936,
-      "sha256": "bb2bfe18878415ef6e1837c0b3971126d8ad4a0c8ee933aeeb06c0d4af568db3",
+      "bytes": 256688921,
+      "sha256": "c6a81cd89dc9312996ebc05b9dd71bd15177c7562e3bb36bc32f47db332acea7",
       "included_in_public_source": false
     },
     {
@@ -345,8 +891,8 @@
     },
     {
       "path": "assets/north_pagoda.glb",
-      "bytes": 9467888,
-      "sha256": "8ea4f44b2ebf6af123df9feb04c9695f760b1eedaad421b782ea409275058818",
+      "bytes": 9497260,
+      "sha256": "4519b666f8cac71731a6f5fc3b96547e08ac1899277935c8a4e1131302997915",
       "included_in_public_source": false
     },
     {
@@ -357,8 +903,8 @@
     },
     {
       "path": "assets/north_pagoda_cover.json",
-      "bytes": 604919,
-      "sha256": "a96956ccbc56144ada2492060aaead20d4a806f0f7ae1253948ceb452b1b13ec",
+      "bytes": 10163086,
+      "sha256": "50fe153211ad6eac187dc335fdb495999a9d4fdbf564dc779d2d1218b7aac732",
       "included_in_public_source": true
     },
     {
@@ -374,10 +920,70 @@
       "included_in_public_source": false
     },
     {
+      "path": "assets/ocean_contact_field.exr",
+      "bytes": 5104541,
+      "sha256": "944c3d8189c17fab33e8394863248026e0e37394c8d7e5347e9c6c458b99fe30",
+      "included_in_public_source": false
+    },
+    {
+      "path": "assets/ocean_contact_field.exr.import",
+      "bytes": 967,
+      "sha256": "e9a3c650e29137bd91c3b8f4e35c38ddcc6431fc37e9a5835c3a3ae625e0c662",
+      "included_in_public_source": false
+    },
+    {
+      "path": "assets/ocean_ground.glb",
+      "included_in_public_source": false,
+      "bytes": 7072092,
+      "sha256": "88d413894fdd777b30c5e51cd75b613765b1e0ad80a9ec223756e046441bf415"
+    },
+    {
+      "path": "assets/ocean_ground.glb.import",
+      "bytes": 1158,
+      "sha256": "c8fe211d70bae9031dfeaba15e8df729568cceb25e2f877d62fe10593ca2567d",
+      "included_in_public_source": false
+    },
+    {
+      "path": "assets/ocean_ground.json",
+      "included_in_public_source": true,
+      "bytes": 335710,
+      "sha256": "b36d4f870b543302ced6c851e99339fc2a8a28307da4b87bb5ca176701294a77"
+    },
+    {
+      "path": "assets/ocean_horizon_edges.json",
+      "bytes": 44814,
+      "sha256": "9a381c85647de16a6ca9a92b7be935e220a90f2c709c57f8dae20ba02e06a505",
+      "included_in_public_source": true
+    },
+    {
+      "path": "assets/ocean_seabed_deep_compact.res",
+      "included_in_public_source": false,
+      "bytes": 2357556,
+      "sha256": "7abdf7e5e40ec499f079d3b1510e31dac249c995f7b0a76c8166ed61c67015a0"
+    },
+    {
+      "path": "assets/ocean_seabed_shoals_compact.res",
+      "included_in_public_source": false,
+      "bytes": 30992,
+      "sha256": "0ac94b712887067c1a80a52ba843f70cd8402fe1a17b0e0c7f8a74457bf7de64"
+    },
+    {
+      "path": "assets/offshore_spectrum.glb",
+      "included_in_public_source": false,
+      "bytes": 7939612,
+      "sha256": "ef400cab129f36e9546600fab8f0db12b2f5a4a53db0a902c23a0ad09276d8a2"
+    },
+    {
       "path": "assets/olive_tree_render_lod.res",
       "bytes": 6861669,
       "sha256": "d360df1964d91653973d59acdde8bc100a600bfbc30207f35f09a4fd1de80843",
       "included_in_public_source": false
+    },
+    {
+      "path": "assets/olive_tree_render_lod_compact.res",
+      "included_in_public_source": false,
+      "bytes": 1620888,
+      "sha256": "064713445588f0dded6c1e7d9f55671aef6494da3b46d98165f26472a9558699"
     },
     {
       "path": "assets/olive_tree_shadow_lod.res",
@@ -386,28 +992,136 @@
       "included_in_public_source": false
     },
     {
+      "path": "assets/olive_tree_shadow_lod_compact.res",
+      "included_in_public_source": false,
+      "bytes": 562701,
+      "sha256": "4ba6c944004e6abfc35e801d843dd5fa6a0827f00a950b8e9ebee16c703d98e4"
+    },
+    {
       "path": "assets/original_grass.glb",
       "bytes": 54440,
       "sha256": "4afb6a86c196234e2fd8d78598980c813ce57807b7ed107db1af14c39cac1f40",
       "included_in_public_source": false
     },
     {
+      "path": "assets/pagoda_interior.glb",
+      "bytes": 4739740,
+      "sha256": "547b3815e9f8ee03dfbbea9dc07f989a00f3db74d7e667bd796a9ddc053a1820",
+      "included_in_public_source": false
+    },
+    {
+      "path": "assets/pagoda_interior.json",
+      "bytes": 12835,
+      "sha256": "9aa2d0fe1e8d434f53fe96b19338dce1d552f5163cc6c66440c8b2b4a9cd65e3",
+      "included_in_public_source": true
+    },
+    {
+      "path": "assets/pagoda_shore.glb",
+      "bytes": 6092228,
+      "sha256": "1b3c993d8d2e358b5c842b9d656c02f42eafcd3af47ad000e317011777486fca",
+      "included_in_public_source": false
+    },
+    {
+      "path": "assets/pagoda_shore.glb.import",
+      "bytes": 1157,
+      "sha256": "5fdcff0625109c71089f1d2b25e350da425ec066f0d874a740a1bc3b6de7d0f7",
+      "included_in_public_source": false
+    },
+    {
+      "path": "assets/pagoda_shore.json",
+      "bytes": 818,
+      "sha256": "dc3a1924e1a3b424f34d5f18ba174ede5cfbd36bf060bc66d9ba042bffe62480",
+      "included_in_public_source": true
+    },
+    {
       "path": "assets/pagoda_sidewalk_repairs.json",
       "included_in_public_source": true,
-      "bytes": 2547,
-      "sha256": "f31dca7b35e6bea358dbf6f76b9b28113d7f5dd468295c0f3cfee7dd9a072b25"
+      "bytes": 2269,
+      "sha256": "f090a81beec0c645e72325d82a53d5ffe8c4ee269830286bdfaf986c5b03788c"
     },
     {
       "path": "assets/pagoda_sidewalk_terrain.glb",
       "included_in_public_source": false,
-      "bytes": 419284,
-      "sha256": "52051800dd0b4ed7847ef6bb9b2bebd6792be8813800f3ca986640c3145713ea"
+      "bytes": 810932,
+      "sha256": "58d05d4a3d6bc5e1bc61aa50731407b74b1afdb39e5f07a0b26621caac6e27e2"
+    },
+    {
+      "path": "assets/seabed_buffer_partition.json",
+      "included_in_public_source": true,
+      "bytes": 915,
+      "sha256": "8067b061713958b9e6e2ac39ee07767863f1cb50732ba1f0b86144f740228a9a"
+    },
+    {
+      "path": "assets/shore_planting.json",
+      "included_in_public_source": true,
+      "bytes": 2341,
+      "sha256": "3387a71585d66e98bd5ea24fe8b29af03917c8821c3df706f1e4129477e49870"
+    },
+    {
+      "path": "assets/south_garden.glb",
+      "included_in_public_source": false,
+      "bytes": 4887260,
+      "sha256": "605848b410463b8934a2b66021ab33668e74c05bfce9677cde896cd28b2dd336"
+    },
+    {
+      "path": "assets/south_garden.json",
+      "included_in_public_source": true,
+      "bytes": 34397,
+      "sha256": "58673bdcaab5af147bcaad563983311a19c6f7711a5b1ba0e5730d2734de2a2d"
+    },
+    {
+      "path": "assets/south_garden_koi.glb",
+      "included_in_public_source": false,
+      "bytes": 344124,
+      "sha256": "aa0981c01676dc28d5a43e683a00fb5714128e23e9c1ced4972d895b4763c486"
+    },
+    {
+      "path": "assets/south_garden_terrain.glb",
+      "included_in_public_source": false,
+      "bytes": 848608,
+      "sha256": "c3e30fb78b75741c530fa0e5a98a62f65a2e67258a4758a8c107303bc97ae5e2"
+    },
+    {
+      "path": "assets/stair_pot_leaves.glb",
+      "included_in_public_source": false,
+      "bytes": 10000356,
+      "sha256": "9f98921657f818fb38b9b77f6bcc43142bebe41cb6d258b759504bbfb8358e56"
+    },
+    {
+      "path": "assets/temple_architecture_detail.glb",
+      "included_in_public_source": false,
+      "bytes": 10879288,
+      "sha256": "1442c6fdbb3af73ff667ee39767a0cc5fb8bb9341b6482f1352f656fd17c9402"
+    },
+    {
+      "path": "assets/temple_clearance.json",
+      "included_in_public_source": true,
+      "bytes": 4038,
+      "sha256": "5b4b1d90112425c569fcbb31c6a8768c348bf49c027cdf85f851c88f34fb4b4a"
+    },
+    {
+      "path": "assets/temple_crown_detail.glb",
+      "included_in_public_source": false,
+      "bytes": 15007452,
+      "sha256": "ea83a176098ad60f357b083f5837df4d825f80b76453018a5d0faa7b1585162e"
+    },
+    {
+      "path": "assets/temple_pool_finish.glb",
+      "included_in_public_source": false,
+      "bytes": 3433824,
+      "sha256": "7ccb7f4ba9bd261cde02a0071104eafbeb4357cdf30923c40afcb048a9fd9a62"
     },
     {
       "path": "assets/temple_static_occlusion.scn",
       "bytes": 1704594,
       "sha256": "4db77f5adf7a3afbe370cd810ea9340abe24c52f385ba2bc107c96d2459ad91c",
       "included_in_public_source": false
+    },
+    {
+      "path": "assets/temple_terrace_guard.glb",
+      "included_in_public_source": false,
+      "bytes": 3292752,
+      "sha256": "62ee5a8503595c0848f343e89d83adc47eedc96c2a5eb6dd2b048f2bff075792"
     },
     {
       "path": "assets/textures/BromusSterilis_x0460_Albedo_8bit_16384ppm.png",
@@ -644,6 +1358,12 @@
       "included_in_public_source": false
     },
     {
+      "path": "assets/textures/couch_pillow_weave.png",
+      "bytes": 178802,
+      "sha256": "d708a081986384645f7c815c95f40ebb72e340f90f09c52dfba16425078fd207",
+      "included_in_public_source": false
+    },
+    {
       "path": "assets/textures/fern_02_alpha_1k.png",
       "bytes": 114589,
       "sha256": "ea3c64284c7ebdeedf484d2d816eae92825ec526140c3bb83859ddc7a64001f9",
@@ -752,6 +1472,12 @@
       "included_in_public_source": false
     },
     {
+      "path": "assets/textures/lab_reagent_labels.png",
+      "included_in_public_source": false,
+      "bytes": 113351,
+      "sha256": "2e4b689d222aac44750aef9314a6620d716092a710c244f09219234840a75365"
+    },
+    {
       "path": "assets/textures/marble_01_Diffuse_2k.jpg",
       "bytes": 1269188,
       "sha256": "d403786171716f86718bdd67eba923d4fb6125c0636bacef0e6a21dd5d623a48",
@@ -797,6 +1523,30 @@
       "path": "assets/textures/marble_bust_01_rough_1k.jpg",
       "bytes": 193918,
       "sha256": "1c4502352dc936dd1f1c1a81b418706df1ce0445949874215015325f9b8921fb",
+      "included_in_public_source": false
+    },
+    {
+      "path": "assets/textures/pagoda_bonsai_bark.png",
+      "bytes": 69237,
+      "sha256": "635aeab17bdd3f8f8ac9d212591f39396762dd9de1c2efe6ea55c93809064dbe",
+      "included_in_public_source": false
+    },
+    {
+      "path": "assets/textures/pagoda_book_bindings.png",
+      "bytes": 683226,
+      "sha256": "845484db17ecb0c5a17a4bb5b3f6c3e63be7acf0e7e3949e24f0818f92bd0b70",
+      "included_in_public_source": false
+    },
+    {
+      "path": "assets/textures/pagoda_furniture_wood.png",
+      "bytes": 198813,
+      "sha256": "4c0a8d0309d4b87bbd78373b2ab9fa3294389554679b96921a7a31fd35206adf",
+      "included_in_public_source": false
+    },
+    {
+      "path": "assets/textures/pagoda_walnut_inset.png",
+      "bytes": 192728,
+      "sha256": "6a48e12bda4daad46efe5a22a7cf2e135956a068753182da8f9591065b8fb7f1",
       "included_in_public_source": false
     },
     {
@@ -912,6 +1662,18 @@
       "bytes": 13997,
       "sha256": "1d2fe9fe5e0e8a16bfc362060a86cab293030e7ae603e67bcda14bb0286c5d05",
       "included_in_public_source": false
+    },
+    {
+      "path": "assets/tree_buffer_compaction.json",
+      "included_in_public_source": true,
+      "bytes": 1617,
+      "sha256": "2af836d3699fa8008434d0f83676fea6a0706ca60fcea993e538a48ac8f09a0a"
+    },
+    {
+      "path": "assets/tree_clearance_repairs.json",
+      "included_in_public_source": true,
+      "bytes": 16580,
+      "sha256": "201fe5d400cb963482bb6ccd4dbab913d370a081859461c0a188da47ca595b1c"
     }
   ]
 }

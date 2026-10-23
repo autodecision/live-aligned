@@ -56,17 +56,18 @@
     "island": "Main",
     "blender_position": [
       -2.0,
-      16.25,
-      3.528825378417969
+      18.75,
+      6.777093505859375
     ],
     "position": [
       -2.0,
-      3.528825378417969,
-      -16.25
+      6.777093505859375,
+      -18.75
     ],
     "yaw": 2.8,
-    "footprint_height_range": 0.01013946533203125,
-    "maximum_base_gap": -0.025
+    "footprint_height_range": 0.22986221313476562,
+    "maximum_base_gap": -0.025,
+    "adjustment": "Rear temple lamp moved fully onto the grassy bank, clear of the plaza edge"
   },
   {
     "name": "Coastal_Lantern_Main_06",
@@ -279,15 +280,15 @@
     "blender_position": [
       80.5,
       -25.0,
-      5.366040802001953
+      5.38006362915039
     ],
     "position": [
       80.5,
-      5.366040802001953,
+      5.38006362915039,
       25.0
     ],
     "yaw": 0.0,
-    "footprint_height_range": 0.17352676391601562,
+    "footprint_height_range": 0.06633377075195312,
     "maximum_base_gap": -0.025
   },
   {
@@ -296,49 +297,49 @@
     "blender_position": [
       94.25,
       -23.25,
-      4.751603698730468
+      4.747499084472656
     ],
     "position": [
       94.25,
-      4.751603698730468,
+      4.747499084472656,
       23.25
     ],
     "yaw": 0.7,
-    "footprint_height_range": 0.15731430053710938,
+    "footprint_height_range": 0.1399078369140625,
     "maximum_base_gap": -0.025
   },
   {
     "name": "Coastal_Lantern_South_03",
     "island": "South",
     "blender_position": [
-      104.0,
-      -26.0,
-      1.1449790954589845
+      85.0,
+      -27.4,
+      4.831491088867187
     ],
     "position": [
-      104.0,
-      1.1449790954589845,
-      26.0
+      85.0,
+      4.831491088867187,
+      27.4
     ],
     "yaw": 1.4,
-    "footprint_height_range": 0.17448043823242188,
+    "footprint_height_range": 0.04895782470703125,
     "maximum_base_gap": -0.025
   },
   {
     "name": "Coastal_Lantern_South_04",
     "island": "South",
     "blender_position": [
-      89.25,
-      -34.0,
-      1.1432777404785157
+      86.5,
+      -37.0,
+      4.461660003662109
     ],
     "position": [
-      89.25,
-      1.1432777404785157,
-      34.0
+      86.5,
+      4.461660003662109,
+      37.0
     ],
     "yaw": 2.0999999999999996,
-    "footprint_height_range": 0.11995697021484375,
+    "footprint_height_range": 0.13314437866210938,
     "maximum_base_gap": -0.025
   },
   {

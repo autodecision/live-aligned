@@ -1,0 +1,685 @@
+{
+  "version": 3,
+  "detail": {
+    "painting": false,
+    "bonsai_count": 3,
+    "individual_leaves": 3168,
+    "cabinets_with_joinery": 2,
+    "closed_cabinet_seams": true,
+    "branches_anchored_to_trunk": true
+  },
+  "libraries": [
+    {
+      "floor": 1,
+      "books": [
+        {
+          "style": 25,
+          "title": "FIELD SKETCHES",
+          "height": 0.29,
+          "thickness": 0.042,
+          "flat": true
+        },
+        {
+          "style": 18,
+          "title": "WILD FLOWERS",
+          "height": 0.27299999999999996,
+          "thickness": 0.034,
+          "flat": true
+        },
+        {
+          "style": 5,
+          "title": "GARDEN JOURNAL",
+          "height": 0.256,
+          "thickness": 0.048,
+          "flat": true
+        },
+        {
+          "style": 3,
+          "title": "HERBAL",
+          "height": 0.3298496088582119,
+          "thickness": 0.0891829642152256,
+          "flat": false
+        },
+        {
+          "style": 6,
+          "title": "BOTANICAL STUDIES",
+          "height": 0.3853322324566721,
+          "thickness": 0.07273204766983875,
+          "flat": false
+        },
+        {
+          "style": 29,
+          "title": "MOSS & FERNS",
+          "height": 0.31404823257449754,
+          "thickness": 0.07595592703601371,
+          "flat": false
+        },
+        {
+          "style": 4,
+          "title": "TEA CEREMONIES",
+          "height": 0.30282194817540337,
+          "thickness": 0.07717702545963213,
+          "flat": false
+        },
+        {
+          "style": 30,
+          "title": "WATER GARDENS",
+          "height": 0.29606160050963515,
+          "thickness": 0.0908726459759433,
+          "flat": false
+        },
+        {
+          "style": 7,
+          "title": "SEASONS",
+          "height": 0.38264567953617734,
+          "thickness": 0.10357069473863245,
+          "flat": false
+        },
+        {
+          "style": 22,
+          "title": "CERAMICS",
+          "height": 0.3608183221745293,
+          "thickness": 0.08804047736475765,
+          "flat": false
+        },
+        {
+          "style": 23,
+          "title": "A SMALL HERBARIUM",
+          "height": 0.31499385000203983,
+          "thickness": 0.10002726382981336,
+          "flat": false
+        },
+        {
+          "style": 0,
+          "title": "COASTAL FIELD NOTES",
+          "height": 0.32311925379210443,
+          "thickness": 0.07844095371014294,
+          "flat": false
+        }
+      ]
+    },
+    {
+      "floor": 2,
+      "books": [
+        {
+          "style": 12,
+          "title": "STAR CHARTS",
+          "height": 0.3503296699388519,
+          "thickness": 0.06646396121996845,
+          "flat": false
+        },
+        {
+          "style": 9,
+          "title": "ISLAND HISTORY",
+          "height": 0.37042379944694975,
+          "thickness": 0.05390298212048767,
+          "flat": false
+        },
+        {
+          "style": 14,
+          "title": "NATURAL PHILOSOPHY",
+          "height": 0.38457571205890667,
+          "thickness": 0.05938506887035589,
+          "flat": false
+        },
+        {
+          "style": 1,
+          "title": "TIDAL ATLAS",
+          "height": 0.3391971124679857,
+          "thickness": 0.06927410265740445,
+          "flat": false
+        },
+        {
+          "style": 20,
+          "title": "OBSERVATIONS",
+          "height": 0.3931120526775023,
+          "thickness": 0.0820439461151762,
+          "flat": false
+        },
+        {
+          "style": 15,
+          "title": "TRAVEL LETTERS",
+          "height": 0.4011733405929246,
+          "thickness": 0.06929462349408241,
+          "flat": false
+        },
+        {
+          "style": 27,
+          "title": "COLLECTED ESSAYS",
+          "height": 0.4626693874845289,
+          "thickness": 0.07163531552252485,
+          "flat": false
+        },
+        {
+          "style": 19,
+          "title": "ARCHIVE VOL. IV",
+          "height": 0.3,
+          "thickness": 0.051,
+          "flat": true
+        },
+        {
+          "style": 28,
+          "title": "VOYAGES",
+          "height": 0.288,
+          "thickness": 0.044,
+          "flat": true
+        },
+        {
+          "style": 16,
+          "title": "THE OLD COAST",
+          "height": 0.27599999999999997,
+          "thickness": 0.038,
+          "flat": true
+        },
+        {
+          "style": 10,
+          "title": "MARINE SURVEY",
+          "height": 0.264,
+          "thickness": 0.048,
+          "flat": true
+        },
+        {
+          "style": 11,
+          "title": "POEMS",
+          "height": 0.478934953777263,
+          "thickness": 0.07563261826412164,
+          "flat": false
+        },
+        {
+          "style": 8,
+          "title": "STONE & WATER",
+          "height": 0.46749115981563416,
+          "thickness": 0.08140531083034122,
+          "flat": false
+        },
+        {
+          "style": 17,
+          "title": "INK & BRUSH",
+          "height": 0.3422444022034879,
+          "thickness": 0.07543417404206652,
+          "flat": false
+        },
+        {
+          "style": 21,
+          "title": "WEATHER RECORDS",
+          "height": 0.3354743164431277,
+          "thickness": 0.061263880434996504,
+          "flat": false
+        },
+        {
+          "style": 24,
+          "title": "RIVER STUDIES",
+          "height": 0.3631882219981003,
+          "thickness": 0.08267483784355,
+          "flat": false
+        },
+        {
+          "style": 26,
+          "title": "THE GARDENER",
+          "height": 0.4071142011868833,
+          "thickness": 0.05858917858492417,
+          "flat": false
+        }
+      ]
+    }
+  ],
+  "floors": [
+    "Pagoda_Interior_Tea",
+    "Pagoda_Interior_Reading",
+    "Pagoda_Interior_Gallery"
+  ],
+  "props": [
+    {
+      "name": "tea table",
+      "floor": 1,
+      "local_center": [
+        0,
+        4.65,
+        1.2650000000000001
+      ],
+      "size": [
+        2.15,
+        0.84,
+        0.53
+      ]
+    },
+    {
+      "name": "tea cushion",
+      "floor": 1,
+      "local_center": [
+        -0.68,
+        3.93,
+        1.085
+      ],
+      "size": [
+        0.62,
+        0.62,
+        0.17
+      ]
+    },
+    {
+      "name": "tea cushion",
+      "floor": 1,
+      "local_center": [
+        0.68,
+        3.93,
+        1.085
+      ],
+      "size": [
+        0.62,
+        0.62,
+        0.17
+      ]
+    },
+    {
+      "name": "tea cabinet",
+      "floor": 1,
+      "local_center": [
+        -4.6,
+        4.85,
+        1.575
+      ],
+      "size": [
+        1.35,
+        0.5900000000000001,
+        1.15
+      ]
+    },
+    {
+      "name": "bonsai stand",
+      "floor": 1,
+      "local_center": [
+        4.9,
+        3.9,
+        1.25
+      ],
+      "size": [
+        0.66,
+        0.66,
+        0.5
+      ]
+    },
+    {
+      "name": "bonsai",
+      "floor": 1,
+      "local_center": [
+        4.9,
+        3.9,
+        1.8599999999999999
+      ],
+      "size": [
+        0.64,
+        0.64,
+        0.72
+      ]
+    },
+    {
+      "name": "entry bench",
+      "floor": 1,
+      "local_center": [
+        -4.95,
+        -0.7,
+        1.225
+      ],
+      "size": [
+        0.65,
+        2.2,
+        0.45
+      ]
+    },
+    {
+      "name": "reading desk",
+      "floor": 2,
+      "local_center": [
+        0,
+        4.5,
+        5.79
+      ],
+      "size": [
+        2.5,
+        0.66,
+        0.78
+      ]
+    },
+    {
+      "name": "book cabinet",
+      "floor": 2,
+      "local_center": [
+        -3.55,
+        -4.55,
+        6.075
+      ],
+      "size": [
+        1.5,
+        0.5800000000000001,
+        1.35
+      ]
+    },
+    {
+      "name": "reading cushion",
+      "floor": 2,
+      "local_center": [
+        0,
+        3.83,
+        5.485
+      ],
+      "size": [
+        0.6,
+        0.6,
+        0.17
+      ]
+    },
+    {
+      "name": "ceramic display console",
+      "floor": 3,
+      "local_center": [
+        0,
+        4.02,
+        10.22
+      ],
+      "size": [
+        2.2,
+        0.55,
+        0.84
+      ]
+    },
+    {
+      "name": "corner bonsai stand",
+      "floor": 3,
+      "local_center": [
+        -3.75,
+        3.75,
+        10.040000000000001
+      ],
+      "size": [
+        0.62,
+        0.62,
+        0.48
+      ]
+    },
+    {
+      "name": "bonsai",
+      "floor": 3,
+      "local_center": [
+        -3.75,
+        3.75,
+        10.64
+      ],
+      "size": [
+        0.64,
+        0.64,
+        0.72
+      ]
+    },
+    {
+      "name": "corner bonsai stand",
+      "floor": 3,
+      "local_center": [
+        3.75,
+        3.75,
+        10.040000000000001
+      ],
+      "size": [
+        0.62,
+        0.62,
+        0.48
+      ]
+    },
+    {
+      "name": "bonsai",
+      "floor": 3,
+      "local_center": [
+        3.75,
+        3.75,
+        10.64
+      ],
+      "size": [
+        0.64,
+        0.64,
+        0.72
+      ]
+    },
+    {
+      "name": "observation writing table",
+      "floor": 3,
+      "local_center": [
+        -2.8,
+        -4.03,
+        10.100000000000001
+      ],
+      "size": [
+        1.4,
+        0.52,
+        0.6
+      ]
+    }
+  ],
+  "colliders": [
+    {
+      "name": "tea table",
+      "center": [
+        95.5839357868802,
+        66.96275282052339,
+        6.765000000000001
+      ],
+      "size": [
+        2.15,
+        0.84,
+        0.53
+      ],
+      "yaw": -0.88
+    },
+    {
+      "name": "tea cushion",
+      "center": [
+        94.59574101601791,
+        67.02810643435171,
+        6.585
+      ],
+      "size": [
+        0.62,
+        0.62,
+        0.17
+      ],
+      "yaw": -0.88
+    },
+    {
+      "name": "tea cushion",
+      "center": [
+        95.46226657212799,
+        65.97990155904913,
+        6.585
+      ],
+      "size": [
+        0.62,
+        0.62,
+        0.17
+      ],
+      "yaw": -0.88
+    },
+    {
+      "name": "tea cabinet",
+      "center": [
+        92.80718829934652,
+        70.63558189229838,
+        7.075
+      ],
+      "size": [
+        1.35,
+        0.5900000000000001,
+        1.15
+      ],
+      "yaw": -0.88
+    },
+    {
+      "name": "bonsai stand",
+      "center": [
+        98.12792223427901,
+        62.70826895576951,
+        6.75
+      ],
+      "size": [
+        0.66,
+        0.66,
+        0.5
+      ],
+      "yaw": -0.88
+    },
+    {
+      "name": "bonsai",
+      "center": [
+        98.12792223427901,
+        62.70826895576951,
+        7.359999999999999
+      ],
+      "size": [
+        0.64,
+        0.64,
+        0.72
+      ],
+      "yaw": -0.88
+    },
+    {
+      "name": "entry bench",
+      "center": [
+        88.30658462098775,
+        67.3691516496109,
+        6.725
+      ],
+      "size": [
+        0.65,
+        2.2,
+        0.45
+      ],
+      "yaw": -0.88
+    },
+    {
+      "name": "reading desk",
+      "center": [
+        95.46832495504536,
+        66.86718014889361,
+        11.29
+      ],
+      "size": [
+        2.5,
+        0.66,
+        0.78
+      ],
+      "yaw": -0.88
+    },
+    {
+      "name": "book cabinet",
+      "center": [
+        86.23125153910473,
+        63.8370853139878,
+        11.575
+      ],
+      "size": [
+        1.5,
+        0.5800000000000001,
+        1.35
+      ],
+      "yaw": -0.88
+    },
+    {
+      "name": "reading cushion",
+      "center": [
+        94.95192990618305,
+        66.44028888228056,
+        10.985
+      ],
+      "size": [
+        0.6,
+        0.6,
+        0.17
+      ],
+      "yaw": -0.88
+    },
+    {
+      "name": "ceramic display console",
+      "center": [
+        95.09837029317386,
+        66.56134759967829,
+        15.72
+      ],
+      "size": [
+        2.2,
+        0.55,
+        0.84
+      ],
+      "yaw": -0.88
+    },
+    {
+      "name": "corner bonsai stand",
+      "center": [
+        92.50095400512646,
+        69.2795875866158,
+        15.540000000000001
+      ],
+      "size": [
+        0.62,
+        0.62,
+        0.48
+      ],
+      "yaw": -0.88
+    },
+    {
+      "name": "bonsai",
+      "center": [
+        92.50095400512646,
+        69.2795875866158,
+        16.14
+      ],
+      "size": [
+        0.64,
+        0.64,
+        0.72
+      ],
+      "yaw": -0.88
+    },
+    {
+      "name": "corner bonsai stand",
+      "center": [
+        97.2795875866158,
+        63.49904599487354,
+        15.540000000000001
+      ],
+      "size": [
+        0.62,
+        0.62,
+        0.48
+      ],
+      "yaw": -0.88
+    },
+    {
+      "name": "bonsai",
+      "center": [
+        97.2795875866158,
+        63.49904599487354,
+        16.14
+      ],
+      "size": [
+        0.64,
+        0.64,
+        0.72
+      ],
+      "yaw": -0.88
+    },
+    {
+      "name": "observation writing table",
+      "center": [
+        87.10989911428113,
+        63.590349749796836,
+        15.600000000000001
+      ],
+      "size": [
+        1.4,
+        0.52,
+        0.6
+      ],
+      "yaw": -0.88
+    }
+  ],
+  "stairs_clear_radius": 3.55,
+  "source": "Original procedural geometry and textures; no downloaded models"
+}

@@ -1,0 +1,733 @@
+{
+  "description": "Final supported tree placements after solid geometry clearance audit",
+  "trees": [
+    {
+      "name": "Coastal_Olive_Overlook",
+      "before_blender": [
+        5.949999809265137,
+        -1.2999999523162842,
+        3.1412274837493896
+      ],
+      "blender_position": [
+        8.550000190734863,
+        -1.2999999523162842,
+        2.6417527198791504
+      ],
+      "position": [
+        8.550000190734863,
+        2.6417527198791504,
+        1.2999999523162842
+      ],
+      "cleared_obstacles": [
+        "Balustrades_With_Outfall_Notch",
+        "Temple_Terrace_Plaza-col",
+        "Terrace_Retaining_Walls-col",
+        "Vase_Stairs_Plinth"
+      ],
+      "attempts": 42
+    },
+    {
+      "name": "Island_North_Olive_04",
+      "before_blender": [
+        69.86993408203125,
+        57.49909210205078,
+        3.8325154781341553
+      ],
+      "blender_position": [
+        70.51993560791016,
+        58.62492370605469,
+        3.6300718784332275
+      ],
+      "position": [
+        70.51993560791016,
+        3.6300718784332275,
+        -58.62492370605469
+      ],
+      "cleared_obstacles": [
+        "Large_Rock_North_03-convcol"
+      ],
+      "attempts": 29
+    },
+    {
+      "name": "Island_North_Olive_05",
+      "before_blender": [
+        52.073604583740234,
+        55.6337890625,
+        6.955395221710205
+      ],
+      "blender_position": [
+        51.61398696899414,
+        55.174171447753906,
+        6.980600833892822
+      ],
+      "position": [
+        51.61398696899414,
+        6.980600833892822,
+        -55.174171447753906
+      ],
+      "cleared_obstacles": [
+        "Large_Rock_North_01-convcol"
+      ],
+      "attempts": 16
+    },
+    {
+      "name": "Island_North_Olive_08",
+      "before_blender": [
+        62.342403411865234,
+        47.25115203857422,
+        5.886408805847168
+      ],
+      "blender_position": [
+        61.21657180786133,
+        46.60115051269531,
+        5.740081787109375
+      ],
+      "position": [
+        61.21657180786133,
+        5.740081787109375,
+        -46.60115051269531
+      ],
+      "cleared_obstacles": [
+        "Large_Rock_North_07-convcol"
+      ],
+      "attempts": 39
+    },
+    {
+      "name": "Island_North_Olive_12",
+      "before_blender": [
+        73.81422424316406,
+        50.75445556640625,
+        4.791416645050049
+      ],
+      "blender_position": [
+        73.98246002197266,
+        51.38230895996094,
+        4.777449131011963
+      ],
+      "position": [
+        73.98246002197266,
+        4.777449131011963,
+        -51.38230895996094
+      ],
+      "cleared_obstacles": [
+        "Large_Rock_North_04-convcol"
+      ],
+      "attempts": 6
+    },
+    {
+      "name": "Island_North_Olive_16",
+      "before_blender": [
+        77.86041259765625,
+        48.34971618652344,
+        4.314558506011963
+      ],
+      "blender_position": [
+        78.51041412353516,
+        49.475547790527344,
+        4.36236572265625
+      ],
+      "position": [
+        78.51041412353516,
+        4.36236572265625,
+        -49.475547790527344
+      ],
+      "cleared_obstacles": [
+        "Large_Rock_North_04-convcol"
+      ],
+      "attempts": 29
+    },
+    {
+      "name": "Island_South_Olive_03",
+      "before_blender": [
+        82.0,
+        -25.200000762939453,
+        5.260417461395264
+      ],
+      "blender_position": [
+        82.6500015258789,
+        -25.200000762939453,
+        5.297204971313477
+      ],
+      "position": [
+        82.6500015258789,
+        5.297204971313477,
+        25.200000762939453
+      ],
+      "cleared_obstacles": [
+        "Coastal_Lantern_South_01_Bulbs",
+        "Coastal_Lantern_South_01_Glass",
+        "Coastal_Lantern_South_01_Metal"
+      ],
+      "attempts": 1
+    },
+    {
+      "name": "Island_South_Olive_04",
+      "before_blender": [
+        83.5,
+        -31.0,
+        3.2569243907928467
+      ],
+      "blender_position": [
+        84.06291961669922,
+        -31.325000762939453,
+        4.070013999938965
+      ],
+      "position": [
+        84.06291961669922,
+        4.070013999938965,
+        31.325000762939453
+      ],
+      "cleared_obstacles": [
+        "Large_Rock_South_01-convcol"
+      ],
+      "attempts": 23
+    },
+    {
+      "name": "Island_South_Olive_07",
+      "before_blender": [
+        80.19999694824219,
+        -25.5,
+        5.05374813079834
+      ],
+      "blender_position": [
+        79.86353302001953,
+        -26.75570297241211,
+        4.603846073150635
+      ],
+      "position": [
+        79.86353302001953,
+        4.603846073150635,
+        26.75570297241211
+      ],
+      "cleared_obstacles": [
+        "Coastal_Lantern_South_01_Bulbs",
+        "Coastal_Lantern_South_01_Glass",
+        "Coastal_Lantern_South_01_Metal"
+      ],
+      "attempts": 38
+    },
+    {
+      "name": "Island_South_Olive_10",
+      "before_blender": [
+        103.0,
+        -23.700000762939453,
+        4.460263729095459
+      ],
+      "blender_position": [
+        103.32499694824219,
+        -23.1370849609375,
+        4.617198467254639
+      ],
+      "position": [
+        103.32499694824219,
+        4.617198467254639,
+        23.1370849609375
+      ],
+      "cleared_obstacles": [
+        "SouthGarden_Dark_Stone",
+        "SouthGarden_Edge_Stone",
+        "SouthGarden_Lantern_Glow"
+      ],
+      "attempts": 5
+    },
+    {
+      "name": "Main_Island_Olive_02",
+      "before_blender": [
+        -26.10906982421875,
+        -9.506786346435547,
+        5.972749710083008
+      ],
+      "blender_position": [
+        -26.10906982421875,
+        -10.15678596496582,
+        6.242166042327881
+      ],
+      "position": [
+        -26.10906982421875,
+        6.242166042327881,
+        10.15678596496582
+      ],
+      "cleared_obstacles": [
+        "Large_Rock_Main_04-convcol"
+      ],
+      "attempts": 19
+    },
+    {
+      "name": "Main_Island_Olive_03",
+      "before_blender": [
+        -24.10315704345703,
+        -20.28561782836914,
+        0.5908634066581726
+      ],
+      "blender_position": [
+        -23.643537521362305,
+        -19.825998306274414,
+        0.7399738430976868
+      ],
+      "position": [
+        -23.643537521362305,
+        0.7399738430976868,
+        19.825998306274414
+      ],
+      "cleared_obstacles": [
+        "Large_Rock_Main_01-convcol",
+        "Large_Rock_Main_03-convcol"
+      ],
+      "attempts": 4
+    },
+    {
+      "name": "Main_Island_Olive_04",
+      "before_blender": [
+        -19.42401695251465,
+        -22.380550384521484,
+        1.073227047920227
+      ],
+      "blender_position": [
+        -18.1240177154541,
+        -22.380550384521484,
+        1.3253237009048462
+      ],
+      "position": [
+        -18.1240177154541,
+        1.3253237009048462,
+        22.380550384521484
+      ],
+      "cleared_obstacles": [
+        "Large_Rock_Main_01-convcol"
+      ],
+      "attempts": 25
+    },
+    {
+      "name": "Main_Island_Olive_14",
+      "before_blender": [
+        -29.501468658447266,
+        15.217220306396484,
+        9.196001052856445
+      ],
+      "blender_position": [
+        -28.851469039916992,
+        15.217220306396484,
+        9.349336624145508
+      ],
+      "position": [
+        -28.851469039916992,
+        9.349336624145508,
+        -15.217220306396484
+      ],
+      "cleared_obstacles": [
+        "Large_Rock_Main_05-convcol"
+      ],
+      "attempts": 1
+    },
+    {
+      "name": "Main_Island_Olive_17",
+      "before_blender": [
+        -22.810409545898438,
+        28.060680389404297,
+        12.030977249145508
+      ],
+      "blender_position": [
+        -23.146873474121094,
+        26.804977416992188,
+        12.021651268005371
+      ],
+      "position": [
+        -23.146873474121094,
+        12.021651268005371,
+        -26.804977416992188
+      ],
+      "cleared_obstacles": [
+        "Large_Rock_Main_07-convcol"
+      ],
+      "attempts": 42
+    },
+    {
+      "name": "Main_Island_Olive_19",
+      "before_blender": [
+        -23.755542755126953,
+        18.304685592651367,
+        8.822120666503906
+      ],
+      "blender_position": [
+        -22.455543518066406,
+        18.304685592651367,
+        8.773716926574707
+      ],
+      "position": [
+        -22.455543518066406,
+        8.773716926574707,
+        -18.304685592651367
+      ],
+      "cleared_obstacles": [
+        "Large_Rock_Main_06-convcol"
+      ],
+      "attempts": 25
+    },
+    {
+      "name": "Main_Island_Olive_27",
+      "before_blender": [
+        4.611347198486328,
+        24.944835662841797,
+        7.252938747406006
+      ],
+      "blender_position": [
+        5.26134729385376,
+        24.944835662841797,
+        7.513182640075684
+      ],
+      "position": [
+        5.26134729385376,
+        7.513182640075684,
+        -24.944835662841797
+      ],
+      "cleared_obstacles": [
+        "Large_Rock_Main_09-convcol"
+      ],
+      "attempts": 1
+    },
+    {
+      "name": "Main_Island_Olive_28",
+      "before_blender": [
+        0.10623156279325485,
+        26.283920288085938,
+        6.867029190063477
+      ],
+      "blender_position": [
+        -0.5437684655189514,
+        27.409753799438477,
+        7.51665735244751
+      ],
+      "position": [
+        -0.5437684655189514,
+        7.51665735244751,
+        -27.409753799438477
+      ],
+      "cleared_obstacles": [
+        "Large_Rock_Main_08-convcol",
+        "Large_Rock_Main_09-convcol"
+      ],
+      "attempts": 33
+    },
+    {
+      "name": "Main_Island_Olive_29",
+      "before_blender": [
+        -7.345310688018799,
+        25.246103286743164,
+        6.959734916687012
+      ],
+      "blender_position": [
+        -7.345310688018799,
+        25.896102905273438,
+        7.366540431976318
+      ],
+      "position": [
+        -7.345310688018799,
+        7.366540431976318,
+        -25.896102905273438
+      ],
+      "cleared_obstacles": [
+        "Large_Rock_Main_08-convcol"
+      ],
+      "attempts": 7
+    },
+    {
+      "name": "Main_Island_Olive_31",
+      "before_blender": [
+        5.242271900177002,
+        28.694913864135742,
+        8.482328414916992
+      ],
+      "blender_position": [
+        5.892271995544434,
+        28.694913864135742,
+        8.780670166015625
+      ],
+      "position": [
+        5.892271995544434,
+        8.780670166015625,
+        -28.694913864135742
+      ],
+      "cleared_obstacles": [
+        "Large_Rock_Main_09-convcol"
+      ],
+      "attempts": 1
+    },
+    {
+      "name": "Main_Island_Olive_33",
+      "before_blender": [
+        18.00882339477539,
+        26.285240173339844,
+        2.595181465148926
+      ],
+      "blender_position": [
+        18.333824157714844,
+        26.848155975341797,
+        2.6814043521881104
+      ],
+      "position": [
+        18.333824157714844,
+        2.6814043521881104,
+        -26.848155975341797
+      ],
+      "cleared_obstacles": [
+        "Large_Rock_Main_11-convcol"
+      ],
+      "attempts": 5
+    },
+    {
+      "name": "Main_Island_Olive_34",
+      "before_blender": [
+        14.216071128845215,
+        26.226274490356445,
+        2.4388110637664795
+      ],
+      "blender_position": [
+        13.879606246948242,
+        24.970571517944336,
+        2.071773052215576
+      ],
+      "position": [
+        13.879606246948242,
+        2.071773052215576,
+        -24.970571517944336
+      ],
+      "cleared_obstacles": [
+        "Large_Rock_Main_10-convcol"
+      ],
+      "attempts": 42
+    },
+    {
+      "name": "Main_Island_Olive_35",
+      "before_blender": [
+        17.440185546875,
+        22.58942985534668,
+        1.6676979064941406
+      ],
+      "blender_position": [
+        16.31435203552246,
+        21.939430236816406,
+        1.5832144021987915
+      ],
+      "position": [
+        16.31435203552246,
+        1.5832144021987915,
+        -21.939430236816406
+      ],
+      "cleared_obstacles": [
+        "Large_Rock_Main_11-convcol"
+      ],
+      "attempts": 36
+    },
+    {
+      "name": "Main_Island_Olive_36",
+      "before_blender": [
+        22.412033081054688,
+        23.362863540649414,
+        1.9694961309432983
+      ],
+      "blender_position": [
+        23.33127212524414,
+        24.282102584838867,
+        2.2000293731689453
+      ],
+      "position": [
+        23.33127212524414,
+        2.2000293731689453,
+        -24.282102584838867
+      ],
+      "cleared_obstacles": [
+        "Coastal_Lantern_Main_14_Glass",
+        "Coastal_Lantern_Main_14_Metal",
+        "Large_Rock_Main_11-convcol"
+      ],
+      "attempts": 28
+    },
+    {
+      "name": "Main_Island_Olive_38",
+      "before_blender": [
+        16.66698455810547,
+        29.812816619873047,
+        2.454134702682495
+      ],
+      "blender_position": [
+        17.316984176635742,
+        29.812816619873047,
+        2.5322930812835693
+      ],
+      "position": [
+        17.316984176635742,
+        2.5322930812835693,
+        -29.812816619873047
+      ],
+      "cleared_obstacles": [
+        "Large_Rock_Main_10-convcol"
+      ],
+      "attempts": 1
+    },
+    {
+      "name": "Main_Island_Olive_40",
+      "before_blender": [
+        18.34497833251953,
+        18.56238555908203,
+        1.085577368736267
+      ],
+      "blender_position": [
+        17.717126846313477,
+        18.73061752319336,
+        1.1981550455093384
+      ],
+      "position": [
+        17.717126846313477,
+        1.1981550455093384,
+        -18.73061752319336
+      ],
+      "cleared_obstacles": [
+        "Large_Rock_Main_11-convcol"
+      ],
+      "attempts": 12
+    },
+    {
+      "name": "Main_Island_Olive_43",
+      "before_blender": [
+        -1.8528434038162231,
+        -19.6331787109375,
+        2.1798532009124756
+      ],
+      "blender_position": [
+        -1.5278433561325073,
+        -19.070262908935547,
+        2.3096163272857666
+      ],
+      "position": [
+        -1.5278433561325073,
+        2.3096163272857666,
+        19.070262908935547
+      ],
+      "cleared_obstacles": [
+        "Bridge_Main_South_Bridge_Bronze_Fasteners",
+        "Bridge_Main_South_Bridge_Dark_Heartwood"
+      ],
+      "attempts": 5
+    },
+    {
+      "name": "Main_Island_Olive_49",
+      "before_blender": [
+        -33.01966094970703,
+        9.362043380737305,
+        8.538909912109375
+      ],
+      "blender_position": [
+        -33.66966247558594,
+        8.236210823059082,
+        8.959738731384277
+      ],
+      "position": [
+        -33.66966247558594,
+        8.959738731384277,
+        -8.236210823059082
+      ],
+      "cleared_obstacles": [
+        "Large_Rock_Main_05-convcol"
+      ],
+      "attempts": 41
+    },
+    {
+      "name": "Olive_Framing_Left",
+      "before_blender": [
+        -9.5,
+        -3.25,
+        0.33185455203056335
+      ],
+      "blender_position": [
+        -10.87885856628418,
+        -1.871141791343689,
+        3.192307710647583
+      ],
+      "position": [
+        -10.87885856628418,
+        3.192307710647583,
+        1.871141791343689
+      ],
+      "cleared_obstacles": [
+        "Temple_Bedrock_Foundation-col",
+        "Temple_Stylobate-col",
+        "Temple_Terrace_Plaza-col",
+        "Terrace_Retaining_Walls-col"
+      ],
+      "attempts": 37
+    },
+    {
+      "name": "Olive_Ridge_BG_1",
+      "before_blender": [
+        -4.75,
+        21.0,
+        6.337047576904297
+      ],
+      "blender_position": [
+        -5.669239044189453,
+        20.080760955810547,
+        6.113417625427246
+      ],
+      "position": [
+        -5.669239044189453,
+        6.113417625427246,
+        -20.080760955810547
+      ],
+      "cleared_obstacles": [
+        "Large_Rock_Main_08-convcol"
+      ],
+      "attempts": 40
+    },
+    {
+      "name": "Olive_Ridge_BG_2",
+      "before_blender": [
+        5.75,
+        16.0,
+        3.420372486114502
+      ],
+      "blender_position": [
+        10.899999618530273,
+        18.5,
+        5.701597213745117
+      ],
+      "position": [
+        10.899999618530273,
+        5.701597213745117,
+        -18.5
+      ],
+      "cleared_obstacles": [
+        "Temple_Terrace_Plaza-col"
+      ],
+      "attempts": 7,
+      "spacing_reason": "Separated rear temple canopies and woody branches"
+    },
+    {
+      "name": "Olive_Temple_Back_R",
+      "before_blender": [
+        3.5,
+        14.5,
+        3.410106658935547
+      ],
+      "blender_position": [
+        4.004697322845459,
+        16.383554458618164,
+        3.5617153644561768
+      ],
+      "position": [
+        4.004697322845459,
+        3.5617153644561768,
+        -16.383554458618164
+      ],
+      "cleared_obstacles": [
+        "Temple_Colonnade-col",
+        "Temple_Terrace_Plaza-col"
+      ],
+      "attempts": 50
+    }
+  ],
+  "validation": {
+    "tree_count": 89,
+    "obstacles": 398,
+    "hits": []
+  }
+}

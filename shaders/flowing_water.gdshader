@@ -55,7 +55,13 @@ void fragment() {
   NORMAL=normalize((VIEW_MATRIX*vec4(normalize(vec3(-dx,1.0,-dz)),0.0)).xyz);
   vec2 impact=water_kind==0?vec2(12.4,7.45):vec2(4.3,4.9);
   float r=distance(p.xz,impact);
-  foam=smoothstep(.6,.97,sin(r*15.0-water_time*6.0))*exp(-r*1.2)*.65;
+  if(water_kind==0) {
+   float impact_noise=noise2(p.xz*6.0-vec2(water_time*.25));
+   float rings=sin(r*15.0-water_time*6.0+impact_noise*2.1);
+   foam=smoothstep(.55,.96,rings)*exp(-r*1.8)*smoothstep(.2,.7,impact_noise)*.50;
+  } else {
+   foam=smoothstep(.6,.97,sin(r*15.0-water_time*6.0))*exp(-r*1.2)*.65;
+  }
   float variation=noise2((p.xz-current*water_time)*1.8);
   vec3 deep=water_kind==0?vec3(.018,.16,.20):vec3(.045,.25,.28);
   vec3 light=water_kind==0?vec3(.055,.31,.34):vec3(.14,.43,.43);

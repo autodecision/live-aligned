@@ -18,15 +18,17 @@ The game is **Live Aligned**, currently at `/home/allister/Projects/live-aligned
 
 ## Runtime composition
 
-The original map is composed with `island_site_repairs.gd`, `island_bridges.gd`, `north_pagoda.gd`, `island_ground_cover.gd`, `animated_water.gd`, `scene_render_optimization.gd`, `visual_lab.gd`, `island_lanterns.gd`, and `day_night_cycle.gd`. Preserve initialization order in `main.tscn`.
+The original map is composed with `island_site_repairs.gd`, `island_bridges.gd`, `north_pagoda.gd`, `south_garden.gd`, `island_ground_cover.gd`, `animated_water.gd`, `scene_render_optimization.gd`, `visual_lab.gd`, `island_lanterns.gd`, and `day_night_cycle.gd`. Preserve initialization order in `main.tscn`.
 
-Independent additions: `bridge_landing_banks.glb`, `island_bridges.glb` + plan, `coastal_lantern.glb` + positions, `north_pagoda.glb` + plan/cover. A full-map export MUST exclude **Island Bridges**, **Island Lanterns**, **Bridge Landing Banks**, and **North Pagoda**, including descendant collections and generated meadow points. Inspect actual collection names in the loaded scene, rather than relying only on these display names.
+Independent additions: `bridge_landing_banks.glb`, `island_bridges.glb` + plan, `coastal_lantern.glb` + positions, `north_pagoda.glb` + plan/cover, and the `south_garden*.glb` assets + plan. A full-map export MUST exclude **Island Bridges**, **Island Lanterns**, **Bridge Landing Banks**, **North Pagoda**, **South Koi and Zen Garden**, and **South Garden Koi Library**, including descendant collections and generated meadow points. Inspect actual collection names in the loaded scene, rather than relying only on these display names.
 
 The large-island bridge approaches use a scoped `bridge_approach_terrain.glb` override. `island_site_repairs.gd` replaces the existing `Cliff_Terrain` mesh and collider before ground-cover/render initialization; the optimized base-map GLB is unchanged. Both editable sources contain the graded terrain directly. `bridge_approach_repairs.json` records affected props. The small-island bridge starts at Blender `(-1,-22,2.35)`, clear of the temple forecourt. Two coastal lamps were reseated outside its approaches.
 
 The pagoda sidewalk has a separate continuous mesh in `north_pagoda.glb`, with flush landings for Main_North and North_South and a square, flared stair approach. `north_pagoda.gd` installs `pagoda_sidewalk_terrain.glb` into the existing Distant_Islands and Main_North landing-bank nodes, replacing their collision from the same geometry. `pagoda_sidewalk_repairs.json` records grounded props. The remaining pagoda structure and spiral stair collision are preserved.
 
 Blender `(x,y,z)` maps to Godot `(x,z,-y)`. Blender Z yaw and Godot Y yaw have the same sign. Ground props with transformed mesh/base samples, not object origins. Account for the entire grass mesh footprint when clearing paths.
+
+The expanded south island and its koi pond/sand garden are documented in `SOUTH_GARDEN.md`. Their terrain override follows the pagoda override, preserves every northern terrain vertex, and fits both independent south landing banks. `south_garden.gd` owns transparent pond water and fish animation separately from the existing thirteen water surfaces. Keep its day/night hook in `day_night_cycle.gd`.
 
 ## Safe edit sequence
 
@@ -59,6 +61,7 @@ Run from the Godot project with the local asset pack present:
 ```sh
 godot --headless --path . --editor --quit
 godot --headless --path . --script res://scripts/check_pagoda_walkable.gd
+godot --headless --path . --script res://scripts/check_pagoda_window_walls.gd
 godot --headless --path . --script res://scripts/check_pagoda_sidewalk.gd
 godot --path . --script res://scripts/check_pagoda_sidewalk.gd -- --views-only
 godot --headless --path . --script res://scripts/check_bridge_landing_repairs.gd
@@ -87,3 +90,113 @@ F6 switches Balanced/Performance. F7 opens Visual Lab; F9 compares Original. Day
 ## Public repository boundary
 
 Public source does not include the local asset pack, Blender scenes, backups, MCP editor add-on, or Godot cache. See `ASSETS.md`. Review credentials and asset rights before expanding that boundary. GitHub authentication remains in the system credential store, never in a remote URL or project file.
+
+## Character fit, top stair guard, and forecourt rock
+
+For the connected microscope optics and individually labelled reagent bottles,
+see `LAB_PROP_DETAIL.md`. The scoped lab export adds three visual meshes and
+retains the original bench and microscope collision.
+
+For the sea-level shoreline aprons, rounded sea outflow, idle centrifuge display,
+and rear lamp placement, see `COAST_OUTFLOW_REPAIRS.md`.
+
+For the detailed temple pillars and podium, see `TEMPLE_ARCHITECTURE_DETAIL.md`.
+Its scoped export substitutes three visual meshes while retaining the original
+architectural collision and the optimized base-map GLB.
+
+For the October 18 south-island arrival grades, western shoreline/lantern,
+temple pool connection and scientist accessories, see `SITE_FINISH_REPAIRS.md`.
+The additional scoped pool export replaces only three existing runtime meshes;
+the survey reader is an independent hand-attached character prop.
+
+See `VISUAL_FIT_REPAIRS.md` for the saved sources and validation. Character fit is
+built in the existing character pack recipe, then exported individually with
+`tools/repair_character_fit.py`. This does not replace locomotion or its rigs.
+
+`tools/repair_pagoda_stair_guard.py` adds two small batched meshes to the existing
+standalone pagoda and installs them in both maps. Its continuous 1.08 m barrier
+protects the far radial edge of the top landing. Keep the incoming stair edge
+open. The middle landing shares this edge with the ascending second flight, so a
+horizontal guard across it would obstruct the stairs. Preserve the sidewalk and
+window infill when exporting the landmark.
+
+`tools/ground_forecourt_rock.py` seats `Large_Rock_Main_02` 0.65 m lower and closes
+its upper shell down into the terrain, with 0.20 m embed. Its scoped GLB replaces
+only that runtime mesh and convex proxy. Both editable maps contain the same
+geometry and placement. Position overrides remain in `bridge_approach_repairs.json`.
+The optimized `.blend` is kept out of Godot's direct importer with its local
+`.blend.import` set to `keep`; runtime continues to use the existing base GLB
+and the scoped additions.
+
+## Garden composition and Kestrel arms
+
+See `GARDEN_POLISH.md` for the paired stone lanterns, pagoda-matched paving,
+terrace guard return, downward outfall UV transport, final tree clearances,
+varied reagent shelves, and curved Kestrel arm shells. These use scoped assets;
+the original optimized base GLB remains intact.
+
+For the pool ferns, stair planter clearance, side urn, snag-free terrace rail
+collision, and reference-colored offshore rocks, see `TEMPLE_CLEARANCE_REPAIRS.md`.
+These use scoped exports and preserve the optimized base map.
+
+For the carved roof/pediments, weathered spectrum stone, second fountain urn,
+and rear tree-pair spacing, see `TEMPLE_CROWN_DETAIL.md`. Keep the crown as a
+scoped visual export and explicitly export the named spectrum vertex colors.
+
+For the seated cloth couch cushions, three furnished pagoda floors, and
+continuous bowl spillway, see `PAGODA_INTERIOR.md`. Their three scoped exports
+preserve the existing base map and landmark GLBs. Keep the furnishing collection
+separate from structural landmark exports to avoid duplicating its runtime
+instance.
+
+The enclosed pagoda rooms have eight continuous window collision slabs installed
+by `north_pagoda.gd`, blocking all sixteen lattice apertures with concealed
+sill/lintel overlap. Keep these when changing the runtime structure. The window
+check includes actual player jumps from sill height at straight and diagonal
+angles. The open ground-floor veranda and entrance are separate from these walls.
+
+## Ocean floor and submerged foundations
+
+See `OCEAN_GROUND.md` for the rolling seabed and rounded submerged island aprons,
+thirty pier extensions, nine fitted offshore rock roots, distant water horizon
+and underwater boundary haze. `ocean_ground.glb` is independently
+instantiated by `ocean_ground.gd`; exclude **Ocean Ground and Foundations** from
+future base-map exports. `tools/build_seabed.py` uses the active
+`offshore_spectrum.glb` silhouette, not an older buried apron. Both editable maps
+now contain that active rock geometry, with backups retaining the former meshes.
+Keep the independently exported rock asset and its existing runtime transforms.
+
+The ocean-ground GLB requires mesh compression and generated LODs disabled to
+retain its exact water-edge vertices across the distant ring. Keep its water
+time synchronized with AnimatedWater, and preserve the day/night-aware
+underwater overlay without overwriting saved environment settings.
+
+The original sea and distant ring now share `ocean_horizon.gdshader`, including
+world-space swells, distance-filtered ripples, depth color and shore foam. Rebuild
+`assets/ocean_contact_field.exr` with `scripts/bake_ocean_contact_field.gd` after
+changing coastal terrain, offshore rocks or pier foundations. Preserve its raw,
+signed, lossless import settings. See `OCEAN_GROUND.md` for the bake and native
+`check_ocean_surface.gd` checks. Surface shading changes alone need no Blender export.
+
+The western pagoda beach continues below the water through the scoped
+`pagoda_shore.glb` override. `north_pagoda.gd` uses that mesh for both appearance
+and collision. Keep this override after rebuilding the pagoda; see
+`PAGODA_SHORE.md` for source paths, the buried shoreline edges and movement checks.
+
+The October 20 pagoda coast supersedes the western-toe-only patch with one
+continuous north terrain surface and removes the old overlapping northern
+Distant_Islands faces. SouthGarden calls `NorthPagoda.install_coastal_base()`
+after its ground installation; preserve that order and refresh the retained
+south geometry in `pagoda_shore.glb` if the south island changes. The historical
+Main_North landing bank is hidden/disabled because this terrain includes its
+upper surface. See `PAGODA_SHORE.md` and `tools/refine_pagoda_coast.py`; use the
+new coast and sidewalk checks after rebuilding. Both full Blender sources now
+contain 81,325 meadow points.
+
+
+For the October 20 quality-preserving FPS changes, see `FPS_OPTIMIZATION.md`.
+The two compact tree resources preserve all rendered triangles and LODs. Ocean
+floor buffers separate visible shoals from guaranteed submerged geometry; the
+full original collider remains active while deep rendering is hidden above
+water. Regenerate these derived caches after changing their source tree/ocean
+assets, and revisit the -5.56 m cutoff if wave amplitudes or sea heights change.

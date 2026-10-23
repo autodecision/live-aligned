@@ -11,7 +11,7 @@ import bpy
 from mathutils import Vector
 from mathutils.bvhtree import BVHTree
 
-PROJECT = Path('/home/allister/Projects/live-aligned')
+PROJECT = Path(__file__).resolve().parent.parent
 OUT = Path('/home/allister/Projects/mcp-for-blender/output/mediterranean_temple/improvements')
 WIDTH_ADDED = 3.5
 

@@ -11,7 +11,7 @@ from mathutils import Vector
 from mathutils.bvhtree import BVHTree
 from mathutils.geometry import delaunay_2d_cdt
 
-PROJECT=Path('/home/allister/Projects/live-aligned')
+PROJECT=Path(__file__).resolve().parent.parent
 OUT=Path('/home/allister/Projects/mcp-for-blender/output/mediterranean_temple/improvements')
 
 def smooth(a,b,x):

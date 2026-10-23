@@ -96,5 +96,9 @@
   ],
   "landing_banks": "res://assets/bridge_landing_banks.glb",
   "bank_collision": "exact small terrain mesh",
-  "north_approach_cleared": true
+  "north_approach_cleared": true,
+  "removed_trees": [
+    "Island_North_Olive_14",
+    "Island_North_Olive_15"
+  ]
 }

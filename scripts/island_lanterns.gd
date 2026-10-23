@@ -28,8 +28,8 @@ func _ready()->void:
   var collision:=CollisionShape3D.new();var shape:=CylinderShape3D.new();shape.radius=.17;shape.height=2.5
   collision.shape=shape;collision.position.y=1.25;body.add_child(collision)
   var light:=OmniLight3D.new();light.name="WarmLanternLight";light.position.y=2.77
-  light.light_color=Color(1.0,.68,.32);light.light_energy=0.0
-  light.omni_range=8.0;light.omni_attenuation=1.4;light.omni_shadow_mode=OmniLight3D.SHADOW_CUBE
+  light.omni_range=4.2 if row.name=="Coastal_Lantern_Main_05" else (6.0 if row.name=="Coastal_Lantern_Main_06" else 8.0)
+  light.omni_attenuation=1.4;light.omni_shadow_mode=OmniLight3D.SHADOW_CUBE
   light.shadow_enabled=false;light.light_size=.12
   # The lantern remains visible at all distances. Only its contribution to
   # nearby surfaces fades out, avoiding distant local-light rendering cost.

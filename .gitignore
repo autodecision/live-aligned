@@ -28,6 +28,8 @@ __pycache__/
 *.p12
 *.pfx
 *credentials*
+!/scripts/ai/ai_credentials.gd
+!/scripts/ai/ai_credentials.gd.uid
 *mcp_auth_token*
 export_credentials.cfg
 export_presets.cfg

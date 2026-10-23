@@ -19,8 +19,8 @@ func check(condition: bool, message: String) -> void:
 func run() -> void:
 	var capture := "--capture" in OS.get_cmdline_user_args()
 	if not capture:
-		Engine.physics_ticks_per_second = 240
-		Engine.time_scale = 4.0
+		Engine.physics_ticks_per_second = 600
+		Engine.time_scale = 10.0
 	main = load("res://scenes/main.tscn").instantiate()
 	root.add_child(main)
 	var player: CharacterBody3D = main.get_node("Player")
@@ -30,14 +30,14 @@ func run() -> void:
 	npcs = main.get_node("IslandCharacters").get_children()
 	for npc in npcs:
 		npc.set_physics_process(false)
-		measurements[npc.name] = {"distance": 0.0, "backward_frames": 0, "moving_frames": 0, "max_stuck": 0.0, "visited": {}, "min_y": 100.0, "max_y": -100.0}
+		measurements[npc.name] = {"distance": 0.0, "backward_frames": 0, "moving_frames": 0, "max_stuck": 0.0, "visited": {}, "min_y": 100.0, "max_y": -100.0, "regions": {}, "dwell_seconds": {}, "destination_seconds": 0.0, "last_destination": 0}
 	await physics_frame
 	if capture:
 		await capture_views(player)
 		quit()
 		return
-	# Long enough for the 160 m round-trip bridge inspection and several surveys.
-	for frame in 13200:
+	# Allow the full garden and pagoda inspection circuit at normal walking speed.
+	for frame in 48000:
 		for npc in npcs:
 			var before: Vector3 = npc.global_position
 			npc._physics_process(1.0 / 60.0)
@@ -48,6 +48,20 @@ func run() -> void:
 			m.min_y = minf(m.min_y, npc.position.y)
 			m.max_y = maxf(m.max_y, npc.position.y)
 			m.max_stuck = maxf(m.max_stuck, npc.stuck_timer)
+			if m.last_destination != npc.current_waypoint_idx:
+				m.last_destination = npc.current_waypoint_idx
+				m.destination_seconds = 0.0
+			else:
+				m.destination_seconds += 1.0 / 60.0
+			if m.destination_seconds > 45.0:
+				for j in npc.get_slide_collision_count():
+					print("CHARACTER_BLOCKER ", npc.name, " ", npc.get_slide_collision(j).get_collider().get_path())
+				check(false, npc.name + " stalled heading for " + str(npc.current_waypoint_idx) + " at " + str(npc.position) + " target " + str(npc.route[npc.current_waypoint_idx].position))
+				quit(1)
+				return
+			_record_region(m, npc.position)
+			if npc.completed_laps > 0 and not m.has("first_lap_seconds"):
+				m.first_lap_seconds = float(frame) / 60.0
 			if step.length() > 0.006:
 				m.moving_frames += 1
 				# Asset +Z must point along actual travel, including after turns.
@@ -55,6 +69,7 @@ func run() -> void:
 					m.backward_frames += 1
 			if npc.current_state == PS3CharacterNPC.State.IDLE:
 				m.visited[npc.current_waypoint_idx] = true
+				m.dwell_seconds[npc.current_waypoint_idx] = m.dwell_seconds.get(npc.current_waypoint_idx, 0.0) + 1.0 / 60.0
 		await physics_frame
 		if frame % 3600 == 0:
 			for npc in npcs:
@@ -69,18 +84,47 @@ func run() -> void:
 		for i in npc.route.size():
 			if npc.route[i].has("activity"):
 				check(m.visited.has(i), npc.name + " missed task " + str(i))
+				# Starting IDLE lasts one second; every other task must really dwell.
+				if i > 0:
+					check(m.dwell_seconds.get(i, 0.0) >= npc.route[i].duration - 0.05, npc.name + " did not dwell at task " + str(i))
+		var route_distance := 0.0
+		for i in npc.route.size():
+			var a: Vector3 = npc.route[i].position
+			var b: Vector3 = npc.route[(i + 1) % npc.route.size()].position
+			route_distance += Vector2(a.x - b.x, a.z - b.z).length()
+		m["planned_route_metres"] = route_distance
 		m["laps"] = npc.completed_laps
 		m["stops"] = npc.completed_stops
 		m["recoveries"] = npc.recovery_count
 		print("CHARACTER_RESULT ", npc.name, " ", JSON.stringify(m))
 	check(measurements.Scientist.max_y - measurements.Scientist.min_y > 4.0, "Scientist did not climb and descend temple stairs")
-	check(measurements.Robot.distance > 160.0, "Robot did not traverse the bridge and return")
+	check(measurements.Robot.distance > 350.0, "Robot did not complete its expanded inspection")
+	for region: String in ["main_north_bridge", "pagoda_entrance", "north_south_bridge", "south_garden", "koi_deck"]:
+		check(measurements.Envoy.regions.has(region), "Envoy missed area " + region)
+	for region: String in ["main_south_bridge", "south_garden", "sand_garden", "north_south_bridge", "pagoda_entrance"]:
+		check(measurements.Robot.regions.has(region), "Robot missed area " + region)
 	await check_player_yield(player)
 	check_gaits()
 	DirAccess.make_dir_recursive_absolute(OUT)
 	FileAccess.open(OUT + "validation.json", FileAccess.WRITE).store_string(JSON.stringify({"passed": not failed, "characters": measurements}, "  "))
 	print("CHARACTER_WALKING_", "FAIL" if failed else "PASS")
 	quit(1 if failed else 0)
+
+func _record_region(m: Dictionary, p: Vector3) -> void:
+	if p.x > 30 and p.x < 50 and p.z < -32 and p.z > -40:
+		m.regions.main_north_bridge = true
+	if p.x > 25 and p.x < 55 and p.z > 20 and p.z < 23:
+		m.regions.main_south_bridge = true
+	if p.x > 88 and p.z > 26:
+		m.regions.south_garden = true
+	if p.x > 90 and p.x < 91.2 and p.z > 33.0 and p.z < 34.4:
+		m.regions.koi_deck = true
+	if p.x > 116 and p.z > 27 and p.z < 42:
+		m.regions.sand_garden = true
+	if p.x > 74 and p.x < 83 and p.z > -26 and p.z < 4:
+		m.regions.north_south_bridge = true
+	if p.x > 82.5 and p.z < -55:
+		m.regions.pagoda_entrance = true
 
 func check_gaits() -> void:
 	# Inspect the actual rig transforms, including rolled shoulder axes and feet.
@@ -109,10 +153,21 @@ func check_gaits() -> void:
 
 func check_player_yield(player: CharacterBody3D) -> void:
 	var npc: PS3CharacterNPC = npcs[2]
-	npc.position = npc.waypoints[3]
-	npc.current_waypoint_idx = 4
+	# Use two actual adjacent deck destinations, independent of route ordering.
+	var deck_idx := -1
+	for i in range(npc.route.size() - 1):
+		var a: Vector3 = npc.route[i].position
+		var b: Vector3 = npc.route[i + 1].position
+		if a.x > 25.0 and a.x < 45.0 and absf(a.z - 22.0) < 1.0 and b.x - a.x > 3.0:
+			deck_idx = i
+			break
+	check(deck_idx >= 0, "No straight Main_South deck segment for yield check")
+	if deck_idx < 0:
+		return
+	npc.position = npc.waypoints[deck_idx]
+	npc.current_waypoint_idx = deck_idx + 1
 	npc.current_state = PS3CharacterNPC.State.WALK
-	var direction: Vector3 = npc.waypoints[4] - npc.position
+	var direction: Vector3 = npc.waypoints[deck_idx + 1] - npc.position
 	direction.y = 0
 	direction = direction.normalized()
 	npc.rotation.y = atan2(-direction.x, -direction.z)
@@ -134,6 +189,7 @@ func capture_views(player: CharacterBody3D) -> void:
 	root.size = Vector2i(1440, 900)
 	root.grab_focus()
 	player.get_node("CanvasLayer").hide()
+	main.get_node("CharacterDialogue").hide()
 	Input.mouse_mode = Input.MOUSE_MODE_VISIBLE
 	main.get_node("DayNightCycle").running = false
 	main.get_node("DayNightCycle").set_phase(0.25)
@@ -157,3 +213,39 @@ func capture_views(player: CharacterBody3D) -> void:
 				await process_frame
 				RenderingServer.force_draw(false)
 				root.get_texture().get_image().save_png(OUT + String(npc.name) + "_walk_%02d.png" % (frame / 15))
+	# Additional views use verified route segments on the expanded island tours.
+	# Placement is a capture fixture; the integration run above walks full circuits.
+	for npc in [npcs[0], npcs[2]]:
+		for area: String in ["garden", "pagoda"]:
+			var route_index := -1
+			for i in range(1, npc.route.size()):
+				var p: Vector3 = npc.route[i].position
+				if area == "garden":
+					if (npc.name == "Envoy" and p.distance_to(Vector3(88, 4.735, 34)) < 0.1) or (npc.name == "Robot" and p.distance_to(Vector3(118.53, 4.735, 41.46)) < 0.1):
+						route_index = i
+						break
+				elif p.x > 80.0 and p.x < 81.0 and p.z < -49.0 and p.z > -50.0:
+					route_index = i
+					break
+			check(route_index > 0, "Missing expanded capture segment " + npc.name + " " + area)
+			if route_index < 1:
+				continue
+			npc.position = npc.route[route_index - 1].position
+			npc.velocity = Vector3.ZERO
+			npc.current_waypoint_idx = route_index
+			npc.current_state = PS3CharacterNPC.State.WALK
+			npc.current_activity = "travel"
+			npc._grounded_once = false
+			npc._has_detour = false
+			var direction: Vector3 = npc.route[route_index].position - npc.position
+			npc.rotation.y = atan2(-direction.x, -direction.z)
+			for frame in 150:
+				npc._physics_process(1.0 / 60.0)
+				await physics_frame
+				if frame >= 60 and frame % 15 == 0:
+					var offset := Vector3(-3.8, 1.9, 3.5) if npc.name == "Robot" and area == "garden" else Vector3(3.8, 1.9, 3.5)
+					camera.position = npc.position + offset
+					camera.look_at(npc.position + Vector3.UP * 1.1)
+					await process_frame
+					RenderingServer.force_draw(false)
+					root.get_texture().get_image().save_png(OUT + String(npc.name) + "_" + area + "_%02d.png" % ((frame - 60) / 15))

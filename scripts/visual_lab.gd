@@ -1,6 +1,7 @@
 extends CanvasLayer
 # The screen pass sits below the HUD; the lab itself is above both.
 const Profiles = preload("res://scripts/visual_lab_profiles.gd")
+const UIThemes = preload("res://scripts/ui_themes.gd")
 const ACTIVE_FILE := "user://visual_lab_active.json"
 const ACCENT := Color("efbd78")
 const MUTED := Color("9daeb9")
@@ -35,6 +36,12 @@ var _status:Label
 var _stats:Label
 var _restore_view:CheckBox
 var _tabs:TabContainer
+var _root_ui:Control
+var _theme_picker:OptionButton
+var _theme_desc:Label
+var _lab_title_accent:Label
+var _keep_look_accent:Label
+var _theme_title_accent:Label
 var _syncing := false
 var _prior_physics := true
 var _prior_input := true
@@ -58,6 +65,7 @@ func _ready()->void:
   profiles_dir=OS.get_user_data_dir().path_join("shader_profiles")
   DirAccess.make_dir_recursive_absolute(profiles_dir)
  _build_ui()
+ UIThemes.add_theme_listener(_on_theme_changed)
  _refresh_saved_list()
  if FileAccess.file_exists(ACTIVE_FILE):
   var active:Variant=JSON.parse_string(FileAccess.get_file_as_string(ACTIVE_FILE))
@@ -82,34 +90,7 @@ func _style(color:Color,border:Color=Color.TRANSPARENT,radius:int=8)->StyleBoxFl
  return box
 
 func _theme()->Theme:
- var theme:=Theme.new();var font:=SystemFont.new();font.font_names=PackedStringArray(["Inter","Noto Sans","DejaVu Sans"])
- theme.default_font=font;theme.default_font_size=14
- for type in ["Button","OptionButton"]:
-  theme.set_stylebox("normal",type,_style(Color("202d37"),Color("35434e")))
-  theme.set_stylebox("hover",type,_style(Color("30414c"),ACCENT))
-  theme.set_stylebox("pressed",type,_style(Color("4a3c2c"),ACCENT))
-  theme.set_stylebox("focus",type,_style(Color(0,0,0,0),ACCENT))
-  theme.set_color("font_color",type,Color("e9eef0"))
- theme.set_stylebox("panel","PanelContainer",_style(Color(.055,.078,.10,.98),Color("41515d"),14))
- theme.set_stylebox("panel","PopupMenu",_style(Color("15212a"),Color("41515d")))
- theme.set_color("font_color","PopupMenu",Color("e9eef0"))
- theme.set_stylebox("hover","PopupMenu",_style(Color("3b4544")))
- for type in ["LineEdit","SpinBox"]:
-  theme.set_stylebox("normal",type,_style(Color("101b23"),Color("344550")))
-  theme.set_color("font_color",type,Color("e9eef0"))
-  theme.set_stylebox("focus",type,_style(Color("16232c"),ACCENT))
- theme.set_stylebox("panel","TabContainer",_style(Color("101a22"),Color("2d3d49")))
- theme.set_stylebox("tab_selected","TabContainer",_style(Color("3e3930"),ACCENT,5))
- theme.set_stylebox("tab_unselected","TabContainer",_style(Color("18262f"),Color.TRANSPARENT,5))
- theme.set_stylebox("tab_hovered","TabContainer",_style(Color("293943"),Color("60717b"),5))
- theme.set_color("font_selected_color","TabContainer",ACCENT)
- theme.set_color("font_unselected_color","TabContainer",MUTED)
- theme.set_font_size("font_size","TabContainer",12)
- var track:=_style(Color("31414a"));track.content_margin_top=2;track.content_margin_bottom=2
- theme.set_stylebox("slider","HSlider",track)
- theme.set_stylebox("grabber_area","HSlider",_style(Color("8b7253")))
- theme.set_stylebox("grabber_area_highlight","HSlider",_style(ACCENT))
- return theme
+ return UIThemes.make_visual_lab_theme()
 
 func _label(text:String,size:int=14,color:Color=Color("e9eef0"))->Label:
  var label:=Label.new();label.text=text;label.add_theme_font_size_override("font_size",size);label.add_theme_color_override("font_color",color)
@@ -124,6 +105,7 @@ func _row()->HBoxContainer:
 
 func _build_ui()->void:
  var root_ui:=Control.new();root_ui.name="LabUI";root_ui.set_anchors_and_offsets_preset(Control.PRESET_FULL_RECT);root_ui.mouse_filter=Control.MOUSE_FILTER_IGNORE;root_ui.theme=_theme();add_child(root_ui)
+ _root_ui=root_ui
  # Keep the control for existing preview scripts; F7 is the visible HUD shortcut.
  _launcher=_button("Visual Lab   F7",func():set_panel_open(true));_launcher.name="OpenVisualLab"
  _launcher.hide()
@@ -134,7 +116,7 @@ func _build_ui()->void:
  var body:=VBoxContainer.new();body.add_theme_constant_override("separation",9);margin.add_child(body)
  var heading:=_row();body.add_child(heading)
  var titles:=VBoxContainer.new();titles.size_flags_horizontal=Control.SIZE_EXPAND_FILL;heading.add_child(titles)
- titles.add_child(_label("VISUAL LAB",11,ACCENT));titles.add_child(_label("Shape the scene",25))
+ _lab_title_accent=_label("VISUAL LAB",11,ACCENT);titles.add_child(_lab_title_accent);titles.add_child(_label("Shape the scene",25))
  _stats=_label("LIVE",12,MUTED);heading.add_child(_stats)
  var close_button:=_button("×",func():set_panel_open(false));close_button.name="CloseVisualLab";close_button.tooltip_text="Close • F7 or Esc";heading.add_child(close_button)
  _preset_menu=OptionButton.new();_preset_menu.name="StartingLook";_preset_menu.fit_to_longest_item=false;_preset_menu.size_flags_horizontal=Control.SIZE_EXPAND_FILL
@@ -153,7 +135,8 @@ func _build_ui()->void:
   var column:=VBoxContainer.new();column.size_flags_horizontal=Control.SIZE_EXPAND_FILL;column.add_theme_constant_override("separation",10);scroll.add_child(column)
   for control in Profiles.CONTROLS:
    if control[2]==group:_add_control(column,control)
- body.add_child(_label("KEEP THIS LOOK",11,ACCENT))
+ _build_theme_ui()
+ _keep_look_accent=_label("KEEP THIS LOOK",11,ACCENT);body.add_child(_keep_look_accent)
  var save_row:=_row();body.add_child(save_row)
  _name_edit=LineEdit.new();_name_edit.name="ProfileName";_name_edit.placeholder_text="Name your look";_name_edit.text="Coastal study";_name_edit.max_length=80;_name_edit.size_flags_horizontal=Control.SIZE_EXPAND_FILL;save_row.add_child(_name_edit)
  var save:=_button("Save look",func():save_profile(_name_edit.text));save.name="SaveLook";save.tooltip_text="Write a named JSON file and restore this saved look on the next launch.";save_row.add_child(save)
@@ -278,6 +261,8 @@ func _input(event:InputEvent)->void:
   set_panel_open(not _panel.visible);get_viewport().set_input_as_handled()
  elif key==KEY_F9 and not event.echo:
   set_compare(event.pressed);get_viewport().set_input_as_handled()
+ elif key==KEY_F10 and event.pressed and not event.echo:
+  UIThemes.cycle_theme(1);get_viewport().set_input_as_handled()
  elif key==KEY_ESCAPE and event.pressed and _panel.visible:
   set_panel_open(false);get_viewport().set_input_as_handled()
 
@@ -369,3 +354,62 @@ func _apply_viewpoint(viewpoint:Dictionary)->void:
    if typeof(number) not in [TYPE_FLOAT,TYPE_INT] or not is_finite(float(number)) or absf(float(number))>10000.:return
  var p:Array=viewpoint.player_position;var r:Array=viewpoint.player_rotation_radians;var h:Array=viewpoint.head_rotation_radians
  _player.global_position=Vector3(p[0],p[1],p[2]);_player.rotation=Vector3(r[0],r[1],r[2]);_player.get_node("Head").rotation=Vector3(h[0],h[1],h[2]);_player.velocity=Vector3.ZERO
+
+func _exit_tree()->void:
+ UIThemes.remove_theme_listener(_on_theme_changed)
+
+func _on_theme_changed(_id:String,theme_data:Dictionary)->void:
+ if is_instance_valid(_root_ui):
+  _root_ui.theme=UIThemes.make_visual_lab_theme(theme_data)
+ if is_instance_valid(_theme_picker):
+  for i in _theme_picker.item_count:
+   if str(_theme_picker.get_item_metadata(i))==theme_data.id:
+    _theme_picker.select(i)
+    break
+ if is_instance_valid(_theme_desc):
+  _theme_desc.text=theme_data.description
+  _theme_desc.add_theme_color_override("font_color",theme_data.muted)
+ if is_instance_valid(_lab_title_accent):
+  _lab_title_accent.add_theme_color_override("font_color",theme_data.accent)
+ if is_instance_valid(_keep_look_accent):
+  _keep_look_accent.add_theme_color_override("font_color",theme_data.accent)
+ if is_instance_valid(_theme_title_accent):
+  _theme_title_accent.add_theme_color_override("font_color",theme_data.accent)
+ if is_instance_valid(_panel):
+  _panel.add_theme_stylebox_override("panel",UIThemes.flat_box(theme_data.bg_panel,theme_data.panel_border,14,12))
+
+func _build_theme_ui()->void:
+ if _tabs.get_child_count()<=4:return
+ var column:VBoxContainer=_tabs.get_child(4).get_child(0)
+ var box:=VBoxContainer.new();box.name="UIThemeSection";box.add_theme_constant_override("separation",6)
+ column.add_child(box);column.move_child(box,0)
+ var cur_theme:=UIThemes.get_current()
+ _theme_title_accent=_label("UI COLOR THEME · 12 THEMES",11,cur_theme.accent);box.add_child(_theme_title_accent)
+ var row:=_row();box.add_child(row)
+ _theme_picker=OptionButton.new();_theme_picker.name="UIThemePicker";_theme_picker.size_flags_horizontal=Control.SIZE_EXPAND_FILL
+ var all_themes:=UIThemes.get_all_themes()
+ var current_id:=UIThemes.get_current_id()
+ var selected_idx:=0
+ for i in all_themes.size():
+  var t:Dictionary=all_themes[i]
+  var tag:String="["+t.roygbiv_letter+"] " if t.category=="ROYGBIV" else "★ "
+  _theme_picker.add_item("%s%s"%[tag,t.name])
+  _theme_picker.set_item_metadata(i,t.id)
+  if t.id==current_id:selected_idx=i
+ _theme_picker.select(selected_idx)
+ _theme_picker.item_selected.connect(func(index:int):
+  var tid:String=str(_theme_picker.get_item_metadata(index))
+  UIThemes.set_theme(tid)
+ )
+ row.add_child(_theme_picker)
+ var prev_btn:=_button("◀",func():UIThemes.cycle_theme(-1))
+ prev_btn.tooltip_text="Previous UI Theme (F10)"
+ var next_btn:=_button("▶",func():UIThemes.cycle_theme(1))
+ next_btn.tooltip_text="Next UI Theme (F10)"
+ row.add_child(prev_btn);row.add_child(next_btn)
+ _theme_desc=_label(cur_theme.description,12,cur_theme.muted)
+ _theme_desc.autowrap_mode=TextServer.AUTOWRAP_WORD_SMART
+ box.add_child(_theme_desc)
+ var hint:=_label("Shortcut: F10 cycles themes anywhere in-game.",11,cur_theme.muted)
+ box.add_child(hint)
+ var separator:=HSeparator.new();box.add_child(separator)

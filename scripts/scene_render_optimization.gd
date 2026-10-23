@@ -13,8 +13,10 @@ const SETTINGS_FILE := "user://graphics.cfg"
 func _ready() -> void:
 	get_viewport().use_occlusion_culling = true
 	var optimized_materials := {}
-	var tree_mesh: ArrayMesh = load("res://assets/olive_tree_render_lod.res")
-	var shadow_mesh: ArrayMesh = load("res://assets/olive_tree_shadow_lod.res")
+	# Identical packed attributes, triangles and LODs; unused imported vertices
+	# are removed from these shared buffers. Leaf visibility is unchanged.
+	var tree_mesh: ArrayMesh = load("res://assets/olive_tree_render_lod_compact.res")
+	var shadow_mesh: ArrayMesh = load("res://assets/olive_tree_shadow_lod_compact.res")
 	var bust_collision: ConvexPolygonShape3D = load("res://assets/bust_collision_proxy.tres")
 	for mesh in get_parent().get_node("TempleMap").find_children("*", "MeshInstance3D", true, false):
 		# The sculpture's concave render-mesh collider makes contact/step

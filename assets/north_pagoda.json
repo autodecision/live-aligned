@@ -43028,6 +43028,21 @@
         2.18
       ],
       "yaw": -5.59238898038469
+    },
+    {
+      "type": "box",
+      "center": [
+        91.57149570034105,
+        62.61476209076787,
+        15.84
+      ],
+      "size": [
+        2.3000000000000003,
+        0.11,
+        1.08
+      ],
+      "yaw": -1.8707963267948966,
+      "top_landing_guard": true
     }
   ],
   "cover_count": 1814,
@@ -45503,5 +45518,15 @@
   "stair_radius": 1.57,
   "stair_rise_per_step": 0.1375,
   "yaw": -0.88,
-  "window_wall_infill_panels": 24
+  "window_wall_infill_panels": 24,
+  "top_landing_guard": {
+    "angle": -0.9907963267948966,
+    "radial_extent": [
+      0.3,
+      2.6
+    ],
+    "height": 1.08,
+    "floor": 15.3,
+    "preserves_stair_entry": true
+  }
 }

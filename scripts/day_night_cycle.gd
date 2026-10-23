@@ -94,6 +94,8 @@ func _apply_clock()->void:
  if lamps:lamps.set_night_strength(lantern_strength)
  var pagoda=get_parent().get_node_or_null("NorthPagoda")
  if pagoda:pagoda.set_night_strength(lantern_strength)
+ var garden=get_parent().get_node_or_null("SouthGarden")
+ if garden:garden.set_night_strength(lantern_strength)
  if is_instance_valid(_clock_label):
   var period:String="Day" if phase<.5 else "Night"
   if absf(solar)<.20:period="Dawn" if phase<.25 or phase>.75 else "Dusk"

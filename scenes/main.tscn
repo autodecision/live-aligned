@@ -1,4 +1,4 @@
-[gd_scene load_steps=19 format=3 uid="uid://dfqm251m3t1a"]
+[gd_scene load_steps=22 format=3 uid="uid://dfqm251m3t1a"]
 
 [ext_resource type="PackedScene" uid="uid://b4k11dpddqmu6" path="res://assets/mediterranean_temple.glb" id="1_temple"]
 [ext_resource type="PackedScene" uid="uid://bvyqm14m3c6e" path="res://scenes/player.tscn" id="2_player"]
@@ -24,6 +24,12 @@
 [ext_resource type="Script" path="res://scripts/north_pagoda.gd" id="12_pagoda"]
 
 [ext_resource type="Script" path="res://scripts/island_characters.gd" id="13_characters"]
+
+[ext_resource type="Script" path="res://scripts/south_garden.gd" id="14_garden"]
+
+[ext_resource type="Script" path="res://scripts/ai/character_dialogue.gd" id="15_dialogue"]
+
+[ext_resource type="Script" path="res://scripts/ocean_ground.gd" id="16_ocean_ground"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_med"]
 sky_top_color = Color(0.2, 0.52, 0.95, 1)
@@ -93,8 +99,14 @@ script = ExtResource("10_bridges")
 [node name="NorthPagoda" type="Node3D" parent="."]
 script = ExtResource("12_pagoda")
 
+[node name="SouthGarden" type="Node3D" parent="."]
+script = ExtResource("14_garden")
+
 [node name="IslandGroundCover" type="Node3D" parent="."]
 script = ExtResource("3_ground_cover")
+
+[node name="OceanGround" type="Node3D" parent="."]
+script = ExtResource("16_ocean_ground")
 
 [node name="AnimatedWater" type="Node3D" parent="."]
 script = ExtResource("4_water")
@@ -116,3 +128,5 @@ script = ExtResource("9_clock")
 [node name="IslandCharacters" type="Node3D" parent="."]
 script = ExtResource("13_characters")
 
+[node name="CharacterDialogue" type="CanvasLayer" parent="."]
+script = ExtResource("15_dialogue")

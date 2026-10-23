@@ -7,9 +7,13 @@ extends CharacterBody3D
 @export var character_id: String = "alien_suit"
 @export var model_path: String = "res://assets/characters/alien_suit.glb"
 @export var walk_speed: float = 1.5
+@export var travel_speed_multiplier: float = 3.0
+@export var normal_speed_radius: float = 2.5
+@export var full_travel_speed_radius: float = 5.0
 @export var turn_speed: float = 2.5
 @export var acceleration: float = 3.0
 @export var arrival_distance: float = 0.22
+@export var approach_arrival_distance: float = 2.15
 @export var waypoints: Array = []
 
 enum State { IDLE, WALK }
@@ -21,6 +25,7 @@ var stuck_timer: float = 0.0
 var completed_stops: int = 0
 var completed_laps: int = 0
 var recovery_count: int = 0
+var approaching_player: bool = false
 var route: Array[Dictionary] = []
 var model_node: Node3D
 var skeleton: Skeleton3D
@@ -42,7 +47,18 @@ var _turn_rate: float = 0.0
 var _detour: Vector3
 var _has_detour: bool = false
 var _grounded_once: bool = false
+var _dialogue_paused := false
+var _travel_step_credit: float = 0.0
 var _player: Node3D
+var _navigation: Node
+var _approach_path: PackedVector3Array = PackedVector3Array()
+var _approach_path_idx: int = 0
+var _approach_repath_timer: float = 0.0
+var _approach_last_player_pos := Vector3.INF
+var _return_path: PackedVector3Array = PackedVector3Array()
+var _return_path_idx: int = 0
+var palm_pad: Node3D
+var _pad_weight: float = 0.0
 
 func set_waypoints(points: Array) -> void:
 	route.clear()
@@ -119,9 +135,197 @@ func _setup_model() -> void:
 		_bones[bone] = i
 		_rest[bone] = skeleton.get_bone_rest(i)
 		_global_rest[bone] = skeleton.get_bone_global_rest(i)
+	if character_id == "female_scientist":
+		palm_pad = preload("res://assets/characters/palm_pad.glb").instantiate()
+		palm_pad.name = "SurveyPalmPad"
+		skeleton.add_child(palm_pad)
+		palm_pad.visible = false
+
+func get_face_focus_position() -> Vector3:
+	if skeleton and _bones.has("head"):
+		return skeleton.to_global(skeleton.get_bone_global_pose(_bones["head"]).origin) + Vector3.UP * 0.08
+	match character_id:
+		"female_scientist":
+			return global_position + Vector3.UP * 1.56
+		"robot":
+			return global_position + Vector3.UP * 1.82
+		_:
+			return global_position + Vector3.UP * 1.72
+
+func set_dialogue_paused(paused: bool) -> void:
+	_dialogue_paused = paused
+	velocity = Vector3.ZERO
+	if paused and is_instance_valid(_player):
+		var to_player := _player.global_position - global_position
+		if Vector2(to_player.x, to_player.z).length() > 0.05:
+			rotation.y = atan2(-to_player.x, -to_player.z)
+		_animate(0.0, 0.0)
+
+func start_approach_player(player_node: Node3D = null, nav: Node = null) -> void:
+	if is_instance_valid(player_node):
+		_player = player_node
+	if is_instance_valid(nav):
+		_navigation = nav
+	if not approaching_player:
+		approaching_player = true
+		_grounded_once = false
+		_return_path = PackedVector3Array()
+		_return_path_idx = 0
+		_has_detour = false
+		stuck_timer = 0.0
+		current_state = State.WALK
+		current_activity = "approach"
+		_approach_repath_timer = 0.0
+		_refresh_approach_path(true)
+
+func stop_approach_player(nav: Node = null) -> void:
+	if is_instance_valid(nav):
+		_navigation = nav
+	if not approaching_player:
+		return
+	approaching_player = false
+	_approach_path = PackedVector3Array()
+	_approach_path_idx = 0
+	_has_detour = false
+	stuck_timer = 0.0
+	if route.is_empty():
+		return
+	var current_target: Vector3 = route[current_waypoint_idx].position
+	if Vector2(current_target.x - global_position.x, current_target.z - global_position.z).length() <= 3.5 and absf(current_target.y - global_position.y) <= 1.5:
+		return
+	var best_idx := current_waypoint_idx
+	var best_dist := INF
+	for i in route.size():
+		var d := global_position.distance_to(route[i].position)
+		if d < best_dist:
+			best_dist = d
+			best_idx = i
+	current_waypoint_idx = best_idx
+	current_state = State.WALK
+	current_activity = "travel"
+	if is_instance_valid(_navigation) and _navigation.has_method("is_ready") and _navigation.is_ready() and best_dist > 3.5:
+		_return_path = _navigation.find_path(global_position, route[best_idx].position)
+		_return_path_idx = 0
+
+func has_reached_player(player_node: Node3D = null) -> bool:
+	var p := player_node if is_instance_valid(player_node) else _player
+	if not is_instance_valid(p) or not is_inside_tree():
+		return false
+	var offset := p.global_position - global_position
+	var horiz := Vector2(offset.x, offset.z).length()
+	if horiz > approach_arrival_distance or absf(offset.y) > 1.8:
+		return false
+	var ray := PhysicsRayQueryParameters3D.create(p.global_position + Vector3.UP * 1.3, global_position + Vector3.UP * 1.3, 1)
+	return get_world_3d().direct_space_state.intersect_ray(ray).is_empty()
+
+func _refresh_approach_path(force: bool) -> void:
+	if not is_instance_valid(_player):
+		return
+	_approach_repath_timer = 0.45
+	_approach_last_player_pos = _player.global_position
+	var offset := _player.global_position - global_position
+	var horiz := Vector2(offset.x, offset.z).length()
+	if horiz <= 6.5 and absf(offset.y) < 1.8:
+		var ray := PhysicsRayQueryParameters3D.create(global_position + Vector3.UP * 1.1, _player.global_position + Vector3.UP * 1.1, 1)
+		if get_world_3d().direct_space_state.intersect_ray(ray).is_empty():
+			_approach_path = PackedVector3Array([_player.global_position])
+			_approach_path_idx = 0
+			return
+	if is_instance_valid(_navigation) and _navigation.has_method("is_ready") and _navigation.is_ready():
+		var path: PackedVector3Array = _navigation.find_path(global_position, _player.global_position)
+		if path.size() >= 2:
+			_approach_path = path
+			_approach_path_idx = 1 if path[0].distance_to(global_position) < 0.85 else 0
+			return
+	if force or _approach_path.is_empty():
+		_approach_path = _build_route_fallback_path(_player.global_position)
+		_approach_path_idx = 0
+
+func _build_route_fallback_path(goal: Vector3) -> PackedVector3Array:
+	var pts := PackedVector3Array()
+	if route.is_empty():
+		pts.append(goal)
+		return pts
+	var start_idx := current_waypoint_idx
+	var best_start_d := INF
+	var best_goal_idx := 0
+	var best_goal_d := INF
+	for i in route.size():
+		var p: Vector3 = route[i].position
+		var ds := global_position.distance_to(p)
+		if ds < best_start_d:
+			best_start_d = ds
+			start_idx = i
+		var dg := goal.distance_to(p)
+		if dg < best_goal_d:
+			best_goal_d = dg
+			best_goal_idx = i
+	var n := route.size()
+	var forward_steps := posmod(best_goal_idx - start_idx, n)
+	var backward_steps := posmod(start_idx - best_goal_idx, n)
+	var dir_step := 1 if forward_steps <= backward_steps else -1
+	var steps := mini(forward_steps, backward_steps)
+	for s in range(steps + 1):
+		var idx := posmod(start_idx + s * dir_step, n)
+		pts.append(route[idx].position)
+	pts.append(goal)
+	return pts
+
+func _target_walk_speed() -> float:
+	if approaching_player:
+		# Approach at full travel speed all the way to the player without slowing
+		# down to normal walking speed when close.
+		return walk_speed * travel_speed_multiplier
+	if not is_instance_valid(_player):
+		return walk_speed * travel_speed_multiplier
+	var offset := _player.global_position - global_position
+	var distance := Vector2(offset.x, offset.z).length()
+	var blend := smoothstep(normal_speed_radius, full_travel_speed_radius, distance)
+	return walk_speed * lerpf(1.0, travel_speed_multiplier, blend)
 
 func _physics_process(delta: float) -> void:
+	if _dialogue_paused:
+		_elapsed += delta
+		if is_instance_valid(_player):
+			var to_player := _player.global_position - global_position
+			if Vector2(to_player.x, to_player.z).length() > 0.05:
+				rotation.y = rotate_toward(rotation.y, atan2(-to_player.x, -to_player.z), turn_speed * 2.2 * delta)
+		_animate(delta, 0.0)
+		return
 	_elapsed += delta
+	var previous_position := global_position
+	if current_state == State.IDLE and not approaching_player:
+		_travel_step_credit = 0.0
+		_movement_step(delta)
+		_animate(delta, _horizontal_speed_since(previous_position, delta))
+		return
+	# Repeat the proven short movement step instead of leaping over dense route
+	# points. At distance (and during full-speed check-in approaches), three steps
+	# cover three times as much ground per tick.
+	var step_ratio := _target_walk_speed() / walk_speed
+	if approaching_player and is_instance_valid(_player):
+		var dist_to_player := Vector2(_player.global_position.x - global_position.x, _player.global_position.z - global_position.z).length()
+		if dist_to_player > 22.0:
+			step_ratio = maxf(step_ratio, 5.0)
+	_travel_step_credit += step_ratio
+	var steps := floori(_travel_step_credit)
+	_travel_step_credit -= steps
+	for step in steps:
+		_movement_step(delta)
+		if current_state == State.IDLE and not approaching_player:
+			_travel_step_credit = 0.0
+			break
+		if approaching_player and has_reached_player(_player):
+			_travel_step_credit = 0.0
+			break
+	_animate(delta, _horizontal_speed_since(previous_position, delta))
+
+func _horizontal_speed_since(previous_position: Vector3, delta: float) -> float:
+	var displacement := global_position - previous_position
+	displacement.y = 0.0
+	return displacement.length() / maxf(delta, 0.001)
+
+func _movement_step(delta: float) -> void:
 	if not _grounded_once:
 		# Wait until physics has registered the world before placing the feet.
 		var ground := _ground_at(global_position, 1.5, 5.0)
@@ -142,20 +346,67 @@ func _physics_process(delta: float) -> void:
 	var previous_yaw := rotation.y
 	var desired := Vector3.ZERO
 	var yielding := false
-	if not route.is_empty():
+	if approaching_player and is_instance_valid(_player):
+		current_state = State.WALK
+		current_activity = "approach"
+		_approach_repath_timer -= delta
+		if _approach_repath_timer <= 0.0 or _player.global_position.distance_to(_approach_last_player_pos) > 1.2:
+			_refresh_approach_path(false)
+		if has_reached_player(_player):
+			var to_player := _player.global_position - global_position
+			if Vector2(to_player.x, to_player.z).length() > 0.05:
+				rotation.y = rotate_toward(rotation.y, atan2(-to_player.x, -to_player.z), turn_speed * 2.5 * delta)
+			desired = Vector3.ZERO
+		else:
+			while _approach_path_idx < _approach_path.size() - 1:
+				var corner := _approach_path[_approach_path_idx]
+				if Vector2(corner.x - global_position.x, corner.z - global_position.z).length() < 0.55 and absf(corner.y - global_position.y) < 1.4:
+					_approach_path_idx += 1
+				else:
+					break
+			var target: Vector3 = _detour if _has_detour else (_approach_path[_approach_path_idx] if _approach_path_idx < _approach_path.size() else _player.global_position)
+			var difference := target - global_position
+			difference.y = 0.0
+			var distance := difference.length()
+			if _has_detour and distance < arrival_distance:
+				_has_detour = false
+			elif distance > 0.05:
+				var yaw := atan2(-difference.x, -difference.z)
+				rotation.y = rotate_toward(rotation.y, yaw, turn_speed * 1.8 * delta)
+				var error := absf(angle_difference(rotation.y, yaw))
+				var alignment := smoothstep(0.05, 0.75, cos(error))
+				var target_speed := _target_walk_speed()
+				desired = -global_basis.z * target_speed * maxf(0.35, alignment)
+				if not _safe_ground_ahead(desired):
+					desired = Vector3.ZERO
+	elif not route.is_empty():
 		if current_state == State.IDLE:
 			_face_interest(delta)
 			state_timer -= delta
 			if state_timer <= 0.0 and route.size() > 1:
 				_advance_route()
 		else:
-			var target: Vector3 = _detour if _has_detour else route[current_waypoint_idx].position
+			var using_return := _return_path_idx < _return_path.size()
+			if using_return:
+				while _return_path_idx < _return_path.size():
+					var rpt := _return_path[_return_path_idx]
+					if Vector2(rpt.x - global_position.x, rpt.z - global_position.z).length() < 0.50:
+						_return_path_idx += 1
+					else:
+						break
+				using_return = _return_path_idx < _return_path.size()
+				if not using_return:
+					_return_path = PackedVector3Array()
+					_return_path_idx = 0
+			var target: Vector3 = _detour if _has_detour else (_return_path[_return_path_idx] if using_return else route[current_waypoint_idx].position)
 			var difference := target - global_position
 			difference.y = 0.0
 			var distance := difference.length()
 			if distance < arrival_distance and absf(target.y - global_position.y) < 0.85:
 				if _has_detour:
 					_has_detour = false
+				elif using_return:
+					_return_path_idx += 1
 				elif route[current_waypoint_idx].has("activity"):
 					current_state = State.IDLE
 					current_activity = route[current_waypoint_idx].activity
@@ -169,12 +420,21 @@ func _physics_process(delta: float) -> void:
 				var error := absf(angle_difference(rotation.y, yaw))
 				# Brake for a sharp turn and step around before moving off.
 				var alignment := smoothstep(0.1, 0.9, cos(error))
-				var braking := minf(1.0, sqrt(maxf(distance - 0.10, 0.0) * 2.0 * acceleration) / walk_speed)
-				desired = -global_basis.z * walk_speed * alignment * braking
+				var target_speed := _target_walk_speed()
+				# The temple stairs and narrow upper landing need deliberate foot placement.
+				var previous_idx := (current_waypoint_idx - 1 + route.size()) % route.size()
+				var segment_rise := absf(route[current_waypoint_idx].position.y - route[previous_idx].position.y)
+				var temple_upper := character_id == "female_scientist" and maxf(route[current_waypoint_idx].position.y, route[previous_idx].position.y) > 1.0
+				if segment_rise > 0.8 or temple_upper:
+					target_speed = minf(target_speed, walk_speed)
+				var target_acceleration := acceleration * target_speed / walk_speed
+				var braking := minf(1.0, sqrt(maxf(distance - 0.10, 0.0) * 2.0 * target_acceleration) / target_speed)
+				desired = -global_basis.z * target_speed * alignment * braking
 				yielding = _person_ahead()
 				if yielding or not _safe_ground_ahead(desired):
 					desired = Vector3.ZERO
-	var horizontal := Vector3(velocity.x, 0, velocity.z).move_toward(desired, acceleration * delta)
+	var movement_acceleration := acceleration * maxf(1.0, _target_walk_speed() / walk_speed)
+	var horizontal := Vector3(velocity.x, 0, velocity.z).move_toward(desired, movement_acceleration * delta)
 	velocity.x = horizontal.x
 	velocity.z = horizontal.z
 	move_and_slide()
@@ -186,12 +446,21 @@ func _physics_process(delta: float) -> void:
 	_turn_rate = angle_difference(previous_yaw, rotation.y) / delta
 	if current_state == State.WALK and desired.length() > 0.3 and speed < 0.12 and not yielding:
 		stuck_timer += delta
-		if stuck_timer > 2.0:
+		if approaching_player and stuck_timer > 1.4:
+			if not _has_detour:
+				_find_detour()
+			elif _approach_path_idx + 1 < _approach_path.size():
+				_has_detour = false
+				_approach_path_idx += 1
+				var next_ground := _ground_at(_approach_path[_approach_path_idx], 1.5, 3.0)
+				if not next_ground.is_empty():
+					global_position = next_ground.position + Vector3.UP * 0.02
+			stuck_timer = 0.0
+		elif stuck_timer > 2.0:
 			_find_detour()
 			stuck_timer = 0.0
 	else:
 		stuck_timer = maxf(0.0, stuck_timer - delta * 2.0)
-	_animate(delta, speed)
 
 func _advance_route() -> void:
 	current_waypoint_idx = (current_waypoint_idx + 1) % route.size()
@@ -209,7 +478,7 @@ func _face_interest(delta: float) -> void:
 
 func _person_ahead() -> bool:
 	# Yield to the player without altering their movement/collision preferences.
-	if not is_instance_valid(_player):
+	if approaching_player or not is_instance_valid(_player):
 		return false
 	var offset := _player.global_position - global_position
 	return absf(offset.y) < 1.5 and offset.length() < 1.45 and offset.dot(-global_basis.z) > 0.3
@@ -244,7 +513,8 @@ func _find_detour() -> void:
 		if not hit.is_empty() and not test_move(global_transform, offset):
 			_detour = hit.position
 			_has_detour = true
-			recovery_count += 1
+			if not approaching_player:
+				recovery_count += 1
 			return
 
 func _rotate_rest(bone: String, axis: Vector3, angle: float) -> void:
@@ -296,7 +566,7 @@ func _animate(delta: float, speed: float) -> void:
 	var wave := sin(_phase * TAU)
 	var arm_wave := cos(_phase * TAU)
 	var breath := sin(_elapsed * 1.8)
-	var task_amount := 1.0 if current_state == State.IDLE and state_timer > 0.7 else 0.0
+	var task_amount := 1.0 if current_state == State.IDLE and state_timer > 0.7 and not _dialogue_paused else 0.0
 	_activity_weight = move_toward(_activity_weight, task_amount, delta * 2.0)
 	for bone in _bones:
 		skeleton.set_bone_pose_rotation(_bones[bone], _rest[bone].basis.get_rotation_quaternion())
@@ -334,13 +604,60 @@ func _animate(delta: float, speed: float) -> void:
 		_rotate_rest("forearm." + side, Vector3.RIGHT, -0.16 - maxf(0, -sign_side * arm_wave) * 0.30 * _motion_weight)
 		_rotate_rest("hand." + side, Vector3.RIGHT, -0.06 + sign_side * wave * 0.04 * _motion_weight)
 	var gaze := sin(_elapsed * 0.55) * 0.16 * (1.0 - _motion_weight)
-	if current_state == State.WALK and not route.is_empty():
+	if approaching_player and is_instance_valid(_player):
+		var to_p: Vector3 = _player.global_position - global_position
+		gaze = clampf(angle_difference(rotation.y, atan2(-to_p.x, -to_p.z)), -0.5, 0.5)
+	elif current_state == State.WALK and not route.is_empty():
 		var difference: Vector3 = route[current_waypoint_idx].position - global_position
 		gaze = clampf(angle_difference(rotation.y, atan2(-difference.x, -difference.z)), -0.5, 0.5)
 	_head_yaw = lerpf(_head_yaw, gaze, 1.0 - exp(-delta * 5.0))
 	_rotate_rest("head", Vector3.UP, _head_yaw)
+	# Character-specific personality body language during conversation and tasks.
+	if _dialogue_paused:
+		if character_id == "female_scientist":
+			_pad_weight = move_toward(_pad_weight, 0.0, delta * 2.5)
+			_update_palm_pad()
+			# Analytical, skeptical-yet-playful stance: slight inquisitive head tilt and expressive hand.
+			var nod := sin(_elapsed * 2.2) * 0.045
+			var tilt := sin(_elapsed * 1.1) * 0.06 + 0.05
+			_rotate_rest("upper_arm.R", Vector3.RIGHT, -0.28 + sin(_elapsed * 2.0) * 0.06)
+			_rotate_rest("forearm.R", Vector3.RIGHT, -0.62 + cos(_elapsed * 2.0) * 0.08)
+			_rotate_rest("upper_arm.L", Vector3.RIGHT, 0.08)
+			_rotate_rest("forearm.L", Vector3.RIGHT, -0.32)
+			_set_global_rotation("head", Quaternion(Vector3.UP, _head_yaw * 0.4) * Quaternion(Vector3.FORWARD, tilt) * Quaternion(Vector3.RIGHT, nod) * _global_rest["head"].basis.get_rotation_quaternion())
+		elif character_id == "robot":
+			# Stoic, Spock-like composure: upright spine, stillness, hands held neatly.
+			_rotate_rest("chest", Vector3.RIGHT, -0.02)
+			_rotate_rest("upper_arm.L", Vector3.RIGHT, -0.18)
+			_rotate_rest("forearm.L", Vector3.RIGHT, -0.55)
+			_rotate_rest("upper_arm.R", Vector3.RIGHT, -0.18)
+			_rotate_rest("forearm.R", Vector3.RIGHT, -0.55)
+			_rotate_rest("head", Vector3.RIGHT, sin(_elapsed * 0.9) * 0.02)
+		else:
+			# Easygoing, far-out alien traveler: gentle sway and warm, open gesture.
+			var sway := sin(_elapsed * 1.35) * 0.055
+			_rotate_rest("spine", Vector3.FORWARD, sway)
+			_rotate_rest("upper_arm.R", Vector3.RIGHT, -0.34 + sin(_elapsed * 1.5) * 0.07)
+			_rotate_rest("forearm.R", Vector3.RIGHT, -0.52)
+			_rotate_rest("upper_arm.L", Vector3.RIGHT, -0.20 + cos(_elapsed * 1.5) * 0.05)
+			_rotate_rest("forearm.L", Vector3.RIGHT, -0.38)
+			_set_global_rotation("head", Quaternion(Vector3.UP, sin(_elapsed * 0.8) * 0.06) * Quaternion(Vector3.FORWARD, sway * 0.9) * _global_rest["head"].basis.get_rotation_quaternion())
+		return
 	# Quiet, readable tasks: study the surroundings, check a wrist, scan equipment.
-	if current_activity == "record":
+	if character_id == "female_scientist":
+		var reading := current_activity == "record" and current_state == State.IDLE and not _dialogue_paused and state_timer > 0.10
+		var target := 1.0 if reading and state_timer > 0.90 else 0.0
+		_pad_weight = move_toward(_pad_weight, target, delta * (1.15 if target > 0.0 else 1.5))
+		var raised := smoothstep(0.18, 0.95, _pad_weight)
+		if _pad_weight > 0.0:
+			# First reach to the coat pocket, then lift the reader into view.
+			_rotate_rest("upper_arm.L", Vector3.RIGHT, lerpf(0.12, -0.42, raised) * minf(_pad_weight * 5.0, 1.0))
+			_rotate_rest("forearm.L", Vector3.RIGHT, -0.16 - 1.15 * raised)
+			_rotate_rest("upper_arm.R", Vector3.RIGHT, -0.12 * raised)
+			_rotate_rest("forearm.R", Vector3.RIGHT, -0.16 - 0.25 * raised)
+			_set_global_rotation("head", Quaternion(Vector3.UP, 0.38 * raised) * Quaternion(Vector3.RIGHT, 0.58 * raised) * _global_rest["head"].basis.get_rotation_quaternion())
+		_update_palm_pad()
+	elif current_activity == "record":
 		_rotate_rest("upper_arm.L", Vector3.RIGHT, -0.42 * _activity_weight)
 		_rotate_rest("forearm.L", Vector3.RIGHT, -1.15 * _activity_weight - 0.16)
 		_rotate_rest("upper_arm.R", Vector3.RIGHT, -0.22 * _activity_weight)
@@ -351,3 +668,13 @@ func _animate(delta: float, speed: float) -> void:
 		_rotate_rest("upper_arm.R", Vector3.RIGHT, -0.55 * _activity_weight)
 		_rotate_rest("forearm.R", Vector3.RIGHT, -0.7 * _activity_weight - 0.16)
 		_rotate_rest("head", Vector3.RIGHT, 0.18 * _activity_weight)
+
+func _update_palm_pad() -> void:
+	if not palm_pad:
+		return
+	palm_pad.visible = _pad_weight > 0.20
+	var rest: Transform3D = _global_rest["hand.L"]
+	var center := rest.origin + Vector3(0.008, -0.057, 0.037)
+	# The reader lies against the palm; apply the same bone deformation as the
+	# skinned hand instead of approximating a world-space position each frame.
+	palm_pad.transform = skeleton.get_bone_global_pose(_bones["hand.L"]) * rest.affine_inverse() * Transform3D(Basis.IDENTITY, center)

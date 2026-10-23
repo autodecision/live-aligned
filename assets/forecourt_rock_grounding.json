@@ -1,0 +1,15 @@
+{
+  "name": "Large_Rock_Main_02",
+  "source_object": "Large_Rock_Main_02-convcol",
+  "mesh": "res://assets/forecourt_rock_grounded.glb",
+  "ground_samples": 6373,
+  "maximum_underside_gap_m": -0.18148040771484375,
+  "underside_vertices_seated": 765,
+  "silhouette_refinements": 0,
+  "embed_m": 0.2,
+  "position": [
+    -7.8280510902404785,
+    2.8605713844299316,
+    22.300731658935547
+  ]
+}

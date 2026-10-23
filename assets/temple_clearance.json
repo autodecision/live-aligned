@@ -1,0 +1,82 @@
+{
+  "removed_props": [
+    "Fern_Pool_1",
+    "Fern_Pool_2"
+  ],
+  "positions": {
+    "Vase_Stairs_Plinth": [
+      5.599999904632568,
+      3.5485498905181885,
+      -5.900000095367432
+    ],
+    "Fountain_Offering_Vase": [
+      4.300000190734863,
+      3.547656774520874,
+      -5.400000095367432
+    ],
+    "Pot_Stairs_Bot_L_pot": [
+      -5.659999847412109,
+      0.05000000074505806,
+      10.210000038146973
+    ],
+    "Pot_Stairs_Bot_L_dirt": [
+      -5.782592296600342,
+      0.34700003266334534,
+      10.084567070007324
+    ],
+    "Pot_Stairs_Bot_L_leaves": [
+      -5.659999847412109,
+      0.05000000074505806,
+      10.210000038146973
+    ]
+  },
+  "sea_rocks": [
+    "East_Headland_Stack",
+    "East_Reef",
+    "North_Reef",
+    "North_Satellite",
+    "South_Cove_Rock",
+    "South_Reef",
+    "South_Satellite",
+    "Southwest_Skerry",
+    "West_Sea_Stack"
+  ],
+  "guard_boxes": [
+    {
+      "center": [
+        3.3,
+        0.5,
+        11.8
+      ],
+      "size": [
+        11.92,
+        1.0,
+        0.32
+      ]
+    },
+    {
+      "center": [
+        9.1,
+        0.5,
+        7.5
+      ],
+      "size": [
+        0.32,
+        1.0,
+        9.0
+      ]
+    },
+    {
+      "center": [
+        6.7,
+        4.0,
+        -7.5
+      ],
+      "size": [
+        0.32,
+        1.0,
+        18.0
+      ]
+    }
+  ]
+}
